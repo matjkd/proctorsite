@@ -51,7 +51,8 @@ $autoload['libraries'] = array('database', 'session', 'table', 'pagination', 'em
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('url', 'form', 'date', 'email', 'file');
+$autoload['helper'] = array('url', 'form', 'date', 'email');
+
 
 /*
 | -------------------------------------------------------------------
@@ -107,7 +108,7 @@ $autoload['language'] = array();
 |
 */
 
-$autoload['model'] = array('content_model', 'news_model');
+$autoload['model'] = array('Membership_model', 'prospect_model', 'support_model');
 
 
 

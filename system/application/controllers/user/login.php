@@ -3,8 +3,8 @@ class Login extends MY_Controller {
 
 function Login()
 	{
-		parent::__Construct();
-		$id = 'login';
+		parent::MY_Controller();
+		
 		$this->load->library(array('encrypt', 'form_validation'));
 		
 	}
@@ -14,9 +14,20 @@ function Login()
 	{
 		$this->is_logged_in();
 		
+	
+			
+			$data['main'] = 'user/main_channel';
+			$title = "Welcome to Lease-Desk.com's Channel Partner Portal";
+			
+			
 		
 		
-			redirect('welcome');
+		
+		
+		$data['title'] = 'Login';
+		
+		$this->load->vars($data);
+		$this->load->view('template');
 	
 	
 	
@@ -40,7 +51,7 @@ function Login()
 						$user_id = $row->user_id;
 						$user_firstname = $row->firstname;
 						$user_lastname = $row->lastname;
-				
+						$company_id = $row->company_id;
 					}
 			}
 			
@@ -48,6 +59,7 @@ function Login()
 				'username' => $this->input->post('username'),
 				'role' => $role_level,
 				'user_id' => $user_id,
+				'company_id' => $company_id,
 				'firstname' => $user_firstname,
 				'lastname' => $user_lastname,
 				'is_logged_in' => true,
@@ -57,14 +69,12 @@ function Login()
 			
 			$this->session->set_userdata($data);
 			$this->session->set_flashdata('conf_msg', "welcome.");
-			redirect('welcome/content');
+			redirect('welcome/');
 		}
 		else // incorrect username or password
 		{
-			$id = 'login';
-			$data['content'] =	$this->content_model->get_content($id);
 			$data['title'] = 'Login Failed';
-			$data['main'] = 'user/login_form';
+			$data['main'] = 'user/index';
 			$this->load->vars($data);
 			$this->load->view('template');
 			
@@ -141,7 +151,7 @@ function Login()
 		$is_logged_in = $this->session->userdata('is_logged_in');
 		if(!isset($is_logged_in) || $is_logged_in == true)
 		{
-			redirect('welcome/content');
+			redirect('welcome/');
 		}		
 	}	
 

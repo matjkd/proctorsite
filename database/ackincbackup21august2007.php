@@ -1,0 +1,170 @@
+<table width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="body">
+  <tr> 
+    <td width="444" class="Heading">Acknowledgement Form<br>
+      No:<?php echo $internalordernumber;
+	  
+	  $sql = "SELECT * FROM internalorder WHERE internalordernumber='$internalordernumber'";
+		$result = mysql_query($sql)
+		or die ("failure");
+		while ($row = mysql_fetch_array($result))
+			{
+		extract($row);
+		}
+	  
+	   ?></td>
+    <td width="256"><img src="http://www.proimaging.co.uk/graphics/pillogo.gif" width="256" height="91"></td>
+  </tr>
+  <tr> 
+    <td colspan="2" class="body"> <table width="100%" border="0">
+        <tr> 
+          <td width="65%" class="body"> 
+            <?php 
+	  
+	  $sql = "SELECT * FROM clients WHERE companyname='$iocompanyname'";
+		$result = mysql_query($sql)
+		or die ("error");
+		while ($row = mysql_fetch_array($result))
+			{
+		extract($row);
+	  
+	  
+	echo "<strong>$clientname</strong><BR><BR>	
+	
+			
+			$companyname, <BR>
+			
+			$address1 <BR>
+			$address2 <BR>
+			$address3 <BR>
+			$address4 <BR>
+			$postcode <BR><BR>
+			$date<BR><BR>
+			<strong>Your Ref:</strong> $ioorderref";
+			
+			 ?>
+          </td>
+          <td width="35%" class="body">
+            <? 
+		  
+		  $deliveryaddress = str_replace("\r\n","<BR>",$deliveryaddress);
+		  echo "<BR><BR>
+		  
+		  <STRONG>Delivery Date</STRONG> - $deliverydate<BR><BR>
+		  <STRONG>Delivery Method</STRONG> - $deliverymethod<BR><BR>
+		  
+		  <STRONG>Delivery Address</STRONG> - $deliveryaddress";
+		  
+		  
+		  } ?>
+          </td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td colspan="2"><table width="100%" border="0" cellspacing="0" cellpadding="0" class="body">
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+      <BR>
+	
+	<table width=100% cellpadding="0" cellspacing="0">
+        <tr> 
+          <td class="tableheader">Quantity</td>
+          <td class="tableheader">Description</td>
+          <td class="tableheader">unit cost</td>
+          <td width="16%" class="tableheader">subtotal</td>
+        </tr>
+        <?php
+	
+	//the following extracts all purchaseorder data corresponding to the selected company and displays it in a table
+	$sql = "SELECT * FROM ordertables WHERE  tableordernumber='$internalordernumber' AND tablecategory='AF' ORDER BY tablenumber";
+	
+		$result = mysql_query($sql)
+		or die ("no data");
+		$totalcost = 0;
+		$x=0;
+		while ($row = mysql_fetch_array($result))
+			{
+		extract($row);
+			
+			//$sql2 = "SELECT tablequantity, tabledescription, tablecost FROM ordertables WHERE tableordernumber='$internalordernumber' AND tableref=$tableref LIMIT 1";
+			//$result2 = mysql_query($sql2)
+			//or die ("no data2");
+			//while ($row2 = mysql_fetch_array($result2))
+			//{
+			//extract($row2);
+		?>
+        <tr> 
+          <td width="8%" class="table"><?php echo "$tablequantity"; ?></td>
+          <td width="63%" class="table"><?php echo $tabledescription; ?></td>
+          <td width="13%" class="table"> £<?php echo $tablecost; ?></td>
+          <td width="13%" class="table"> £ 
+            <?php 
+		  $subtotal = $tablequantity*$tablecost;
+		  
+		  echo $subtotal; 
+		  $totalcost = $totalcost+$subtotal;
+		  ?>
+          </td>
+        </tr>
+        <?php
+  //end of while
+   		}
+  // } 
+   
+   ?>
+        <tr>
+          <td >&nbsp;</td>
+          <td >&nbsp;</td>
+          <td align="right" class="body">&nbsp;</td>
+          <td class="body">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td >&nbsp;</td>
+          <td >&nbsp;</td>
+          <td align="right" class="body"><strong>Total</strong>:</td>
+          <td class="body"><strong>£ <?php echo "$totalcost"; ?></strong></td>
+        </tr>
+      </table>
+
+	
+	
+	</td>
+  </tr>
+</table>
+
+<div class="footer"> 
+  <p><em>If Professional Imaging Ltd at the Customer’s request has carried out 
+    any extra works or incurred any delays beyond the control of Professional 
+    Imaging Ltd that are not included in the substance or extent of the agreed 
+    service(s), such work or results shall be charged for in accordance with Supplier’s 
+    customary rates.<br>
+    </em><em>Please check this order acknowledgement carefully and notify us immediately 
+    of any errors.<br>
+    Where an official order has not been sent, please sign below and fax by return 
+    to 08456 760 748. <BR>
+    All prices are exclusive of VAT<br>
+    </em> </p>
+  <table width="600" border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+      <td><font size="2">SIGN<br>
+        <br>
+        <br>
+        <br>
+        <br>
+        </font></td>
+      <td><font size="2">&nbsp;</font></td>
+    </tr>
+    <tr> 
+      <td width="63%"><font size="2">PRINT</font></td>
+      <td width="37%"><font size="2">DATE</font></td>
+    </tr>
+  </table>
+
+  <BR>
+    <BR>
+  Professional Imaging Ltd. Head Office, Croft Way, Eastways, Witham, Essex, CM8 
+  2EG<BR>
+  tel: 08456 760 747 fax: 08456 760 748 web:www.proimaging.co.uk email: sales@proimaging.co.uk</div>
+</div>
