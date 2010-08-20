@@ -8,7 +8,7 @@ body {
 }
 
 body#bd {
-	background: url(../images/bg.gif) repeat-x top left;
+	background: none;
 	color: #666666;
 }
 
@@ -775,8 +775,8 @@ ul.ja-bullettin li a {
 /* HEADER
 --------------------------------------------------------- */
 #ja-header {
-	background: url(../images/headerback.png) no-repeat 50% 50%;
-	height: 70px;
+	background: url(../images/headback.jpg) no-repeat 50% 50%;
+	height: 130px;
 	z-index:999;
 }
 
