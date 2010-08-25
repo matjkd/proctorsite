@@ -30,8 +30,7 @@ function Login()
 	}
 	function validate_credentials()
 	{		
-		$this->load->model('membership_model');
-		$query = $this->membership_model->validate();
+		$query = $this->Membership_model->validate();
 		
 		if($query) // if the user's credentials validated...
 		{
@@ -47,7 +46,7 @@ function Login()
 						$user_id = $row->user_id;
 						$user_firstname = $row->firstname;
 						$user_lastname = $row->lastname;
-						$company_id = $row->company_id;
+					
 					}
 			}
 			
@@ -55,7 +54,7 @@ function Login()
 				'username' => $this->input->post('username'),
 				'role' => $role_level,
 				'user_id' => $user_id,
-				'company_id' => $company_id,
+			
 				'firstname' => $user_firstname,
 				'lastname' => $user_lastname,
 				'is_logged_in' => true,

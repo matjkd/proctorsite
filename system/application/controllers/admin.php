@@ -12,6 +12,26 @@ class Admin extends My_Controller {
 	{
 		redirect('admin/view_companies', 'refresh');
 	}
+	function edit()
+	{
+		
+		
+		$id = $this->uri->segment(3);
+		$data['page'] = $id;
+		$data['content'] =	$this->content_model->get_content($id);
+		$data['news'] = $this->news_model->list_news();
+		$data['main'] = "admin/edit_content";
+		$data['menu'] =	$this->content_model->get_menus();
+		$this->load->vars($data);
+		$this->load->view('template');
+	}
+	function edit_content()
+	{
+		$id = $this->uri->segment(3);
+		$this->content_model->edit_content($id);
+		
+		redirect ("admin/edit/$id");
+	}
 	function create_company()
 	{
 		

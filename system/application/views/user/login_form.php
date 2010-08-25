@@ -8,6 +8,7 @@
 <div id="effect" class="ui-widget-content ui-corner-all">
 <h4 class="ui-widget-header ui-corner-all">Login Form</h4>
 <?php 
+
 			echo form_open('user/login/validate_credentials');
 			echo "Username<br/>";
 			echo form_input('username', '');?>
