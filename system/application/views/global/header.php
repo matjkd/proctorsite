@@ -18,6 +18,7 @@
 <script src="<?=base_url()?>js/jeditable.js" type="text/javascript"></script>
 <script src="<?=base_url()?>js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
 <script src="<?=base_url()?>js/jquery.dataTables.min.js" type="text/javascript"></script>
+<script src="<?=base_url()?>js/tiny_mce/tiny_mce.js" type="text/javascript"></script>
 <script src="<?=base_url()?>js/autocomplete.js" type="text/javascript"></script>
 <script src="<?=base_url()?>js/AC_RunActiveContent.js" language="javascript"></script>
 <script src="<?=base_url()?>js/jquery.cycle.all.min.js" language="javascript"></script>
