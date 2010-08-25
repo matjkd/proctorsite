@@ -184,6 +184,18 @@ input, select, textarea, .inputbox, .button {
 *+html .button {
 	padding: 0 5px !important; /*IE 7*/
 }
+/*
+Main Content 
+*/
+.main_content {
+	
+	float:left;
+}
+.right_column {
+	
+	float:left;
+	width:200px;
+}
 
 /* JOOMLA STYLE
 --------------------------------------------------------- */

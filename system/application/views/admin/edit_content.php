@@ -20,7 +20,7 @@ Title: <?=form_input('title', $row['title'])?>
 <br/>
 Content:
 <textarea cols=75 rows=20 name="content" id="content"><?=$row['content'];?></textarea>
-
+<?=form_hidden('menu_title', $row['menu_title'])?>
 
 <?php echo form_submit('submit', 'Submit'); ?>
 <?=form_close()?> 

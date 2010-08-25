@@ -51,24 +51,38 @@
             
                         <div id="ja-current-content" class="clearfix"> 
     
-     <div class="slideshow">          
-      <?php	$this->load->view('global/slideshow1'); ?>
+     <div class="slideshow">    
+           
+      <?php	
+      if (isset($slideshow))
+      {
+      $this->load->view($slideshow); 
+      }
+      ?>
+      
      </div>            
      <div style="clear:both;"></div>
-	<?php 
-	
-	if(isset($title))
-	{
-		echo "<h1 class='componentheading'>$title</h1>";
-	}
-	?>
-	
-	<?php $this->load->view('global/warning'); ?> 
-	<?php $this->load->view($main); ?>
-
- 
+									<div class="main_content">
+										     <?php 
+											
+											if(isset($title))
+											{
+												echo "<h1 class='componentheading'>$title</h1>";
+											}
+											?>
+											
+											<?php $this->load->view('global/warning'); ?> 
+											<?php $this->load->view($main); ?>
+								
+								 	</div>
+								 	
+								 	<div class="right_column">
+								 	
+								 	
+								 	</div>
+								 	
             </div> 
-                    </div> 
+      </div> 
   	<!-- //CONTENT --> 
 		
      </div></div></div>
