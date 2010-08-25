@@ -19,10 +19,6 @@ function Login()
 			$data['main'] = 'user/main_channel';
 			$title = "Welcome to Lease-Desk.com's Channel Partner Portal";
 			
-			
-		
-		
-		
 		
 		$data['title'] = 'Login';
 		

@@ -1,8 +1,4 @@
-<strong>Welcome to <?=$title?></strong>
-<p>Our dedicated Partner Portal providing valuable tools and resources to enable you to effectively
- promote and sell Lease-Desk.com</p>
-<p>On the left hand tool bar you will find a list of options available to you.
- If you have any questions or require any assistance, please contact us at:</p>
-<p><strong>Telephone</strong>: 01302 245310</p>
+<div class="article-content">
+<p>Providing Leasing or Structured Finance solutions is becoming increasingly important to Technology Vendors. </p><p>Rightly so, it is an excellent sales tool to win business in difficult market conditions, retain customers on ‘Sticky’ contracts and&nbsp;generate Repeat Business Opportunities. </p><p>The impact of the Credit Crunch on Vendor Finance has seen a move away from one preferred Provider to a host of Providers, to ensure that leasing penetration is maximised and ‘exposure threat’ minimised.</p><p>But how do Vendors source the right partners, manage relationships, service levels and communication without strain on Management Time? </p><p>Proctor Consulting will manage your Providers, Products, Processes, People and Customer Contracts to ensure you gain maximum benefit without costly time investment. </p>
 
-<p><strong>Email</strong>: <a href="mailto:support@lease-desk.com?subject=Channel Resource Help Required">support@lease-desk.com</a></p>
+</div>

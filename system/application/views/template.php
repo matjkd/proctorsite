@@ -54,6 +54,7 @@
      <div class="slideshow">          
       <?php	$this->load->view('global/slideshow1'); ?>
      </div>            
+     <div style="clear:both;"></div>
 	<?php 
 	
 	if(isset($title))

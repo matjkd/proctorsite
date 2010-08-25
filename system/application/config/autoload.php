@@ -108,7 +108,7 @@ $autoload['language'] = array();
 |
 */
 
-$autoload['model'] = array('Membership_model', 'prospect_model', 'support_model');
+$autoload['model'] = array('Membership_model', 'content_model', 'news_model');
 
 
 

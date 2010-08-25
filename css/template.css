@@ -354,8 +354,8 @@ table.searchintro td {
 
 h1.componentheading, .componentheading {
 	border-bottom: 1px solid #DDDDDD;
-	margin: 0 0 15px;
-	padding: 0 0 15px;
+	margin: 10px 0 5px;
+	padding: 0 0 5px;
 }
 
 .componentheading {
@@ -365,7 +365,7 @@ h1.componentheading, .componentheading {
 h2.contentheading, .contentheading {
 	font-size: 175%;
 	font-weight: bold;
-	margin: 0 0 5px;
+	margin: 0px 0 5px;
 	padding: 0;
 }
 
