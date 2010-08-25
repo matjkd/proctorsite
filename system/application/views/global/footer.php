@@ -52,7 +52,7 @@
         
         
    </div> 
-   <span style="float:right;"><img src="<?=base_url()?>images/proctor/logo.png"></img></span>
+   <span style="float:right;"><img width="251px" height="102px" src="<?=base_url()?>images/proctor/logofade.png"></img></span>
 </div> 
 </div>
 <!-- //FOOTER --> 

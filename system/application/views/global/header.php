@@ -45,6 +45,11 @@
 
 
 <link rel='stylesheet' href='<?=base_url()?>css/colors/default.css' type='text/css' />
+<!--[if lt IE 7.]>
+<script defer type="text/javascript" src="<?=base_url()?>js/pngfix.js"></script>
+<link rel='stylesheet' href='<?=base_url()?>css/ie6.css' type='text/css' />
+<![endif]-->
+
 <title>
 Proctor Consulting
 </title>

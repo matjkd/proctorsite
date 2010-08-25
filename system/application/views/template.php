@@ -78,7 +78,7 @@
 								 	
 								 	<div class="right_column">
 								 	
-								 	
+								 	test
 								 	</div>
 								 	
             </div> 

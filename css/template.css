@@ -190,6 +190,7 @@ Main Content
 .main_content {
 	
 	float:left;
+	width:400px;
 }
 .right_column {
 	
@@ -546,7 +547,7 @@ div.syndicate div {
 }
 
 #ja-content .main {
-	width: 830px;
+	width: 730px;
 }
 
 #ja-col1 {
