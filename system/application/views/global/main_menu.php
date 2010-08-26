@@ -17,7 +17,7 @@
 			</li> 
 			
 			<li>
-			<a href="<?=base_url()?>welcome/content/lease-desk" class="menu-item0 active first-item" id="menu1" title="lease-desk">
+			<a href="<?=base_url()?>leasedesk" class="menu-item0 active first-item" id="menu1" title="lease-desk">
 			<span class="menu-title">Lease-Desk</span></a>
 			
 			</li> 
