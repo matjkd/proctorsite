@@ -67,13 +67,7 @@ if(isset($sidebar)) { $this->load->view($sidebar); }
      </div>            
      <div style="clear:both;"></div>
 									<div class="main_content" <?php if(!isset($rightcolumn)) {?> style="width:670px;"<?php }?>>
-										     <?php 
-											
-											if(isset($title))
-											{
-												echo "<h1 class='componentheading'>$title</h1>";
-											}
-											?>
+										    
 											
 											<?php $this->load->view('global/warning'); ?> 
 											<?php $this->load->view($main); ?>

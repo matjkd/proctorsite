@@ -14,6 +14,11 @@ class Leasedesk extends My_Controller {
 		
 		
 		$data['content'] =	$this->content_model->get_content($id);
+		foreach($data['content'] as $row):
+		
+		$data['title'] = $row['title'];
+		
+		endforeach;
 		$data['menu'] =	$this->content_model->get_menus();
 		$data['slideshow'] = "global/lease-desk-flash";
 		$data['news'] = $this->news_model->list_news();

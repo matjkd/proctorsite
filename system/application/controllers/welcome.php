@@ -41,6 +41,11 @@ function content()
 			}
 		
 		$data['content'] =	$this->content_model->get_content($id);
+		foreach($data['content'] as $row):
+		
+		$data['title'] = $row['title'];
+		
+		endforeach;
 		$data['menu'] =	$this->content_model->get_menus();
 		$data['slideshow'] = "global/slideshow1";
 		$data['news'] = $this->news_model->list_news();

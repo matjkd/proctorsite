@@ -51,7 +51,7 @@
 <![endif]-->
 
 <title>
-Proctor Consulting
+<?=$title?>
 </title>
 </head>
 
