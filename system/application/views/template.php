@@ -36,11 +36,15 @@
 	
   	<div id="ja-container-fr" class="wrap"> 
   	<div class="main clearfix">
+  	<div id="ja-col1">
 <?php  		
-	$this->load->view('global/custmenu');
+	
+$this->load->view('sidebar/lease-desk-login');
+
+if(isset($sidebar)) { $this->load->view($sidebar); }
 
 ?>
-       
+  </div>     
  		
   	
   	
@@ -62,7 +66,7 @@
       
      </div>            
      <div style="clear:both;"></div>
-									<div class="main_content">
+									<div class="main_content" <?php if(!isset($rightcolumn)) {?> style="width:670px;"<?php }?>>
 										     <?php 
 											
 											if(isset($title))
@@ -78,7 +82,7 @@
 								 	
 								 	<div class="right_column">
 								 	
-								 	test
+								 		<?php if(isset($rightcolumn)) { $this->load->view($rightcolumn); } ?> 
 								 	</div>
 								 	
             </div> 
@@ -90,6 +94,14 @@
   
 
 <?php $this->load->view('global/footer'); ?>
-
+<script type="text/javascript"> 
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script> 
+<script type="text/javascript"> 
+try {
+var pageTracker = _gat._getTracker("UA-920708-15");
+pageTracker._trackPageview();
+} catch(err) {}</script> 
 </body>
 </html>

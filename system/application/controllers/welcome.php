@@ -44,7 +44,8 @@ function content()
 		$data['menu'] =	$this->content_model->get_menus();
 		$data['slideshow'] = "global/slideshow1";
 		$data['news'] = $this->news_model->list_news();
-		$data['sidebar'] = 'sidebar/news';
+		$data['sidebar'] = 'sidebar/links';
+		$data['rightcolumn'] = 'sidebar/channel_partner';
 		$data['page'] = $id;
 		$is_logged_in = $this->session->userdata('is_logged_in');
 		

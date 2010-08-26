@@ -190,12 +190,12 @@ Main Content
 .main_content {
 	
 	float:left;
-	width:400px;
+	width:470px;
 }
 .right_column {
-	
-	float:left;
-	width:200px;
+	padding: 10px 0 0 0;
+	float:right;
+	width:228px;
 }
 
 /* JOOMLA STYLE
@@ -568,7 +568,7 @@ div.syndicate div {
 }
 
 #ja-container-fr #ja-current-content {
-	width: 715px;
+	width: 725px;
 }
 
 #ja-container-f #ja-current-content,
