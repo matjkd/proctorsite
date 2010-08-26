@@ -20,9 +20,9 @@ class Forms extends Controller {
 		$data['preferred_time'] = '';
 		$data['message'] = '';
 		$data['errors'] = '';
-		$data['main'] = '/forms/request';
+		$data['main'] = 'sidebar/forms/request';
 		$this->load->vars($data);
-		$this->load->view('template');
+		$this->load->view('form_template');
 		
 		
 		
@@ -52,9 +52,9 @@ class Forms extends Controller {
 					
 					$data['errors'] = validation_errors();
 				
-					$data['main'] = '/forms/request';
+					$data['main'] = 'sidebar/forms/request';
 					$this->load->vars($data);
-					$this->load->view('template');
+					$this->load->view('form_template');
 					
 				}
 			else
@@ -119,9 +119,9 @@ End
 				$this->email->send();
 				//end mailto webCRM
 				
-				$data['main'] = '/forms/request_sent';
+				$data['main'] = 'sidebar/forms/request_sent';
 				$this->load->vars($data);
-				$this->load->view('template');
+				$this->load->view('form_template');
 				}
 	}
 function send_info()
@@ -147,9 +147,9 @@ function send_info()
 					
 					$data['errors'] = validation_errors();
 				
-					$data['main'] = '/forms/request2';
+					$data['main'] = 'sidebar/forms/request2';
 					$this->load->vars($data);
-					$this->load->view('template');
+					$this->load->view('form_template');
 					
 				}
 			else
@@ -209,9 +209,9 @@ End
 				$this->email->send();
 				//end mailto webCRM
 				
-				$data['main'] = '/forms/request_sent';
+				$data['main'] = 'sidebar/forms/request_sent';
 				$this->load->vars($data);
-				$this->load->view('template');
+				$this->load->view('form_template');
 				}
 	}
 function contact_page()
@@ -237,9 +237,9 @@ function contact_page()
 					
 					$data['errors'] = validation_errors();
 				
-					$data['main'] = '/forms/contact';
+					$data['main'] = 'sidebar/forms/contact';
 					$this->load->vars($data);
-					$this->load->view('template');
+					$this->load->view('form_template');
 					
 				}
 			else
@@ -307,9 +307,9 @@ End
 				$this->email->send();
 				//end mailto webCRM
 				
-				$data['main'] = '/forms/request_sent';
+				$data['main'] = 'sidebar/forms/request_sent';
 				$this->load->vars($data);
-				$this->load->view('template');
+				$this->load->view('form_template');
 				}
 	}
 
@@ -337,9 +337,9 @@ function register_thursday()
 					
 					$data['errors'] = validation_errors();
 				
-					$data['main'] = '/forms/register_thursday';
+					$data['main'] = 'sidebar/forms/register_thursday';
 					$this->load->vars($data);
-					$this->load->view('template');
+					$this->load->view('form_template');
 					
 				}
 			else
@@ -375,9 +375,9 @@ function register_thursday()
 
 				
 				
-				$data['main'] = '/forms/request_sent';
+				$data['main'] = 'sidebar/forms/request_sent';
 				$this->load->vars($data);
-				$this->load->view('template');
+				$this->load->view('form_template');
 				}
 	}
 
@@ -404,9 +404,9 @@ function register_friday()
 					
 					$data['errors'] = validation_errors();
 				
-					$data['main'] = '/forms/register_friday';
+					$data['main'] = 'sidebar/forms/register_friday';
 					$this->load->vars($data);
-					$this->load->view('template');
+					$this->load->view('form_template');
 					
 				}
 			else
@@ -442,9 +442,9 @@ function register_friday()
 
 				
 				
-				$data['main'] = '/forms/request_sent';
+				$data['main'] = 'sidebar/forms/request_sent';
 				$this->load->vars($data);
-				$this->load->view('template');
+				$this->load->view('form_template');
 				}
 	}
 function request_a_demo()
@@ -472,9 +472,9 @@ function request_a_demo()
 					
 					$data['errors'] = validation_errors();
 				
-					$data['main'] = '/forms/request_a_demo';
+					$data['main'] = 'sidebar/forms/request_a_demo';
 					$this->load->vars($data);
-					$this->load->view('template');
+					$this->load->view('form_template');
 					
 				}
 			else
@@ -539,9 +539,9 @@ End
 				$this->email->send();
 				//end mailto webCRM
 				
-				$data['main'] = '/forms/request_sent';
+				$data['main'] = 'sidebar/forms/request_sent';
 				$this->load->vars($data);
-				$this->load->view('template');
+				$this->load->view('form_template');
 				}
 	}
 
