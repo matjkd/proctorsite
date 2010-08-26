@@ -24,6 +24,7 @@ class Leasedesk extends My_Controller {
 		$data['news'] = $this->news_model->list_news();
 		$data['sidebar'] = 'sidebar/links';
 		$data['rightcolumn'] = 'sidebar/channel_partner';
+		$data['bottom'] = 'sidebar/leasedesk_forms';
 		$data['page'] = $id;
 		$is_logged_in = $this->session->userdata('is_logged_in');
 		

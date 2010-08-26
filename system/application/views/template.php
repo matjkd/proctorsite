@@ -81,6 +81,7 @@ if(isset($sidebar)) { $this->load->view($sidebar); }
 								 	
             </div> 
       </div> 
+      <div id='bottom' style="clear:both;"><?php if(isset($bottom)) { $this->load->view($bottom); } ?> </div>
   	<!-- //CONTENT --> 
 		
      </div></div></div>

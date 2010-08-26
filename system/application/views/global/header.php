@@ -41,7 +41,13 @@
 	document.write('<link rel="stylesheet" type="text/css" href="<?=base_url()?>/css/css3.css" media="all" \/>');
 	//]]>
 </script> 
-
+<script type="text/javascript">
+	$(function() {
+		$("button").button();
+		
+		
+	});
+	</script>
 
 
 <link rel='stylesheet' href='<?=base_url()?>css/colors/default.css' type='text/css' />
