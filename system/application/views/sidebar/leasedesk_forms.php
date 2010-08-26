@@ -1,5 +1,9 @@
 
-	
+	<script type="text/javascript">
+	$(function() {
+		$("#datepicker").datepicker({showOtherMonths: true, selectOtherMonths: true, dateFormat: 'D, dd M yy' });
+	});
+	</script>
 	
 	<script type="text/javascript">
 	$(function() {
@@ -96,21 +100,10 @@
 <div class="demo">
 
 <div id="dialog-form" title="Create new user">
-	<p class="validateTips">All form fields are required.</p>
-
-	<form>
-	<fieldset>
-		<label for="name">Name</label>
-		<input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all" />
-		<label for="email">Email</label>
-		<input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all" />
-		<label for="password">Password</label>
-		<input type="password" name="password" id="password" value="" class="text ui-widget-content ui-corner-all" />
-	</fieldset>
-	</form>
+	<?php $this->load->view('/sidebar/forms/request_demo');?>
 </div>
 
 
-<button id="create-user">Create new user</button>
+<button id="create-user">Request a Demo</button>
 
 </div><!-- End demo -->
