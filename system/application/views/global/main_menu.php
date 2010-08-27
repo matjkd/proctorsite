@@ -29,7 +29,7 @@
 			</li> 
 			
 			<li>
-			<a href="<?=base_url()?>welcome/content/management-team" class="menu-item0 active first-item" id="menu1" title="lease-desk">
+			<a href="<?=base_url()?>welcome/management_team/" class="menu-item0 active first-item" id="menu1" title="lease-desk">
 			<span class="menu-title">Management Team</span></a>
 			
 			</li>

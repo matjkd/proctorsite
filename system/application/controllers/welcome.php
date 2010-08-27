@@ -5,7 +5,7 @@ class Welcome extends My_Controller {
 	function Welcome()
 	{
 		parent::Controller();	
-		
+		$this->load->model('professionals_model');
 	}
 	
 	function index()
@@ -87,6 +87,45 @@ function contact()
 	
 		$this->load->vars($data);
 		$this->load->view('template');
+}
+function management_team()
+	{
+		if(($this->uri->segment(3))==NULL)
+			{
+				$member = 7;
+				
+			}
+		else
+			{
+				$member = $this->uri->segment(3);
+			
+			}
+		
+		$id = "management-team";
+		$data['content'] =	$this->content_model->get_content($id);
+		$data['team'] = $this->professionals_model->get_professionals();
+		$data['slideshow'] = "global/team";
+		$data['menu'] =	$this->content_model->get_menus();
+		$data['main'] = "pages/team";
+		$data['title'] = 'Management Team';
+		$data['news'] = $this->news_model->list_news();
+		$data['sidebar'] = 'sidebar/links';
+		$data['page'] = $id;
+		$is_logged_in = $this->session->userdata('is_logged_in');
+		$data['member'] = $this->professionals_model->get_professional($member);
+		if($is_logged_in!=NULL)
+			{
+			$data['edit'] = site_url("admin/edit/$id");
+	        }
+		         
+		$this->load->vars($data);
+		$this->load->view('template');
+}
+function team_member($id)
+{
+	$data['member'] = $this->professionals_model->get_professional($id);
+	$this->load->vars($data);
+	$this->load->view('ajax/member.php');
 }
 function login()
 	{

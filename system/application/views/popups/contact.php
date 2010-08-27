@@ -1,12 +1,12 @@
 <script type="text/javascript">
 	// increase the default animation speed to exaggerate the effect
-	$.fx.speeds._default = 1000;
+	$.fx.speeds._default = 500;
 	$(function() {
 		$('#contactform').dialog({
 			autoOpen: false,
 			show: 'puff',
 			width:400,
-			height:500,
+			height:400,
 			hide: 'puff'
 		});
 		
