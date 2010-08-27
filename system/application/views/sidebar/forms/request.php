@@ -1,10 +1,5 @@
-<script type="text/javascript">
-	$(function() {
-		$("#datepicker").datepicker({showOtherMonths: true, selectOtherMonths: true, dateFormat: 'D, dd M yy' });
-	});
-	</script>
-	
-<?php echo $errors;?>	
+<?=$this->load->view('sidebar/forms/form_top')?>
+<?=$errors?>	
 <?=form_open('welcome/send_request')?>
 <?=$this->load->view('global/table')?>	
 
