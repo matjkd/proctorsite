@@ -37,14 +37,14 @@ $(function() {
 </div>
 
 
-<div  style="width:228px; height:272px; z-index:-50; position:relative; float:left;">
+<div  style="width:228px; height:238px; z-index:-50; position:relative; float:left;">
 
 <div id="s2" class="pics">
 
-<a href="http://www.redstudio.co.uk"><img width="228px" height="272px" src="<?=base_url()?>images/stories/demo/channelpartner1.png" /></a>
-<a href="http://www.redstudio.co.uk"><img width="228px" height="272px" src="<?=base_url()?>images/stories/demo/channelpartner2.png" /></a>
+<a href="http://www.redstudio.co.uk"><img width="228px" height="238px" src="<?=base_url()?>images/stories/demo/channelpartner1.png" /></a>
+<a href="http://www.redstudio.co.uk"><img width="228px" height="238px" src="<?=base_url()?>images/stories/demo/channelpartner2.png" /></a>
 
 </div>
 
 </div>
-<a href="#" id="openchannel">Click Here for more info</a>
+<a href="#" id="openchannel"><img width="228px" height="35px" src="<?=base_url()?>images/stories/demo/clickhere.png" /></a>
