@@ -1,6 +1,6 @@
 <?=$this->load->view('sidebar/forms/form_top')?>
 <?=$errors?>	
-<?=form_open('welcome/send_request')?>
+<?=form_open('forms/send_request')?>
 <?=$this->load->view('global/table')?>	
 
 <?php 

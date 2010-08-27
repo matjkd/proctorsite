@@ -68,11 +68,12 @@ function contact()
 	{
 		$id = "contact_us";
 		$data['content'] =	$this->content_model->get_content($id);
+		$data['slideshow'] = "global/slideshow1";
 		$data['menu'] =	$this->content_model->get_menus();
 		$data['main'] = "pages/contact";
-		$data['slideshow'] = "global/slideshow1";
+		$data['title'] = 'Contact Us';
 		$data['news'] = $this->news_model->list_news();
-		$data['sidebar'] = 'sidebar/contact';
+		$data['sidebar'] = 'sidebar/links';
 		$data['page'] = $id;
 		$is_logged_in = $this->session->userdata('is_logged_in');
 		

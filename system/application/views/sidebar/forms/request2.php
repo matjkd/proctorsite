@@ -1,7 +1,7 @@
 <?=$this->load->view('sidebar/forms/form_top')?>
 	
 <?php echo $errors;?>	
-<?=form_open('welcome/send_info')?>
+<?=form_open('forms/send_info')?>
 <?=$this->load->view('global/table')?>	
 
 <?php 

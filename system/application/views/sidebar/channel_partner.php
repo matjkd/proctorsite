@@ -20,9 +20,9 @@ $(function() {
 $(function() {
     // run the code in the markup!
 	$('#s2').cycle({ 
-	    fx: 'fade',
-	    speed:    500, 
-	    timeout:  7000
+	    fx: 'turnDown',
+	    speed:    600, 
+	    timeout:  15000
 	   
 	});
     

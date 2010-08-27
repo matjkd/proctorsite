@@ -1,6 +1,6 @@
 <script type="text/javascript">
 	// increase the default animation speed to exaggerate the effect
-	$.fx.speeds._default = 1000;
+	$.fx.speeds._default = 500;
 	$(function() {
 		$('#dialog').dialog({
 			autoOpen: false,

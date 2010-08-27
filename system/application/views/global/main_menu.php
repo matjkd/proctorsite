@@ -35,7 +35,7 @@
 			</li>
 			
 			<li>
-			<a href="<?=base_url()?>welcome/content/contact-us" class="menu-item0 active first-item" id="menu1" title="lease-desk">
+			<a href="<?=base_url()?>welcome/contact" class="menu-item0 active first-item" id="menu1" title="lease-desk">
 			<span class="menu-title">Contact Us</span></a>
 			
 			</li>  

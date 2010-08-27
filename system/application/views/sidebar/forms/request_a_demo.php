@@ -7,7 +7,7 @@
 <h2>Request Lease-Desk V2.0 Web Demo </h2>
 <h3></h3>
 <?php echo $errors;?>	
-<?=form_open('welcome/send_request')?>
+<?=form_open('forms/send_request')?>
 <?=$this->load->view('global/table')?>	
 
 <?php 
