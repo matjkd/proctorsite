@@ -6,7 +6,7 @@ class Quote extends My_Controller {
 	{
 		parent::Controller();
 			
-		$this->is_logged_in();
+		
 		$this->load->library(array('encrypt', 'form_validation'));
 		$this->load->model('quote_model');
 	}

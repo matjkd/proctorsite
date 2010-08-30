@@ -41,12 +41,23 @@
 	document.write('<link rel="stylesheet" type="text/css" href="<?=base_url()?>/css/css3.css" media="all" \/>');
 	//]]>
 </script> 
-
+<script type="text/javascript">
+	$(function() {
+		$("button").button();
+		
+		
+	});
+	</script>
 
 
 <link rel='stylesheet' href='<?=base_url()?>css/colors/default.css' type='text/css' />
+<!--[if lt IE 7.]>
+<script defer type="text/javascript" src="<?=base_url()?>js/pngfix.js"></script>
+<link rel='stylesheet' href='<?=base_url()?>css/ie6.css' type='text/css' />
+<![endif]-->
+
 <title>
-Proctor Consulting
+<?=$title?>
 </title>
 </head>
 

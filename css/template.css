@@ -190,11 +190,12 @@ Main Content
 .main_content {
 	
 	float:left;
+	width:470px;
 }
 .right_column {
-	
-	float:left;
-	width:200px;
+	padding: 10px 0 0 0;
+	float:right;
+	width:228px;
 }
 
 /* JOOMLA STYLE
@@ -546,7 +547,7 @@ div.syndicate div {
 }
 
 #ja-content .main {
-	width: 830px;
+	width: 730px;
 }
 
 #ja-col1 {
@@ -567,7 +568,7 @@ div.syndicate div {
 }
 
 #ja-container-fr #ja-current-content {
-	width: 715px;
+	width: 725px;
 }
 
 #ja-container-f #ja-current-content,
@@ -1364,4 +1365,12 @@ li.ja-firstitem,
 	background: #000000;
 	color: #ffffff;
 	
+}
+
+#bottom {
+	padding:0px 0px 0px 0px;
+	
+}
+.quotefield, #jquerytype, #jquerytype2 {
+	width:150px;
 }
