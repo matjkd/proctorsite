@@ -38,9 +38,9 @@ $active_group = "default";
 $active_record = TRUE;
 
 $db['default']['hostname'] = "localhost";
-$db['default']['username'] = "sadler_igni174";
+$db['default']['username'] = "pc001_igni174";
 $db['default']['password'] = "6vPbn5Szh7";
-$db['default']['database'] = "sadler_igni174";
+$db['default']['database'] = "pc001_igni174";
 $db['default']['dbdriver'] = "mysql";
 $db['default']['dbprefix'] = "ignite_";
 $db['default']['pconnect'] = TRUE;
