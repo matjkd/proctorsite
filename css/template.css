@@ -1368,6 +1368,9 @@ li.ja-firstitem,
 }
 
 #bottom {
-	padding:10px;
+	padding:0px 0px 0px 0px;
 	
+}
+.quotefield, #jquerytype, #jquerytype2 {
+	width:150px;
 }

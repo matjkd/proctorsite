@@ -71,7 +71,7 @@ if(isset($sidebar)) { $this->load->view($sidebar); }
 											
 											<?php $this->load->view('global/warning'); ?> 
 											<?php $this->load->view($main); ?>
-								
+								 <div id='bottom' style="clear:both;"><?php if(isset($bottom)) { $this->load->view($bottom); } ?> </div>
 								 	</div>
 								 	
 								 	<div class="right_column">
@@ -81,7 +81,7 @@ if(isset($sidebar)) { $this->load->view($sidebar); }
 								 	
             </div> 
       </div> 
-      <div id='bottom' style="clear:both;"><?php if(isset($bottom)) { $this->load->view($bottom); } ?> </div>
+     
   	<!-- //CONTENT --> 
 		
      </div></div></div>

@@ -5,6 +5,7 @@ class Admin extends My_Controller {
 	function Admin()
 	{
 		parent::Controller();
+		$this->load->model('professionals_model');
 		$this->load->library(array('encrypt', 'form_validation'));	
 		$this->is_logged_in();
 	}
@@ -118,7 +119,7 @@ class Admin extends My_Controller {
 		}
 	}
 	function username_check($str)
-	{
+	{	
 		
 		$this->db->where('username', $str);
 		$query = $this->db->get('users');
@@ -161,6 +162,25 @@ class Admin extends My_Controller {
 		$this->load->view('template');
 		
 		
+	}
+function editpro()
+	{
+		
+		$id = $this->uri->segment(3);
+		$data['page'] ='professionals';
+		$data['content'] =	$this->content_model->get_content('news');
+		$data['professional'] = $this->professionals_model->get_professional($id);
+		$data['news'] = $this->news_model->list_news();
+		$data['main'] = "admin/edit_user";
+		$data['menu'] =	$this->content_model->get_menus();
+		$this->load->vars($data);
+		$this->load->view('template');
+	}
+function edit_pro()
+	{
+		$id = $this->uri->segment(3);
+		$this->professionals_model->edit_pro($id);
+		redirect ("admin/editpro/$id");
 	}
 	function delete_user()
 	{
