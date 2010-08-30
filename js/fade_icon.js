@@ -1,6 +1,6 @@
 $(function() {
 // OPACITY OF BUTTON SET TO 50%
-$(".latest_img").css("opacity","0.5");
+$(".latest_img").css("opacity","0.8");
 		
 // ON MOUSE OVER
 $(".latest_img").hover(function () {
@@ -16,7 +16,7 @@ function () {
 			
 // SET OPACITY BACK TO 50%
 $(this).stop().animate({
-opacity: 0.5
+opacity: 0.8
 }, "slow");
 });
 });
@@ -24,7 +24,7 @@ opacity: 0.5
 
 $(function() {
 // OPACITY OF BUTTON SET TO 50%
-$("#text p").css("opacity","0.5");
+$("#text p").css("opacity","0.8");
 		
 // ON MOUSE OVER
 $("#text p").hover(function () {
@@ -40,7 +40,7 @@ function () {
 			
 // SET OPACITY BACK TO 50%
 $(this).stop().animate({
-opacity: 0.5
+opacity: 0.8
 }, "slow");
 });
 });
@@ -48,7 +48,7 @@ opacity: 0.5
 
 $(function() {
 // OPACITY OF BUTTON SET TO 50%
-$("#div").css("opacity","0.5");
+$("#div").css("opacity","0.8");
 		
 // ON MOUSE OVER
 $("#div").hover(function () {
@@ -64,7 +64,7 @@ function () {
 			
 // SET OPACITY BACK TO 50%
 $(this).stop().animate({
-opacity: 0.5
+opacity: 0.8
 }, "slow");
 });
 });

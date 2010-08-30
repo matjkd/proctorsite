@@ -291,15 +291,7 @@ End
 Start:Activity
 
 End
-Start:OpportunityDeliverIn an economic environment where the benefit of using financial structures to adopt technology are understood and demanded by both Senior Management at the Vendor and the Customer alike, it is often a sales force lacking in confidence in their financial skills that acts as a barrier to sale. 
-
-Proctor Consulting has vast experience in developing people and their financial skills.
-
-We will develop your senior sales teams to a standard where they are confident of presenting business cases and financial cases to key Financial Decision Makers
-
-Lease-Desk allows you to follow your sales teams development and identify those courses which actually increase your sale of products.
-
-Our ongoing development process means that you will always have the best Financial Products and your people will always have the skills to sell them.y
+Start:OpportunityDelivery
 
 End
 				

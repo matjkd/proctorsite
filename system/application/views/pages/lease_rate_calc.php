@@ -1,5 +1,5 @@
 <?=$this->load->view('pages/dynamic')?>
-
+<?=$this->load->view('admin/table')?>
 <?=$this->load->view('pages/quote')?>
 
 <?php if(isset($calc_results)) {?>

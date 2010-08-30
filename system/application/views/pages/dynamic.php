@@ -1,5 +1,3 @@
-
-
 <?php foreach($content as $row):?>
 
 <h1><?=$row['title'];?>
