@@ -5,9 +5,8 @@ function example_ajax_request(id) {
 	
 	   
 	    $('#ajax_content').html('<p><img src="/images/load.gif"  /></p>');  
-	    //$('#load').fadeIn('normal');  
-	   
-	    $('#ajax_content').load("http://www.matsadler.co.uk/welcome/team_member/"+ id);  
+	    
+	    $('#ajax_content').load("<?=base_url()?>/welcome/team_member/"+ id);  
 		$('#ajax_content').css("display", "none");  
 		$("#ajax_content").fadeIn(1000);
 		

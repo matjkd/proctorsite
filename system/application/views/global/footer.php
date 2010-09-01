@@ -16,40 +16,26 @@
         &copy; Copyright 2009 Proctor Consulting. Website Developed by <a href="http://www.redstudio.co.uk">Redstudio Design Limited</a>
         <br/>
        
-        <?php 
-		$role = $this->session->userdata('role');		
-        if(!isset($role) || $role != 1)
-					{
-						
-					}
-					else
-					{
-					?>
+      
 					 
-    <a href="<?=base_url()?>quote/main">Quoting Tool</a> |
+    <a href="<?=base_url()?>">Home</a> |
     
-    <a href="<?=base_url()?>support">Support Request</a> |
+    <a href="<?=base_url()?>welcome/content/about-us">About Us</a> |
     
-    <a href="<?=base_url()?>welcome/news">News</a> |
+    <a href="<?=base_url()?>leasedesk">Lease-Desk</a> |
     
-    <a href="<?=base_url()?>welcome/directory">Directory</a> |
+    <a href="<?=base_url()?>welcome/content/peopledevelopment">People Development</a> |
     
-    <a href="<?=base_url()?>pricelist">Pricelists</a> |
+    <a href="<?=base_url()?>welcome/management_team">Management Team</a> |
     
-    <a href="<?=base_url()?>roi/main">ROI Calculator</a> |
+    <a href="<?=base_url()?>welcome/lease_rate_calc">Lease Rate Calculator</a> |
     
-    <a href="<?=base_url()?>prospect">Prospect Registration</a> |
+  
     
-    <a href="<?=base_url()?>welcome/presentations">Presentations</a> |
+    <a href="<?=base_url()?>welcome/contact">Contact Us</a> |
     
    
-						
-					<?php 	
-						
-					}
-						
-					?>
-        
+				
         
    </div> 
    <span style="float:right;"><img width="251px" height="102px" src="<?=base_url()?>images/proctor/logofade.png"></img></span>
