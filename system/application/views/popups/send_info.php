@@ -4,10 +4,10 @@
 	$(function() {
 		$('#send_info').dialog({
 			autoOpen: false,
-			show: 'puff',
+			
 			width:400,
-			height:400,
-			hide: 'puff'
+			height:400
+			
 		});
 		
 		$('#open_send_info').click(function() {
