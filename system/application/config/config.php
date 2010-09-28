@@ -11,7 +11,7 @@
 |	http://example.com/
 |
 */
-$config['base_url']	= "http://www.proctorconsulting.co.uk/";
+$config['base_url']	= "http://proctorconsulting.co.uk/";
 
 /*
 |--------------------------------------------------------------------------
@@ -217,7 +217,7 @@ $config['cache_path'] = '';
 | enabled you MUST set an encryption key.  See the user guide for info.
 |
 */
-$config['encryption_key'] = "wksptzjw";
+$config['encryption_key'] = "6bkdke1x";
 
 /*
 |--------------------------------------------------------------------------
