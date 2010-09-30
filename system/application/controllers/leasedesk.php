@@ -32,7 +32,12 @@ class Leasedesk extends My_Controller {
 			{
 			$data['edit'] = site_url("admin/edit/$id");
 	        }
-			
+
+		//Load the shiny new rssparse
+  		//$this->load->library('RSSParser', array('url' => 'http://twitter.com/statuses/user_timeline/190582980.rss', 'life' => 2));
+  		//Get six items from the feed
+ 		//$data['twitter'] = $this->rssparser->getFeed(6);	        
+	        
         $this->load->vars($data);
 		$this->load->view('template');
 	}

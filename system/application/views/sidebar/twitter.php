@@ -1,0 +1,1 @@
+<a  target="_blank" href="http://twitter.com/LeaseDeskdotCom"><img src="<?=base_url()?>images/stories/twitter.png" border="0" /></a>

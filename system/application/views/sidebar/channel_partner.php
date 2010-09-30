@@ -6,10 +6,9 @@ $.fx.speeds._default = 1000;
 $(function() {
 	$('#channel').dialog({
 		autoOpen: false,
-		show: 'puff',
+		
 		width:400,
-		height:400,
-		hide: 'puff'
+		height:400
 	});
 	
 	$('#openchannel').click(function() {
