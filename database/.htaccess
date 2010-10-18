@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "database"
-AuthUserFile "/home/sadler/.htpasswds/public_html/database/passwd"
-require valid-user
