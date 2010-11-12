@@ -1131,7 +1131,7 @@ ul.menu li li a:focus {
 /* FOOTER
 --------------------------------------------------------- */
 #ja-footer {
-	background: url(../images/footback.png) center no-repeat #333333;
+	background:  #333333;
 	border-bottom: 3px solid #111111;
 	text-align: center;
 
