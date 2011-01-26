@@ -306,7 +306,7 @@ End
 	}
 
 
-function register_thursday()
+function register_weds()
 	{
 		
 		$this->form_validation->set_rules('email', 'email', 'trim|required');
@@ -314,22 +314,22 @@ function register_thursday()
 		$this->form_validation->set_rules('phone', 'phone', 'trim|required');
 		$this->form_validation->set_rules('business_name', 'business_name', 'trim|required');
 		$this->form_validation->set_rules('message', 'message', 'trim|required');
-		$this->form_validation->set_rules('referral', 'referral', 'trim|required');
+		
 		
     	$data['email'] = $this->input->post('email');
     	$data['phone'] = $this->input->post('phone');
     	$data['message'] = $this->input->post('message');
     	$data['business_name'] = $this->input->post('business_name');
-		$data['referral'] = $this->input->post('referral');
-    	$data['name'] = $this->input->post('name');
+		$data['name'] = $this->input->post('name');
 			if($this->form_validation->run() == FALSE)
 				{
 					
 					
 					
 					$data['errors'] = validation_errors();
-				
-					$data['main'] = 'sidebar/forms/register_thursday';
+					$data['datetime'] = "Wednesday 26th Jan 2011 at 10am";
+					$data['form'] = "register_weds";
+					$data['main'] = 'sidebar/forms/request_webinar';
 					$this->load->vars($data);
 					$this->load->view('form_template');
 					
@@ -352,7 +352,7 @@ function register_thursday()
 				$this->email->to('chloe@lease-desk.com'); 
 				$this->email->cc('debra.taylor@lease-desk.com'); 
 				$this->email->cc('mat@redstudio.co.uk'); 
-				$this->email->subject('Register for Thursday 10th June Webinar');
+				$this->email->subject('Register for Weds 26th Jan Webinar');
 				$this->email->message("$name has completed the request form.
 				
 				They heard about us: $referral 
@@ -360,7 +360,7 @@ function register_thursday()
 				 Email: $email
 				 Phone: $phone		 
 				 Message: $message
-				 Date of Webinar: thursday 10th June 2010");	
+				 Date of Webinar:  Weds 26th Jan 2011");	
 				
 				
 				$this->email->send();
@@ -373,7 +373,7 @@ function register_thursday()
 				}
 	}
 
-function register_friday()
+function register_thurs()
 	{
 		
 		$this->form_validation->set_rules('email', 'email', 'trim|required');
@@ -381,22 +381,23 @@ function register_friday()
 		$this->form_validation->set_rules('phone', 'phone', 'trim|required');
 		$this->form_validation->set_rules('business_name', 'business_name', 'trim|required');
 		$this->form_validation->set_rules('message', 'message', 'trim|required');
-		$this->form_validation->set_rules('referral', 'referral', 'trim|required');
-		
-    	$data['email'] = $this->input->post('email');
+
+		$data['email'] = $this->input->post('email');
     	$data['phone'] = $this->input->post('phone');
     	$data['message'] = $this->input->post('message');
     	$data['business_name'] = $this->input->post('business_name');
 		$data['referral'] = $this->input->post('referral');
     	$data['name'] = $this->input->post('name');
+    	
 			if($this->form_validation->run() == FALSE)
 				{
 					
 					
 					
 					$data['errors'] = validation_errors();
-				
-					$data['main'] = 'sidebar/forms/register_friday';
+					$data['datetime'] = "Thursday 27th Jan 2011 at 10am";
+					$data['form'] = "register_thurs";
+					$data['main'] = 'sidebar/forms/request_webinar';
 					$this->load->vars($data);
 					$this->load->view('form_template');
 					
@@ -419,7 +420,7 @@ function register_friday()
 				$this->email->to('chloe@lease-desk.com'); 
 				$this->email->cc('debra.taylor@lease-desk.com'); 
 				$this->email->cc('mat@redstudio.co.uk'); 
-				$this->email->subject('Register for Friday 11th June Webinar');
+				$this->email->subject('Register for Thursday 27th Jan Webinar');
 				$this->email->message("$name has completed the request form.
 				
 				They heard about us: $referral 
@@ -427,7 +428,7 @@ function register_friday()
 				 Email: $email
 				 Phone: $phone		 
 				 Message: $message
-				 Date of Webinar: Friday 11th June 2010");	
+				 Date of Webinar: Thursday 27th Jan 2011");	
 				
 				
 				$this->email->send();
