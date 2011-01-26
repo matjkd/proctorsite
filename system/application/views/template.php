@@ -20,8 +20,23 @@
     </div>
   </div>
   <![endif]-->
-  
- Proctor Consulting Revamp Coming Soon 
+
+<div class="header">
+
+<div class="topbar"> </div> 
+<div class="container_24">
+	<div class="head_container">
+		<div class="logo"></div> 
+		<div class="menu">menu menu menu</div> 
+		
+		
+	</div>
+
+</div>
+<div class="slide_container">
+<div class="slides"><img width="1060px" height="200px" src="<?=base_url()?>images/team/dan.jpg"/></div>
+</div>
+</div>
 
 <?php $this->load->view('global/footer'); ?>
 <script type="text/javascript"> 
