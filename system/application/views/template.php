@@ -20,73 +20,8 @@
     </div>
   </div>
   <![endif]-->
-<a name="Top" id="Top"></a>
-
-		
-        <div id="top_menu">
-        	<?php $this->load->view('global/menutop'); ?>	
-		</div>
   
-
-
-        <?php $this->load->view('global/main_menu'); ?>
-
-	
-
-	
-  	<div id="ja-container-fr" class="wrap"> 
-  	<div class="main clearfix">
-  	<div id="ja-col1">
-<?php  		
-	
-$this->load->view('sidebar/lease-desk-login');
-
-if(isset($sidebar)) { $this->load->view($sidebar); }
-
-?>
-  </div>     
- 		
-  	
-  	
-  	<!-- CONTENT -->  
-  	<div id="ja-content" style="min-height:420px;"> 
-  	
-    	<div class="main clearfix"> 
-            
-                        <div id="ja-current-content" class="clearfix"> 
-    
-     <div class="slideshow">    
-           
-      <?php	
-      if (isset($slideshow))
-      {
-      $this->load->view($slideshow); 
-      }
-      ?>
-      
-     </div>            
-     <div style="clear:both;"></div>
-									<div class="main_content" <?php if(!isset($rightcolumn)) {?> style="width:670px;"<?php }?>>
-										    
-											
-											<?php $this->load->view('global/warning'); ?> 
-											<?php $this->load->view($main); ?>
-								 <div id='bottom' style="clear:both;"><?php if(isset($bottom)) { $this->load->view($bottom); } ?> </div>
-								 	</div>
-								 	
-								 	<div class="right_column">
-								 	
-								 		<?php if(isset($rightcolumn)) { $this->load->view($rightcolumn); } ?> 
-								 	</div>
-								 	
-            </div> 
-      </div> 
-     
-  	<!-- //CONTENT --> 
-		
-     </div></div></div>
-  
-  
+ Proctor Consulting Revamp Coming Soon 
 
 <?php $this->load->view('global/footer'); ?>
 <script type="text/javascript"> 

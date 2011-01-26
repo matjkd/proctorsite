@@ -1,1 +1,4 @@
 system/application/config/database.php
+system/application/config/config.php
+system/application/system/libraries/MY_Controller.php
+email_images/

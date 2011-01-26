@@ -11,7 +11,7 @@
 |	http://example.com/
 |
 */
-$config['base_url']	= "http://proctorconsulting.co.uk/";
+$config['base_url']	= "http://www.go-freelance.co.uk/";
 
 /*
 |--------------------------------------------------------------------------

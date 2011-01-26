@@ -1,4 +1,0 @@
-<div class="article-content">
-<p>Providing Leasing or Structured Finance solutions is becoming increasingly important to Technology Vendors. </p><p>Rightly so, it is an excellent sales tool to win business in difficult market conditions, retain customers on ‘Sticky’ contracts and&nbsp;generate Repeat Business Opportunities. </p><p>The impact of the Credit Crunch on Vendor Finance has seen a move away from one preferred Provider to a host of Providers, to ensure that leasing penetration is maximised and ‘exposure threat’ minimised.</p><p>But how do Vendors source the right partners, manage relationships, service levels and communication without strain on Management Time? </p><p>Proctor Consulting will manage your Providers, Products, Processes, People and Customer Contracts to ensure you gain maximum benefit without costly time investment. </p>
-
-</div>
