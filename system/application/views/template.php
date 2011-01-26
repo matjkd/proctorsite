@@ -23,6 +23,8 @@
 
 <script type="text/javascript">
 
+
+
 $('div.parallax').parallax({
 	  'elements': [
 	    {
@@ -31,7 +33,7 @@ $('div.parallax').parallax({
 	        'x': {
 	          'background-position-x': {
 	            'initial': 0,
-	            'multiplier': 0.04,
+	            'multiplier': 0.01,
 	            'invert': true
 	          }
 	        }
@@ -43,7 +45,7 @@ $('div.parallax').parallax({
 	        'x': {
 	          'background-position-x': {
 	            'initial': 5,
-	            'multiplier': 0.08,
+	            'multiplier': 0.03,
 	            
 	            	'invert': true
 	          }
@@ -58,23 +60,70 @@ $('div.parallax').parallax({
 </script>
 
 
+
+
+
 <div class="header">
 
 <div class="topbar"> </div> 
 <div class="container_24">
 	<div class="head_container">
-		<div class="logo"></div> 
-		<div class="menu">menu menu menu</div> 
+		<div id="clickme" class="logo"><img src="<?=base_url()?>images/logos/proctor.png"/></div> 
+		<div class="menu">
+			<?=$this->load->view('global/top_menu')?>
+		</div> 
 		
 		
 	</div>
 
 </div>
 <div class="slide_container">
-<div class="slides"><img width="1060px" height="200px" src="<?=base_url()?>images/team/dan.jpg"/></div>
+<div class="slides" align="center"><img width="960px" height="273px" src="<?=base_url()?>images/slides/slide1.png"/></div>
 </div>
+</div>
+<div class="top_shadow"></div>
+
+<div class="main_content">
+	<div class="container_24">
+		<div class="grid_14">
+	main body
+		</div>
+		
+		<div class="grid_5">
+	col 1
+		</div>
+		
+		<div class="grid_5">
+	col 2
+		</div>
+	
+	</div>
+</div>
+<div class="clear"></div>
+<div class="footer1">
+	<div class="container_24">
+	
+		<div class="grid_14">
+footer col 1
+	</div>
+	
+	<div class="grid_5">
+footer col 2
+	</div>
+	
+	<div class="grid_5">
+footer col 3
+	</div>
+	</div>
 </div>
 
+<div class="footer2">
+	<div class="container_24">
+	<div class="grid_24">
+	footer
+	</div>
+	</div>
+</div>
 <?php $this->load->view('global/footer'); ?>
 <script type="text/javascript"> 
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");

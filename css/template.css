@@ -5,12 +5,19 @@
 body {
 	padding: 0px;
 	margin:0px;
-	background: url('/images/team/roy.jpg') repeat #ffffff;
+	background: url('/images/backgrounds/main_background.jpg') repeat-x #ffffff;
+	font-family: Helvetica, Arial, sans-serif;
+			font-size: 12px;
+			color: #222;
+			line-height: 17px;
+}
+.main_content {
+	min-height:300px;
 }
 .header {
-	height:250px;
-	
-	background: url('/images/team/chloe.jpg') repeat #999999;
+	height:273px;
+	border-bottom:1px #cccccc solid;
+	background: url('/images/backgrounds/headerback.jpg') repeat-x #999999;
 }
 .head_container {
 	top:-50px;
@@ -27,14 +34,22 @@ body {
 	background:#000000;
 	opacity: 0.5;
 }
+.top_shadow {
+	background: url('/images/backgrounds/top_shadow.png') repeat-x;
+	height:9px;
+}
 .logo {
 	z-index:5;
 	float:left;
 	top:0px;
 	position:relative;
-	height:100px;
-	width:200px;
+	height:84px;
+	width:230px;
 	background:#ffffff;
+	padding: 10px 0 0 30px;
+	-moz-box-shadow: 2px 3px 6px #191919;
+-webkit-box-shadow: 2px 3px 6px #191919;
+box-shadow: 2px 3px 6px #191919;
 }
 .menu {
 	z-index:3;
@@ -42,16 +57,31 @@ body {
 	color:#ffffff;
 	top:0px;
 	position:relative;
+	margin-top:18px;
 }
 .slide_container {
 	margin-left: auto;
 	margin-right: auto;
-	width:1060px;
+	width:960px;
+	height:273px;
+	position:relative;
+	top:-50px;
+	
 }
 .slides {
 	top:0px;
-	
-
+	margin-left: auto;
+	margin-right: auto;
+	overflow:hidden;
 	position:absolute;
 	float:left;
+}
+.footer1 {
+	background:url('/images/backgrounds/red_footer.jpg') repeat-x #920700;
+	height:148px;
+}
+
+.footer2 {
+	background:#151515;
+	height:200px;
 }
