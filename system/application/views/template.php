@@ -21,6 +21,43 @@
   </div>
   <![endif]-->
 
+<script type="text/javascript">
+
+$('div.parallax').parallax({
+	  'elements': [
+	    {
+	      'selector': 'body',
+	      'properties': {
+	        'x': {
+	          'background-position-x': {
+	            'initial': 0,
+	            'multiplier': 0.04,
+	            'invert': true
+	          }
+	        }
+	      }
+	    },
+	    {
+	      'selector': 'div.header',
+	      'properties': {
+	        'x': {
+	          'background-position-x': {
+	            'initial': 5,
+	            'multiplier': 0.08,
+	            
+	            	'invert': true
+	          }
+	        }
+	      }
+	    },
+	   
+	  ]
+	});
+
+
+</script>
+
+
 <div class="header">
 
 <div class="topbar"> </div> 
