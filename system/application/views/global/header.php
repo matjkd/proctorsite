@@ -21,9 +21,10 @@ google.load("jqueryui", "1.8.7");
 		
 	});
 </script>
-
+<script type="text/javascript" src="<?=base_url()?>js/jquery.cycle.all.min.js"></script>
 <script type="text/javascript" src="<?=base_url()?>js/jquery.parallax-0.2-min.js"></script>
-
+<!-- include FLIR -->
+<script src="<?=base_url()?>facelift/flir.js" type="text/javascript"></script>  
 
 <!--[if lt IE 7.]>
 <script defer type="text/javascript" src="<?=base_url()?>js/pngfix.js"></script>

@@ -11,7 +11,20 @@ body {
 			color: #222;
 			line-height: 17px;
 }
+img {
+	
+	border-style: none
+}
+h1 {
+	font-weight:bold;
+	color:#000000;
+}
+h2 {
+	font-weight:bold;
+	color:#ffffff;
+}
 .main_content {
+	margin-top:20px;
 	min-height:300px;
 }
 .header {
@@ -29,30 +42,31 @@ body {
 	color:#ffffff;
 	top:0px;
 	position:relative;
-	z-index:2;
+	z-index:45;
 	width:100%;
 	background:#000000;
-	opacity: 0.5;
+	opacity: 0.8;
 }
 .top_shadow {
 	background: url('/images/backgrounds/top_shadow.png') repeat-x;
 	height:9px;
 }
 .logo {
-	z-index:5;
+	z-index:50;
 	float:left;
 	top:0px;
+	overflow:hidden;
 	position:relative;
 	height:84px;
-	width:230px;
-	background:#ffffff;
-	padding: 10px 0 0 30px;
+	width:260px;
+	background: #ffffff;
+	padding: 10px 0 0 0px;
 	-moz-box-shadow: 2px 3px 6px #191919;
 -webkit-box-shadow: 2px 3px 6px #191919;
 box-shadow: 2px 3px 6px #191919;
 }
 .menu {
-	z-index:3;
+	z-index:60;
 	float:right;
 	color:#ffffff;
 	top:0px;
@@ -76,8 +90,14 @@ box-shadow: 2px 3px 6px #191919;
 	position:absolute;
 	float:left;
 }
+.col3box {
+	background:url('/images/backgrounds/col3back.png') repeat-x ;
+	width:192px;
+	height:308px;
+	margin-bottom:20px;
+}
 .footer1 {
-	background:url('/images/backgrounds/red_footer.jpg') repeat-x #920700;
+	background:url('/images/backgrounds/grey_footer.jpg') repeat-x #666666;
 	height:148px;
 }
 

@@ -39,7 +39,7 @@ define('HBOUNDS_TEXT', 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz[]{}
 
 // Each font you want to use should have an entry in the fonts array.
 $fonts = array();
-$fonts['helveticalt'] 	= 'HelveticaNeueLTPro-ThEx.otf';
+$fonts['helveticalt'] 	= 'HelveticaNeueLTPro-LtCn.otf';
 $fonts['illuminating'] 	= 'ArtOfIlluminating.ttf';
 $fonts['okolaks'] 		= 'okolaksBold.ttf';
 $fonts['wanta'] 			= 'wanta_091.ttf';
@@ -67,7 +67,7 @@ $fonts['your_font'][] 	= array('file' => 'test/font_italic.ttf'
 
 
 // Set default replacements for "web fonts" here
-$fonts['arial'] = $fonts['helvetica'] = $fonts['sans-serif'] 		= $fonts['okolaks'];
+$fonts['arial'] = $fonts['helvetica'] = $fonts['sans-serif'] 		= $fonts['helveticalt'];
 $fonts['times new roman'] = $fonts['times'] = $fonts['serif'] 		= $fonts['illuminating'];
 $fonts['courier new'] = $fonts['courier'] = $fonts['monospace'] 	= $fonts['wanta'];
 

@@ -21,43 +21,6 @@
   </div>
   <![endif]-->
 
-<script type="text/javascript">
-
-
-
-$('div.parallax').parallax({
-	  'elements': [
-	    {
-	      'selector': 'body',
-	      'properties': {
-	        'x': {
-	          'background-position-x': {
-	            'initial': 0,
-	            'multiplier': 0.01,
-	            'invert': true
-	          }
-	        }
-	      }
-	    },
-	    {
-	      'selector': 'div.header',
-	      'properties': {
-	        'x': {
-	          'background-position-x': {
-	            'initial': 5,
-	            'multiplier': 0.03,
-	            
-	            	'invert': true
-	          }
-	        }
-	      }
-	    },
-	   
-	  ]
-	});
-
-
-</script>
 
 
 
@@ -68,7 +31,20 @@ $('div.parallax').parallax({
 <div class="topbar"> </div> 
 <div class="container_24">
 	<div class="head_container">
-		<div id="clickme" class="logo"><img src="<?=base_url()?>images/logos/proctor.png"/></div> 
+		
+		<div  class="logo">
+			<img width="260px" src="<?=base_url()?>images/logos/proctor.png"/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<a href="mailto:support@lease-desk.com"><img src="<?=base_url()?>images/logos/email_link.png"/></a>
+			<img src="<?=base_url()?>images/logos/tel_link.png"/>
+			<a href="http://twitter.com/leasedeskdotcom" target="_blank"><img src="<?=base_url()?>images/logos/twitter_link.png"/></a>
+			
+		</div> 
+		
+		
 		<div class="menu">
 			<?=$this->load->view('global/top_menu')?>
 		</div> 
@@ -78,7 +54,15 @@ $('div.parallax').parallax({
 
 </div>
 <div class="slide_container">
-<div class="slides" align="center"><img width="960px" height="273px" src="<?=base_url()?>images/slides/slide1.png"/></div>
+<div class="slides" align="center">
+<?php	
+      if (isset($slideshow))
+      {
+      $this->load->view($slideshow); 
+      }
+      ?>
+
+</div>
 </div>
 </div>
 <div class="top_shadow"></div>
@@ -86,7 +70,8 @@ $('div.parallax').parallax({
 <div class="main_content">
 	<div class="container_24">
 		<div class="grid_14">
-	main body
+	<?php $this->load->view('global/warning'); ?> 
+	<?php $this->load->view($main); ?>
 		</div>
 		
 		<div class="grid_5">
@@ -94,7 +79,7 @@ $('div.parallax').parallax({
 		</div>
 		
 		<div class="grid_5">
-	col 2
+	<div class="col3box"></div>
 		</div>
 	
 	</div>
@@ -104,15 +89,15 @@ $('div.parallax').parallax({
 	<div class="container_24">
 	
 		<div class="grid_14">
-footer col 1
+<h2>LATEST NEWS</h2>
 	</div>
 	
 	<div class="grid_5">
-footer col 2
+<h2>LATEST TWEETS</h2>
 	</div>
 	
 	<div class="grid_5">
-footer col 3
+<h2>LEASE-DESK CLIENT LOGIN</h2>
 	</div>
 	</div>
 </div>
@@ -134,5 +119,98 @@ try {
 var pageTracker = _gat._getTracker("UA-920708-15");
 pageTracker._trackPageview();
 } catch(err) {}</script> 
+
+
+<script type="text/javascript">
+
+$('.logo').hover(
+		
+		  function() {
+		  
+		    $(this)
+			  .animate({height: '220px'}) 
+		  },
+		  function() {
+		   
+			  $(this)
+			  .animate({height: '84px'}) 
+		  });
+
+
+$('div.parallax').parallax({
+	  'elements': [
+	    {
+	      'selector': 'body',
+	      'properties': {
+	        'x': {
+	          'background-position-x': {
+	            'initial': 0,
+	            'multiplier': 0.008,
+	            'invert': true
+	          }
+	        }
+	      }
+	    },
+	    {
+	      'selector': 'div.header',
+	      'properties': {
+	        'x': {
+	          'background-position-x': {
+	            'initial': 5,
+	            'multiplier': 0.01,
+	            
+	            	'invert': true
+	          }
+	        }
+	      }
+	    },
+
+	    {
+		      'selector': 'div.footer1',
+		      'properties': {
+		        'x': {
+		          'background-position-x': {
+		            'initial': 5,
+		            'multiplier': 0.003,
+		            
+		            	'invert': true
+		          }
+		        }
+		      }
+		    }
+	   
+	  ]
+	});
+
+
+</script>
+<!--[if !IE]><!-->
+<script type="text/javascript" charset="utf-8">
+		$(document).ready(function(){
+			$("a[rel^='prettyPhoto']").prettyPhoto();
+		});
+
+		FLIR.init( { path: '/facelift/' } );
+		FLIR.auto([ 'h1', 'h2']);  
+</script>   
+<!-- <![endif]--> 
+
+<!--[if gte IE 7]>
+<script type="text/javascript" charset="utf-8">
+		$(document).ready(function(){
+			$("a[rel^='prettyPhoto']").prettyPhoto();
+		});
+
+		
+</script> 
+<![endif]-->
+
+<!--[if gte IE 8]>
+<script type="text/javascript" charset="utf-8">
+	
+		 FLIR.init();  
+		 FLIR.auto([ 'h1', 'h2']);  
+</script> 
+<![endif]--> 
 </body>
 </html>
