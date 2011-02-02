@@ -1,6 +1,6 @@
 <?php
 
-class News extends MY_Controller {
+class Blog extends MY_Controller {
 
 	function News()
 	{
@@ -11,10 +11,10 @@ class News extends MY_Controller {
 	
 	function index()
 	{
-		redirect('news/view');
+		redirect('blog/item');
 	}
 	
-function view()
+function item()
 	{
 		
 		if(($this->uri->segment(3))==NULL)
@@ -25,13 +25,20 @@ function view()
 			{
 				$id = $this->uri->segment(3);
 			}
-		$data['content'] =	$this->content_model->get_content($id);
-		$data['news'] = $this->news_model->list_news();
-		$data['slideshow'] = "global/slideshow1";
-		$data['sidebar'] = 'sidebar/news';
+			
+			
 		$data['menu'] =	$this->content_model->get_menus();
-		$data['main'] = "pages/news";
+		$data['slideshow'] = "global/slideshow1";
+		$data['news'] = $this->news_model->list_news();
+		$data['sidebar'] = 'sidebar/links';
+		$data['rightcolumn'] = 'sidebar/channel_partner';
 		$data['page'] = $id;
+		$is_logged_in = $this->session->userdata('is_logged_in');	
+			
+		$data['content'] =	$this->content_model->get_content($id);
+	
+		$data['main'] = "pages/news";
+		
 		$is_logged_in = $this->session->userdata('is_logged_in');
 		
 		if($is_logged_in!=NULL)
@@ -40,7 +47,8 @@ function view()
 			$data['create_news'] = site_url("admin/create_news");
 	        }
 			
-                       
+         $data['title'] = 'Proctor Consulting Blog';
+		              
 			
 		$data['info'] = "infoblock/times";
 		$this->load->vars($data);

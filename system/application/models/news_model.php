@@ -41,7 +41,7 @@ function get_news($id)
 			
     				$content_update = array(
     				'news_content' => $this->input->post('content'),
-    				
+    				'date_added' => $this->input->post('date_added'),
     				'news_title' => $this->input->post('title')
     				);
 					

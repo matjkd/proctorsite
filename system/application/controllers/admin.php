@@ -192,6 +192,35 @@ function edit_pro()
 		
 		redirect('admin/view_companies', 'refresh');
 	}
+function create_news()
+	{
+		$data['page'] = "news";
+		$data['content'] =	$this->content_model->get_content('news');
+		$data['main'] = "admin/create_news";
+		$data['menu'] =	$this->content_model->get_menus();
+		$data['news'] = $this->news_model->list_news();
+		$this->load->vars($data);
+		$this->load->view('template');
+	}
+function editnews()
+	{
+		
+		$id = $this->uri->segment(3);
+		$data['page'] ='news';
+		$data['content'] =	$this->content_model->get_content('news');
+		$data['news'] =	$this->news_model->get_news($id);
+		
+		$data['main'] = "admin/edit_news";
+		$data['menu'] =	$this->content_model->get_menus();
+		$this->load->vars($data);
+		$this->load->view('template');
+	}
+function edit_news()
+	{
+		$id = $this->uri->segment(3);
+		$this->news_model->edit_news($id);
+		redirect ("admin/editnews/$id");
+	}
 	
 	function is_logged_in()
 	{
