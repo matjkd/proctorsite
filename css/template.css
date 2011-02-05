@@ -1325,7 +1325,7 @@ li.ja-firstitem,
 	margin:0 auto 0;
 	position:relative;
 	top:0px;
-	padding: 0px auto 0px auto;	
+	padding: 0px 0px 0px 0px;	
 	z-index:999;
 	
 }
@@ -1373,4 +1373,7 @@ li.ja-firstitem,
 }
 .quotefield, #jquerytype, #jquerytype2 {
 	width:150px;
+}
+.news_date {
+	font-style: italic;
 }

@@ -26,7 +26,7 @@ function item()
 				$id = $this->uri->segment(3);
 			}
 			
-			
+		
 		$data['menu'] =	$this->content_model->get_menus();
 		$data['slideshow'] = "global/slideshow1";
 		$data['news'] = $this->news_model->list_news();

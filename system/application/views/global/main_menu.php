@@ -9,6 +9,12 @@
 			<span class="menu-title"><img src="<?=base_url()?>images/home_icon.png" style="padding:2px;"></span></a>
 			
 			</li> 
+			
+			<li>
+			<a href="<?=base_url()?>blog" class="menu-item0 active first-item" id="menu1" title="Blog">
+			<span class="menu-title">Blog</span></a>
+			
+			</li> 
 		
 			<li>
 			<a href="<?=base_url()?>welcome/content/about-us" class="menu-item0 active first-item" id="menu1" title="About-us">

@@ -209,7 +209,7 @@ function editnews()
 		$data['page'] ='news';
 		$data['content'] =	$this->content_model->get_content('news');
 		$data['news'] =	$this->news_model->get_news($id);
-		
+		$data['title'] = "edit blog";
 		$data['main'] = "admin/edit_news";
 		$data['menu'] =	$this->content_model->get_menus();
 		$this->load->vars($data);
