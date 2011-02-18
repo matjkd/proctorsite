@@ -12,8 +12,8 @@ on Thursday 24th Feb at 4pm
 
 <?php 
 $data = array(
-			'name' => 'message',
-			'id' => 'message',
+			'name' => 'address',
+			'id' => 'address',
             'rows'   => '4',
             'cols'        => '22'
             

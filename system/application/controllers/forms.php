@@ -461,18 +461,58 @@ function webinar()
 			if($this->form_validation->run() == FALSE)
 				{
 				$data['errors'] = validation_errors();
+				$data['main'] = 'forms/webinar';
+				$this->load->vars($data);
+				$this->load->view('forms/form_template');
 				}
+				else
+					{
+					echo "success";	
+					$data['errors'] = validation_errors();
+					//$this->forms_model->add_request();
+								$email = $this->input->post('email');
+								$firstname = $this->input->post('firstname');
+								$lastname = $this->input->post('lastname');
+								$business_name = $this->input->post('business_name');
+								$jobtitle = $this->input->post('jobtitle');
+								$address = $this->input->post('address');
+								$phone = $this->input->post('phone');
+						
+								
+								
+				    			$referral = $this->input->post('referral');
+				    			$name = $this->input->post('name');
+								
+								
+								$this->email->from('info@proctorconsulting.co.uk', 'Proctor Consulting');
+								$this->email->to('chloe@lease-desk.com'); 
+								$this->email->cc('debra.taylor@lease-desk.com'); 
+								$this->email->cc('mat@redstudio.co.uk'); 
+								$this->email->subject('Register for Webinar');
+								$this->email->message("$firstname $lastname has completed the request form.
+								
+Job Title: $jobtitle
+Company Name: $business_name
+Email: $email
+Phone: $phone		 
+address: 
+$address
+");	
+								
+								
+								$this->email->send();
+								$data['main'] = 'forms/success';
+						
+						
+						
+								$this->load->vars($data);
+								$this->load->view('forms/form_template');
+					
+					
+					
+					}
 		
 		
-		$data['main'] = 'forms/webinar';
-		if($this->form_validation->run() == FALSE)
-				{
-				$data['errors'] = validation_errors();
-				}
-		
-		
-		$this->load->vars($data);
-		$this->load->view('forms/form_template');
 }
 function request_a_demo()
 	{
