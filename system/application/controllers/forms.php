@@ -440,6 +440,40 @@ function register_thurs()
 				$this->load->view('form_template');
 				}
 	}
+function webinar()
+{
+			
+		$this->form_validation->set_rules('email', 'email', 'trim|required');
+		$this->form_validation->set_rules('phone', 'phone', 'trim|required');
+		$this->form_validation->set_rules('business_name', 'business_name', 'trim|required');
+		$this->form_validation->set_rules('firstname', 'First name', 'trim|required');
+		$this->form_validation->set_rules('lastname', 'Last name', 'trim|required');
+		
+		$data['email'] = $this->input->post('email');
+		$data['firstname'] = $this->input->post('firstname');
+		$data['lastname'] = $this->input->post('lastname');
+		$data['business_name'] = $this->input->post('business_name');
+		$data['jobtitle'] = $this->input->post('jobtitle');
+		$data['address'] = $this->input->post('address');
+		$data['phone'] = $this->input->post('phone');
+		
+		
+			if($this->form_validation->run() == FALSE)
+				{
+				$data['errors'] = validation_errors();
+				}
+		
+		
+		$data['main'] = 'forms/webinar';
+		if($this->form_validation->run() == FALSE)
+				{
+				$data['errors'] = validation_errors();
+				}
+		
+		
+		$this->load->vars($data);
+		$this->load->view('forms/form_template');
+}
 function request_a_demo()
 	{
 		
