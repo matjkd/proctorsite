@@ -1,9 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+<!doctype html>  
 
-<?php $this->load->view('global/header'); ?>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ --> 
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+ 
+<?=$this->load->view('global/header')?>
 
-<body id="bd" class="  fs3"> 
+</head>
+
+<body onload="initialize()" onunload="GUnload()">
  <!--[if lt IE 7]>
   <div style='border: 1px solid #F7941D; background: #FEEFDA; text-align: center; clear: both; height: 75px; position: relative;'>
     <div style='position: absolute; right: 3px; top: 3px; font-family: courier new; font-weight: bold;'><a href='#' onclick='javascript:this.parentNode.parentNode.style.display="none"; return false;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-cornerx.jpg' style='border: none;' alt='Close this notice'/></a></div>
@@ -121,69 +130,7 @@ pageTracker._trackPageview();
 } catch(err) {}</script> 
 
 
-<script type="text/javascript">
 
-$('.logo').hover(
-		
-		  function() {
-		  
-		    $(this)
-			  .animate({height: '220px'}) 
-		  },
-		  function() {
-		   
-			  $(this)
-			  .animate({height: '100px'}) 
-		  });
-
-
-$('div.parallax').parallax({
-	  'elements': [
-	    {
-	      'selector': 'body',
-	      'properties': {
-	        'x': {
-	          'background-position-x': {
-	            'initial': 0,
-	            'multiplier': 0.008,
-	            'invert': true
-	          }
-	        }
-	      }
-	    },
-	    {
-	      'selector': 'div.header',
-	      'properties': {
-	        'x': {
-	          'background-position-x': {
-	            'initial': 5,
-	            'multiplier': 0.01,
-	            
-	            	'invert': true
-	          }
-	        }
-	      }
-	    },
-
-	    {
-		      'selector': 'div.footer1',
-		      'properties': {
-		        'x': {
-		          'background-position-x': {
-		            'initial': 5,
-		            'multiplier': 0.003,
-		            
-		            	'invert': true
-		          }
-		        }
-		      }
-		    }
-	   
-	  ]
-	});
-
-
-</script>
 <!--[if !IE]><!-->
 <script type="text/javascript" charset="utf-8">
 		$(document).ready(function(){
