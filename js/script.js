@@ -43,6 +43,15 @@ window.log = function(){
 		
 		
 	});
+//slideshow
+$(document).ready(function() {
+    $('.cycle').cycle({
+		fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+		speedIn:  4500, 
+	    speedOut: 4500, 
+	   timeout:   10000 
+	});
+});
 	
 //hover
 $('.logo').hover(

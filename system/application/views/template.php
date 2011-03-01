@@ -33,47 +33,44 @@
 
 
 
+   <header>
+   	<div class="logotop">
+    	<div class="container_24">
+    	
+    	<!-- Logo here --> 
+	    <div class="grid_19">
+		<img width="260px" src="<?=base_url()?>images/logos/proctor.png"/>
+		</div>
+	    
+		<div class="grid_5">
+		contact details here
+		</div>
+	    	
+    	</div>
+    </div>
+    	<div class="menu_container">
+    		<div class="container_24"><?=$this->load->view('global/top_menu')?></div>
+    	</div>
+    	
+    	<div class="header">
+			<div class="slide_container">
+				<div class="slides" align="center">
+				<?php	
+			      if (isset($slideshow))
+			      {
+			      $this->load->view($slideshow); 
+			      }
+			      ?>
+	
+				</div>
+			</div>
+		</div>
+		
+    </header>
 
 
-<div class="header">
 
-<div class="topbar"> </div> 
-<div class="container_24">
-	<div class="head_container">
-		
-		<div  class="logo">
-			<img width="310px" src="<?=base_url()?>images/logos/proctor.png"/>
-			<br/>
-			<br/>
-			<br/>
-			
-			<a href="mailto:support@lease-desk.com"><img src="<?=base_url()?>images/logos/email_link.png"/></a>
-			<img src="<?=base_url()?>images/logos/tel_link.png"/>
-			<a href="http://twitter.com/leasedeskdotcom" target="_blank"><img src="<?=base_url()?>images/logos/twitter_link.png"/></a>
-			
-		</div> 
-		
-		
-		<div class="menu">
-			<?=$this->load->view('global/top_menu')?>
-		</div> 
-		
-		
-	</div>
 
-</div>
-<div class="slide_container">
-<div class="slides" align="center">
-<?php	
-      if (isset($slideshow))
-      {
-      $this->load->view($slideshow); 
-      }
-      ?>
-
-</div>
-</div>
-</div>
 <div class="top_shadow"></div>
 
 <div class="main_content">

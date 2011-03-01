@@ -5,7 +5,7 @@
 body {
 	padding: 0px;
 	margin:0px;
-	background: url('/images/backgrounds/main_background.jpg') repeat-x #ffffff;
+	background:  url('/images/backgrounds/main_background.jpg') repeat-x #ffffff;
 	font-family: Helvetica, Arial, sans-serif;
 			font-size: 12px;
 			color: #222;
@@ -24,46 +24,61 @@ h2 {
 	color:#ffffff;
 }
 .main_content {
+	
 	margin-top:20px;
 	min-height:300px;
 }
 .header {
-	height:273px;
+	height:196px;
 	border-bottom:1px #cccccc solid;
 	background: url('/images/backgrounds/headerback.jpg') repeat-x #999999;
 }
-.head_container {
-	top:-50px;
-	position:relative;
-	
-}
+
 .topbar {
-	height:50px;
-	color:#ffffff;
+	height:101px;
+	color:#777777;
 	top:0px;
 	position:relative;
 	z-index:45;
 	width:100%;
-	background:#000000;
+	background:#ffffff;
 	opacity: 0.8;
 }
+.menu_container {
+	height:30px;
+	background:#272727;
+}
+#top_menu {
+
+color:#ffffff;
+float:left;
+padding: 0px;
+height:24px;
+
+}
+#top_menu ul {
+margin:8px 0px;
+padding-left:0px;
+}
+#top_menu li {
+display:inline;
+padding-right:35px;
+}
+
+#top_menu a {
+text-decoration:none;
+color: #ffffff; 
+}
+
 .top_shadow {
 	background: url('/images/backgrounds/top_shadow.png') repeat-x;
 	height:9px;
 }
-.logo {
-	z-index:50;
-	float:left;
-	top:0px;
-	overflow:hidden;
-	position:relative;
+.logotop {
+	
 	height:100px;
-	width:310px;
-	background: #ffffff;
-	padding: 5px 0 0 0px;
-	-moz-box-shadow: 2px 3px 6px #191919;
--webkit-box-shadow: 2px 3px 6px #191919;
-box-shadow: 2px 3px 6px #191919;
+	background:#ffffff;
+	
 }
 .menu {
 	z-index:60;
@@ -77,9 +92,9 @@ box-shadow: 2px 3px 6px #191919;
 	margin-left: auto;
 	margin-right: auto;
 	width:960px;
-	height:273px;
+	height:196px;
 	position:relative;
-	top:-50px;
+	
 	
 }
 .slides {
