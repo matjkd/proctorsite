@@ -1,0 +1,59 @@
+body {
+background: url('../images/forms/background.jpg') repeat-x #ffffff;
+font-family: 'Cabin', serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  text-shadow: none;
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.2;
+  margin:0;
+}
+#header {
+background:#ffffff;
+height:60px;
+border-bottom: 10px solid black;
+}
+
+#footer {
+background:#333333;
+height:150px;
+color:#eeeeee;
+text-align:center;
+}
+#logo {
+width:400px;
+height:52px;
+margin: 5px auto;
+
+}
+#form {
+text-align:center;
+color:#ffffff;
+background:#b54845;
+width:300px;
+margin: 25px auto;
+position:relative;
+padding:10px;
+-moz-box-shadow: 5px 5px 13px #2C2E2F;
+-webkit-box-shadow: 5px 5px 13px #2C2E2F;
+box-shadow: 5px 5px 13px #2C2E2F;
+border:solid 1px #451919;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+}
+fieldset {
+border: 0px solid;
+padding: 0px;
+
+}
+input:submit {
+position:relative;
+width: 70px;
+margin 0px auto;
+
+}
