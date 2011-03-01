@@ -33,11 +33,11 @@
 	<div class="head_container">
 		
 		<div  class="logo">
-			<img width="260px" src="<?=base_url()?>images/logos/proctor.png"/>
+			<img width="310px" src="<?=base_url()?>images/logos/proctor.png"/>
 			<br/>
 			<br/>
 			<br/>
-			<br/>
+			
 			<a href="mailto:support@lease-desk.com"><img src="<?=base_url()?>images/logos/email_link.png"/></a>
 			<img src="<?=base_url()?>images/logos/tel_link.png"/>
 			<a href="http://twitter.com/leasedeskdotcom" target="_blank"><img src="<?=base_url()?>images/logos/twitter_link.png"/></a>
@@ -133,7 +133,7 @@ $('.logo').hover(
 		  function() {
 		   
 			  $(this)
-			  .animate({height: '84px'}) 
+			  .animate({height: '100px'}) 
 		  });
 
 

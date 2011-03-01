@@ -57,10 +57,10 @@ h2 {
 	top:0px;
 	overflow:hidden;
 	position:relative;
-	height:84px;
-	width:260px;
+	height:100px;
+	width:310px;
 	background: #ffffff;
-	padding: 10px 0 0 0px;
+	padding: 5px 0 0 0px;
 	-moz-box-shadow: 2px 3px 6px #191919;
 -webkit-box-shadow: 2px 3px 6px #191919;
 box-shadow: 2px 3px 6px #191919;
