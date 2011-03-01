@@ -12,7 +12,9 @@
 <?php $this->load->view($main); ?>
 
 <div id="footer">
-	
+	      
+	<img width="251px" height="102px" src="<?=base_url()?>images/proctor/logofade.png" /><br/> 
+	 &copy; Copyright 2011 Proctor Consulting
 	
 </div>
 </body>

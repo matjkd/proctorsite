@@ -443,6 +443,8 @@ function register_thurs()
 function webinar()
 {
 			
+		$data['webinardate'] = "Thursday 10th March 2011 at 4pm";
+		$webinardate = $data['webinardate'];
 		$this->form_validation->set_rules('email', 'email', 'trim|required');
 		$this->form_validation->set_rules('phone', 'phone', 'trim|required');
 		$this->form_validation->set_rules('business_name', 'business_name', 'trim|required');
@@ -489,7 +491,7 @@ function webinar()
 								$this->email->cc('debra.taylor@lease-desk.com'); 
 								$this->email->cc('mat@redstudio.co.uk'); 
 								$this->email->subject('Register for Webinar');
-								$this->email->message("$firstname $lastname has completed the request form.
+								$this->email->message("$firstname $lastname has completed the request form for webinar on $webinardate.
 								
 Job Title: $jobtitle
 Company Name: $business_name

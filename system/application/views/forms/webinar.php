@@ -1,6 +1,6 @@
 <div  id="form">
 <h2>Register for Webinar</h2>
-on Thursday 24th Feb at 4pm<br/><br/>
+on <?=$webinardate?><br/><br/>
 <?php echo $errors;?>	
 <?=form_open('forms/webinar')?>
 <?=$this->load->view('global/table')?>	
