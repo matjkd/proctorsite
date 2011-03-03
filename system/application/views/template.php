@@ -51,21 +51,22 @@
     	<div class="menu_container">
     		<div class="container_24"><?=$this->load->view('global/top_menu')?></div>
     	</div>
-    	
+    	<?php	
+			      if (isset($slideshow))
+			      { ?>
     	<div class="header">
+    		
 			<div class="slide_container">
 				<div class="slides" align="center">
-				<?php	
-			      if (isset($slideshow))
-			      {
-			      $this->load->view($slideshow); 
-			      }
-			      ?>
+				
+			      <?=$this->load->view($slideshow)?> 
+			      
 	
 				</div>
 			</div>
+			
 		</div>
-		
+		<?php }  ?>
     </header>
 
 
@@ -95,15 +96,15 @@
 	<div class="container_24">
 	
 		<div class="grid_14">
-<h2>LATEST NEWS</h2>
+<img src="<?=base_url()?>images/menu/blog.png"/>
 	</div>
 	
 	<div class="grid_5">
-<h2>LATEST TWEETS</h2>
+<img src="<?=base_url()?>images/menu/latest_tweets.png"/>
 	</div>
 	
 	<div class="grid_5">
-<h2>LEASE-DESK CLIENT LOGIN</h2>
+<img src="<?=base_url()?>images/menu/login.png"/>
 	</div>
 	</div>
 </div>

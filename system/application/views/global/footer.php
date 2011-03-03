@@ -11,6 +11,8 @@
 
   	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> 
 
+
+
   <!-- scripts concatenated and minified via ant build script-->
     <script src="<?=base_url()?>js/wymeditor/jquery.wymeditor.min.js"></script>
     <script src="<?=base_url()?>js/script.js"></script>
@@ -18,11 +20,11 @@
 	<script src="<?=base_url()?>facelift/flir.js" type="text/javascript"></script>  
   <!-- end concatenated and minified scripts-->
   
-  
   <!--[if lt IE 7 ]>
-    <script src="js/libs/dd_belatedpng.js"></script>
+    <script src="<?=base_url()?>js/libs/dd_belatedpng.js"></script>
     <script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>
   <![endif]-->
+  
 
 
 

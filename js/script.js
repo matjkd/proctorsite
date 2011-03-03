@@ -47,12 +47,27 @@ window.log = function(){
 $(document).ready(function() {
     $('.cycle').cycle({
 		fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
-		speedIn:  4500, 
-	    speedOut: 4500, 
-	   timeout:   10000 
+		speedIn:  3500, 
+	    speedOut: 3500, 
+	   timeout:  8000 
 	});
+	$('.cycle').css("display", "block");
+});
+
+//leasedesk-slider
+
+	
+	$(document).ready(function() {
+    $('.leasedesk-cycle').cycle({
+		fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+		speedIn:  1500, 
+	    speedOut: 1500, 
+	   timeout:  8000 
+	});
+	$('.leasedesk-cycle').css("display", "block");
 });
 	
+
 //hover
 $('.logo').hover(
 		
@@ -113,3 +128,4 @@ $('div.parallax').parallax({
 	   
 	  ]
 	});
+	

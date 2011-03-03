@@ -20,7 +20,7 @@ class Leasedesk extends My_Controller {
 		
 		endforeach;
 		$data['menu'] =	$this->content_model->get_menus();
-		$data['slideshow'] = "global/lease-desk-flash";
+		$data['slideshow'] = "slideshow/leasedesk";
 		$data['news'] = $this->news_model->list_news();
 		$data['sidebar'] = 'sidebar/links';
 		$data['rightcolumn'] = 'sidebar/channel_partner';

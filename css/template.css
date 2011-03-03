@@ -32,6 +32,7 @@ h2 {
 	height:196px;
 	border-bottom:1px #cccccc solid;
 	background: url('/images/backgrounds/headerback.jpg') repeat-x #999999;
+	
 }
 
 .topbar {
@@ -105,6 +106,7 @@ color: #ffffff;
 	position:absolute;
 	float:left;
 }
+
 .col3box {
 	background:url('/images/backgrounds/col3back.png') repeat-x ;
 	width:192px;
@@ -113,7 +115,8 @@ color: #ffffff;
 }
 .footer1 {
 	background:url('/images/backgrounds/grey_footer.jpg') repeat-x #666666;
-	height:148px;
+	height:138px;
+	padding-top:10px;
 }
 
 .footer2 {

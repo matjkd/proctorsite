@@ -23,7 +23,7 @@ $config['base_url']	= "http://www.go-freelance.co.uk/";
 | variable so that it is blank.
 |
 */
-$config['index_page'] = "index.php";
+$config['index_page'] = "";
 
 /*
 |--------------------------------------------------------------------------
