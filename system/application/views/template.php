@@ -12,7 +12,7 @@
 
 </head>
 
-<body onload="initialize()" onunload="GUnload()">
+<body>
  <!--[if lt IE 7]>
   <div style='border: 1px solid #F7941D; background: #FEEFDA; text-align: center; clear: both; height: 75px; position: relative;'>
     <div style='position: absolute; right: 3px; top: 3px; font-family: courier new; font-weight: bold;'><a href='#' onclick='javascript:this.parentNode.parentNode.style.display="none"; return false;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-cornerx.jpg' style='border: none;' alt='Close this notice'/></a></div>
@@ -42,8 +42,8 @@
 		<img width="260px" src="<?=base_url()?>images/logos/proctor.png"/>
 		</div>
 	    
-		<div class="grid_5">
-		contact details here
+		<div class="grid_5" id="contact_details">
+		<img width="183px" height="68px" src="<?=base_url()?>images/logos/contact_details.png"/>
 		</div>
 	    	
     	</div>
@@ -117,45 +117,10 @@
 	</div>
 </div>
 <?php $this->load->view('global/footer'); ?>
-<script type="text/javascript"> 
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script> 
-<script type="text/javascript"> 
-try {
-var pageTracker = _gat._getTracker("UA-920708-15");
-pageTracker._trackPageview();
-} catch(err) {}</script> 
 
 
 
-<!--[if !IE]><!-->
-<script type="text/javascript" charset="utf-8">
-		$(document).ready(function(){
-			$("a[rel^='prettyPhoto']").prettyPhoto();
-		});
 
-		FLIR.init( { path: '/facelift/' } );
-		FLIR.auto([ 'h1', 'h2']);  
-</script>   
-<!-- <![endif]--> 
 
-<!--[if gte IE 7]>
-<script type="text/javascript" charset="utf-8">
-		$(document).ready(function(){
-			$("a[rel^='prettyPhoto']").prettyPhoto();
-		});
-
-		
-</script> 
-<![endif]-->
-
-<!--[if gte IE 8]>
-<script type="text/javascript" charset="utf-8">
-	
-		 FLIR.init();  
-		 FLIR.auto([ 'h1', 'h2']);  
-</script> 
-<![endif]--> 
 </body>
 </html>

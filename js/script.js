@@ -68,64 +68,14 @@ $(document).ready(function() {
 });
 	
 
-//hover
-$('.logo').hover(
-		
-		  function() {
-		  
-		    $(this)
-			  .animate({height: '220px'}) 
-		  },
-		  function() {
-		   
-			  $(this)
-			  .animate({height: '100px'}) 
-		  });
 
-// parallax scrolling background
-
-$('div.parallax').parallax({
-	  'elements': [
-	    {
-	      'selector': 'body',
-	      'properties': {
-	        'x': {
-	          'background-position-x': {
-	            'initial': 0,
-	            'multiplier': 0.008,
-	            'invert': true
-	          }
-	        }
-	      }
-	    },
-	    {
-	      'selector': 'div.header',
-	      'properties': {
-	        'x': {
-	          'background-position-x': {
-	            'initial': 5,
-	            'multiplier': 0.01,
-	            
-	            	'invert': true
-	          }
-	        }
-	      }
-	    },
-
-	    {
-		      'selector': 'div.footer1',
-		      'properties': {
-		        'x': {
-		          'background-position-x': {
-		            'initial': 5,
-		            'multiplier': 0.003,
-		            
-		            	'invert': true
-		          }
-		        }
-		      }
-		    }
-	   
-	  ]
-	});
 	
+// editor
+jQuery(function() {
+	jQuery('.wymeditor').cleditor({
+	    });
+});
+
+$(function() {
+		$( "#datepicker" ).datepicker({ dateFormat: 'yy-mm-dd' });
+	});
