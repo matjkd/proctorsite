@@ -39,7 +39,7 @@
     	
     	<!-- Logo here --> 
 	    <div class="grid_19">
-		<img width="260px" src="<?=base_url()?>images/logos/proctor.png"/>
+		<div id="logo"><img width="385px" src="<?=base_url()?>images/logos/leasedesk_logo.jpg"/></div>
 		</div>
 	    
 		<div class="grid_5" id="contact_details">
@@ -83,36 +83,39 @@
 
 <div class="main_content">
 	<div class="container_24">
+		
 		<div class="grid_14">
-	<?php $this->load->view('global/warning'); ?> 
-	<?php $this->load->view($main); ?>
+			
+			<?php $this->load->view('global/warning'); ?>
+			<?php $this->load->view($main); ?>
+			
 		</div>
+		<div class="container_10">
+			<div class="grid_5">
+				
+				<?php $this->load->view('global/mainbuttons'); ?> 
 		
-		<div class="grid_5">
-	<?php $this->load->view('global/mainbuttons'); ?> 
-	
-	<?php $this->load->view('sidebar/login_box'); ?> 
-		</div>
+				<?php $this->load->view('sidebar/login_box'); ?> 
+			
+			</div>
+			
+			<div class="grid_5">
+				
+				<?php $this->load->view('sidebar/channel_partner_program'); ?> 
 		
-		<div class="grid_5">
-	<?php $this->load->view('sidebar/channel_partner_program'); ?> 
-	
+			</div>
+			
+			<div class="grid_10">
+				
+				
+		
+			</div>
 		</div>
-	
 	</div>
 </div>
 <div class="clear"></div>
 	
-	<div class="container_24" id="greybottom">
-		<div class="grid_14">
-		Latest News
-		</div>
-		
-		<div class="grid_10">
-		Benefits of using lease desk
-		</div>
-	</div>
-	
+	<?php $this->load->view('global/greybox'); ?> 
 	
 <div class="clear"></div>
 <div class="footer1">

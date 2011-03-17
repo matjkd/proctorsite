@@ -18,13 +18,20 @@ img {
 h1 {
 	font-weight:bold;
 	color:#000000;
+	font-size: 130%;
 }
 h2 {
 	font-weight:bold;
 	color:#ffffff;
+	font-size: 120%;
 }
 h3 {
 	margin-bottom: 2px;
+	font-size: 120%;
+}
+.news_date {
+	font-style: italic;
+
 }
 .main_content {
 	
@@ -36,6 +43,10 @@ h3 {
 	border-bottom:1px #cccccc solid;
 	background: url('/images/backgrounds/headerback.jpg') repeat-x #999999;
 	
+}
+#logo {
+
+margin-top: 30px;
 }
 
 .topbar {
@@ -55,6 +66,7 @@ h3 {
 }
 #greybottom
 {
+padding-top:10px;
 height:160px;
 background:#b0b0b0;
 }

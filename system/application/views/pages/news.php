@@ -22,7 +22,13 @@ foreach($news as $news):?>
 }
 ?>
 </h3>
-<div class="news_date"><?php echo substr($news['date_added'], 0, 17 ); ?>, Added by <?=$news['added_by'];?></div>
+<?php
+
+	$old_date = strtotime($news['date_added']);
+	$new_date = date('l jS \of F Y h:i:s A', $old_date);
+
+?>
+<div class="news_date"><?=$new_date?>, Added by <?=$news['added_by'];?></div>
 
 </p>
 <?=$news['news_content'];?>
