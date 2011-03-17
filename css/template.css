@@ -9,7 +9,7 @@ body {
 	font-family: Helvetica, Arial, sans-serif;
 			font-size: 12px;
 			color: #222;
-			line-height: 17px;
+			line-height: 20px;
 }
 img {
 	
@@ -32,7 +32,7 @@ h3 {
 	min-height:300px;
 }
 .header {
-	height:196px;
+	
 	border-bottom:1px #cccccc solid;
 	background: url('/images/backgrounds/headerback.jpg') repeat-x #999999;
 	
@@ -49,9 +49,16 @@ h3 {
 	opacity: 0.8;
 }
 .menu_container {
+	color:#ffffff;
 	height:30px;
 	background:#272727;
 }
+#greybottom
+{
+height:160px;
+background:#b0b0b0;
+}
+
 #top_menu {
 
 color:#ffffff;
@@ -98,7 +105,7 @@ margin-top: 15px;
 .slide_container {
 	margin-left: auto;
 	margin-right: auto;
-	width:960px;
+	width:1000px;
 	height:196px;
 	position:relative;
 	
@@ -121,13 +128,66 @@ margin-top: 15px;
 }
 .footer1 {
 	background:url('/images/backgrounds/grey_footer.jpg') repeat-x #666666;
-	height:138px;
+	height:83px;
 	padding-top:10px;
 }
 
 .footer2 {
 	background:#151515;
 	height:200px;
+}
+#partners_container {
+height:70px;
+width:960px;
+overflow:hidden;
+}
+#partners {
+
+}
+
+#partners li{
+	float:left;
+	display:inline;
+	
+}
+#partners ul{
+	margin-left:0px;
+}
+
+.sidebox {
+padding-top:4px;
+padding-left:5px;
+padding-right:5px;
+margin-bottom:10px;
+border:dashed 0px #191919;
+
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+
+-moz-box-shadow: 0px 2px 3px #1C1A1A;
+-webkit-box-shadow: 0px 2px 3px #1C1A1A;
+box-shadow: 0px 2px 3px #1C1A1A;
+
+background:#b44640;
+
+}
+#mainbutton {
+width: 180px;
+height: 45px;
+
+}
+#login_button {
+
+width: 180px;
+height: 130px;
+
+}
+#big_box {
+
+width: 180px;
+height: 307px;
+
 }
 
 .cleditorMain {border:1px solid #999; padding:0 1px 1px; background-color:white}
@@ -154,3 +214,98 @@ margin-top: 15px;
 .cleditorPrompt input,
 .cleditorPrompt textarea {font:8.5pt Arial,Verdana;}
 .cleditorMsg {background-color:#FDFCEE; width:150px; padding:4px; font-size:8.5pt}
+
+/*
+ * To change the color scheme of slider change each 
+ * background property for each of the five styles below
+ */
+
+/*next button*/
+.bx-next {
+	position:absolute;
+	top:40%;
+	right:-50px;
+	z-index:999;
+	width: 30px;
+	height: 30px;
+	text-indent: -999999px;
+	background: url(gray_next.png) no-repeat 0 -30px;
+}
+
+/*previous button*/
+.bx-prev {
+	position:absolute;
+	top:40%;
+	left:-50px;
+	z-index:999;
+	width: 30px;
+	height: 30px;
+	text-indent: -999999px;
+	background: url(gray_prev.png) no-repeat 0 -30px;
+}
+
+/*pager links*/
+.bx-pager a {
+	margin-right: 5px;
+	color: #fff;
+	padding: 3px 8px 3px 6px;
+	font-size: 12px;
+	zoom:1;
+	background: url(/images/slider/gray_pager.png) no-repeat 0 -20px;
+}
+
+/*auto start button*/
+.bx-auto .start {
+	background: url(/images/slider/gray_auto.png) no-repeat 0 2px;
+	padding-left: 13px;
+}
+
+/*auto stop button*/
+.bx-auto .stop {
+	background: url(/images/slider/gray_auto.png) no-repeat 0 -14px;
+	padding-left: 13px;
+}
+
+/*
+ * End color scheme styles
+ */
+
+
+/*next/prev button hover state*/
+.bx-next:hover,
+.bx-prev:hover {
+	background-position: 0 0;
+}
+
+/*pager links hover and active states*/
+.bx-pager .pager-active,
+.bx-pager a:hover {
+	background-position: 0 0;
+}
+
+/*pager wrapper*/
+.bx-pager {
+	text-align:center;
+	padding-top: 7px;
+	font-size:12px;
+	color:#666;
+}
+
+/*captions*/
+.bx-captions {
+	text-align:center;
+	font-size: 12px;
+	padding: 7px 0;
+	color: #666;
+}
+
+/*auto controls*/
+.bx-auto {
+	text-align: center;
+	padding-top: 15px;
+}
+
+.bx-auto a {
+	color: #666;
+	font-size: 12px;
+}

@@ -182,6 +182,25 @@ function edit_pro()
 		$this->professionals_model->edit_pro($id);
 		redirect ("admin/editpro/$id");
 	}
+	function editnews()
+	{
+		
+		$id = $this->uri->segment(3);
+		$data['page'] ='news';
+		$data['content'] =	$this->content_model->get_content('news');
+		$data['news'] =	$this->news_model->get_news($id);
+		$data['title'] = "edit blog";
+		$data['main'] = "admin/edit_news";
+		$data['menu'] =	$this->content_model->get_menus();
+		$this->load->vars($data);
+		$this->load->view('template');
+	}
+function edit_news()
+	{
+		$id = $this->uri->segment(3);
+		$this->news_model->edit_news($id);
+		redirect ("admin/editnews/$id");
+	}
 	function delete_user()
 	{
 		//get user id from link

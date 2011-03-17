@@ -68,7 +68,18 @@ $(document).ready(function() {
 });
 	
 
-
+// slider
+  $(document).ready(function(){
+        $('#partners').bxSlider({
+            displaySlideQty: 4,
+            moveSlideQty: 1,
+            infiniteLoop: true,
+            auto: true,  
+            easing: 'easeOutQuad',
+            speed: 1500,
+            pause:  18000    
+        });
+    });
 	
 // editor
 jQuery(function() {

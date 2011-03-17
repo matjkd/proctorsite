@@ -14,9 +14,13 @@
 
 
   <!-- scripts concatenated and minified via ant build script-->
-   <script src="<?=base_url()?>js/libs/editor.js" type="text/javascript"></script> 
-    <script src="<?=base_url()?>js/script.js"></script>
- 	<script src="<?=base_url()?>js/plugins.js"></script>
+	<script src="<?=base_url()?>js/libs/editor.js" type="text/javascript"></script>
+	<script src="<?=base_url()?>js/libs/easing.js"></script> 
+	<script src="<?=base_url()?>js/libs/bxslider.js"></script>
+	<script src="<?=base_url()?>js/script.js"></script>
+	<script src="<?=base_url()?>js/plugins.js"></script>
+ 
+ 
 	<script src="<?=base_url()?>facelift/flir.js" type="text/javascript"></script>  
 	 
   <!-- end concatenated and minified scripts-->

@@ -19,9 +19,11 @@
 <link  href="http://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet" type="text/css" >
 
   <!-- CSS : implied media="all" -->
+   <link rel="stylesheet" href="<?=base_url()?>css/custom-theme/jquery-ui-1.8.2.custom.css">
    <link rel="stylesheet" href="<?=base_url()?>css/style.css?v=2">
    <link rel="stylesheet" href="<?=base_url()?>css/960.css">
    <link rel="stylesheet" href="<?=base_url()?>css/template.css">
+   
    <link rel="stylesheet" media="handheld" href="<?=base_url()?>css/handheld.css?v=2">  
  
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->

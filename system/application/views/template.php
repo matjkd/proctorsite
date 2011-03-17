@@ -51,6 +51,7 @@
     	<div class="menu_container">
     		<div class="container_24"><?=$this->load->view('global/top_menu')?></div>
     	</div>
+    	
     	<?php	
 			      if (isset($slideshow))
 			      { ?>
@@ -64,7 +65,13 @@
 	
 				</div>
 			</div>
-			
+			<div class="menu_container">
+    			<div class="container_24">
+    				<div class="grid_14">
+    					Take the tour
+    				</div>
+    			</div>
+    		</div>
 		</div>
 		<?php }  ?>
     </header>
@@ -82,30 +89,40 @@
 		</div>
 		
 		<div class="grid_5">
-	col 1
+	<?php $this->load->view('global/mainbuttons'); ?> 
+	
+	<?php $this->load->view('sidebar/login_box'); ?> 
 		</div>
 		
 		<div class="grid_5">
-	<div class="col3box"></div>
+	<?php $this->load->view('sidebar/channel_partner_program'); ?> 
+	
 		</div>
 	
 	</div>
 </div>
 <div class="clear"></div>
-<div class="footer1">
-	<div class="container_24">
 	
+	<div class="container_24" id="greybottom">
 		<div class="grid_14">
-<img src="<?=base_url()?>images/menu/blog.png"/>
+		Latest News
+		</div>
+		
+		<div class="grid_10">
+		Benefits of using lease desk
+		</div>
 	</div>
 	
-	<div class="grid_5">
-<img src="<?=base_url()?>images/menu/latest_tweets.png"/>
+	
+<div class="clear"></div>
+<div class="footer1">
+	<div class="container_24" >
+		
+	<div class="grid_24">
+		<?=$this->load->view('slideshow/companies')?>
 	</div>
 	
-	<div class="grid_5">
-<img src="<?=base_url()?>images/menu/login.png"/>
-	</div>
+	
 	</div>
 </div>
 
