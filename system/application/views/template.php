@@ -81,6 +81,7 @@
 
 <div class="top_shadow"></div>
 
+
 <div class="main_content">
 	<div class="container_24">
 		
@@ -131,9 +132,16 @@
 
 <div class="footer2">
 	<div class="container_24">
-	<div class="grid_24">
-	footer
-	</div>
+	
+	
+		<div class="grid_19">
+			bottom links
+		</div>
+	
+		<div class="grid_5">
+			social links
+		</div>
+	
 	</div>
 </div>
 <?php $this->load->view('global/footer'); ?>

@@ -20,6 +20,7 @@
 
   <!-- CSS : implied media="all" -->
    <link rel="stylesheet" href="<?=base_url()?>css/custom-theme/jquery-ui-1.8.2.custom.css">
+   <link rel="stylesheet" href="<?=base_url()?>css/prettyPhoto.css">
    <link rel="stylesheet" href="<?=base_url()?>css/style.css?v=2">
    <link rel="stylesheet" href="<?=base_url()?>css/960.css">
    <link rel="stylesheet" href="<?=base_url()?>css/template.css">

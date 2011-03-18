@@ -35,8 +35,15 @@ h3 {
 }
 .main_content {
 	
-	margin-top:20px;
+	margin-top:5px;
 	min-height:300px;
+}
+
+.content_image {
+width:150px; 
+float:left;
+margin-right:10px;
+margin-top:5px;
 }
 .header {
 	
@@ -118,7 +125,7 @@ margin-top: 15px;
 	margin-left: auto;
 	margin-right: auto;
 	width:1000px;
-	height:196px;
+	min-height:196px;
 	position:relative;
 	
 	
@@ -130,6 +137,7 @@ margin-top: 15px;
 	overflow:hidden;
 	position:absolute;
 	float:left;
+	
 }
 
 .col3box {
@@ -153,15 +161,58 @@ height:70px;
 width:960px;
 overflow:hidden;
 }
-#partners {
-
+#team_container {
+height:190px;
+width:960px;
+margin:0 20px;
+padding:0 0px 20px;
+overflow:hidden;
+}
+#team li{
+	float:left;
+	display:inline;
+	padding-right:20px;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:20px;
+}
+#team ul{
+margin-left:0px;
 }
 
+#team li img {
+margin:0px;
+}
+.employee_container {
+width:150px;
+height:191px;
+background: rgba(0, 0, 0, 0.5);
+color:#ffffff;
+-moz-box-shadow: 4px 3px 5px #191919;
+-webkit-box-shadow: 4px 3px 5px #191919;
+box-shadow: 4px 3px 5px #191919;
+padding-bottom:5px;
+cursor:pointer;
+}
+#team_image {
+margin-top:0px;
+height:150px;
+
+}
+#team_name {
+margin-top: 0px;
+line-height:12px;
+}
+
+.profile {
+display: none;
+
+}
 #partners li{
 	float:left;
 	display:inline;
-	
 }
+
 #partners ul{
 	margin-left:0px;
 }

@@ -26,7 +26,6 @@ window.log = function(){
 };
 
 
-
 // catch all document.write() calls
 (function(doc){
   var write = doc.write;
@@ -43,6 +42,10 @@ window.log = function(){
 		
 		
 	});
+	
+
+
+	
 //slideshow
 $(document).ready(function() {
     $('.cycle').cycle({
@@ -53,6 +56,8 @@ $(document).ready(function() {
 	});
 	$('.cycle').css("display", "block");
 });
+
+	
 
 //leasedesk-slider
 
@@ -66,21 +71,77 @@ $(document).ready(function() {
 	});
 	$('.leasedesk-cycle').css("display", "block");
 });
-	
 
-// slider
+
+
+// partners slider
   $(document).ready(function(){
         $('#partners').bxSlider({
             displaySlideQty: 4,
             moveSlideQty: 1,
             infiniteLoop: true,
-            auto: true,  
+            auto: false,  
+            easing: 'easeOutQuad',
+            speed: 1500,
+            pause:  18000
+            
+        });
+    });
+
+
+    
+//team profile fader
+	
+	$(function() {
+		var fadedelay = 300;
+		 $('.profile').fadeOut(fadedelay);
+	    $('#button7').click(function () {
+	    	 $('.profile').fadeOut(fadedelay);
+	        $('#profile7').delay(fadedelay).fadeIn(fadedelay);
+	         
+	    });
+	    
+	    $('#button8').click(function () {
+	    	 $('.profile').fadeOut(fadedelay);
+	        $('#profile8').delay(fadedelay).fadeIn(fadedelay);
+	         
+	    });
+	    $('#button9').click(function () {
+	    	 $('.profile').fadeOut(fadedelay);
+	        $('#profile9').delay(fadedelay).fadeIn(fadedelay);
+	         
+	    });
+	    $('#button10').click(function () {
+	    	 $('.profile').fadeOut(fadedelay);
+	        $('#profile10').delay(fadedelay).fadeIn(fadedelay);
+	         
+	    });
+	    $('#button11').click(function () {
+	    	 $('.profile').fadeOut(fadedelay);
+	        $('#profile11').delay(fadedelay).fadeIn(fadedelay);
+	         
+	    });
+	    
+	 });	
+//pretty photo
+
+$(document).ready(function(){
+			$("a[rel^='prettyPhoto']").prettyPhoto();
+		});
+		
+// team slider
+  $(document).ready(function(){
+        $('#team').bxSlider({
+            displaySlideQty: 5,
+            moveSlideQty: 1,
+            infiniteLoop: true,
+            auto: false,  
             easing: 'easeOutQuad',
             speed: 1500,
             pause:  18000    
         });
     });
-	
+
 // editor
 jQuery(function() {
 	jQuery('.wymeditor').cleditor({

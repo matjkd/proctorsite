@@ -104,9 +104,9 @@ function management_team()
 		$id = "management-team";
 		$data['content'] =	$this->content_model->get_content($id);
 		$data['team'] = $this->professionals_model->get_professionals();
-		$data['slideshow'] = "global/team";
+		$data['slideshow'] = "slideshow/team";
 		$data['menu'] =	$this->content_model->get_menus();
-		$data['main'] = "pages/team";
+		$data['main'] = "pages/dynamic";
 		$data['title'] = 'Management Team';
 		$data['news'] = $this->news_model->list_news();
 		$data['sidebar'] = 'sidebar/links';

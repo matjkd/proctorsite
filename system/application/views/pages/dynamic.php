@@ -7,11 +7,32 @@
 }
 
 ?>
+<div class="clear"></div>
+<?php if(isset($row['youtube'])) {?>
+	
+	<div class="content_image">
+	
+	<a href="http://www.youtube.com/watch?v=<?=$row['youtube']?>" rel="prettyPhoto" title=""><img src="<?=base_url()?>images/thumbnails/flash-logo.png" alt="YouTube" width="150"  /></a>
+	
+	</div>
 
+<?php } ?>
 <p>
 <?=$row['content'];?>
 </p>
 
 
-<?php endforeach;
+
+<?php endforeach;?>
+
+<?php 
+if(isset($row['extra'])) {
+
+$this->load->view($row['extra']);	
+	
+}
+
 ?>
+
+
+

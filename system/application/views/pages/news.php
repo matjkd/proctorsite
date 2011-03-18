@@ -25,10 +25,11 @@ foreach($news as $news):?>
 <?php
 
 	$old_date = strtotime($news['date_added']);
-	$new_date = date('l jS \of F Y h:i:s A', $old_date);
+	$new_date = date('l jS \of F Y', $old_date);
 
 ?>
-<div class="news_date"><?=$new_date?>, Added by <?=$news['added_by'];?></div>
+<div class="news_date"><?=$new_date?><br/>
+ Added by <?=$news['added_by'];?></div>
 
 </p>
 <?=$news['news_content'];?>
