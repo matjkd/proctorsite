@@ -108,7 +108,12 @@
 			
 			<div class="grid_10">
 				
-				
+				<?php 
+				if(isset($widecolumn))
+				{
+				$this->load->view('global/widecolumn'); 
+				}
+				?> 
 		
 			</div>
 		</div>
@@ -116,7 +121,12 @@
 </div>
 <div class="clear"></div>
 	
-	<?php $this->load->view('global/greybox'); ?> 
+	<?php 
+	if(isset($greybox))
+	{
+	$this->load->view('global/greybox'); 
+	}
+	?> 
 	
 <div class="clear"></div>
 <div class="footer1">
@@ -135,11 +145,11 @@
 	
 	
 		<div class="grid_19">
-			bottom links
+				<?=$this->load->view('sidebar/footerlinks')?>
 		</div>
 	
 		<div class="grid_5">
-			social links
+			<?=$this->load->view('sidebar/social_links')?>
 		</div>
 	
 	</div>

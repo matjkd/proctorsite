@@ -12,7 +12,7 @@
 	
 	<div class="content_image">
 	
-	<a href="http://www.youtube.com/watch?v=<?=$row['youtube']?>" rel="prettyPhoto" title=""><img src="<?=base_url()?>images/thumbnails/flash-logo.png" alt="YouTube" width="150"  /></a>
+	<a href="http://www.youtube.com/watch?v=<?=$row['youtube']?>" rel="prettyPhoto" title=""><img src="<?=base_url()?>images/general/youtube_screenshot.jpg" alt="YouTube" width="200px" height="185px"  /></a>
 	
 	</div>
 

@@ -28,6 +28,9 @@ class Leasedesk extends My_Controller {
 		$data['page'] = $id;
 		$is_logged_in = $this->session->userdata('is_logged_in');
 		
+		//display greybox module - this should eventually be controlled by some table or something
+		$data['greybox'] = 1;
+		
 		if($is_logged_in!=NULL)
 			{
 			$data['edit'] = site_url("admin/edit/$id");

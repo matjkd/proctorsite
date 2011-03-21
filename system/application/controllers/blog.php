@@ -2,10 +2,9 @@
 
 class Blog extends MY_Controller {
 
-	function News()
-	{
-		parent::Controller();
-		
+	 function __construct()
+    {
+        parent::__construct();
 			
 	}
 	
@@ -40,6 +39,9 @@ function item()
 		$data['main'] = "pages/news";
 		
 		$is_logged_in = $this->session->userdata('is_logged_in');
+		
+			//display widecolumn module - this should eventually be controlled by some table or something
+		$data['widecolumn'] = 1;
 		
 		if($is_logged_in!=NULL)
 			{

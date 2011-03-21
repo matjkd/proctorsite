@@ -1,10 +1,10 @@
 <?php
 
-class Welcome extends My_Controller {
-
-	function Welcome()
+class Welcome extends MY_Controller
+{
+function __construct()
 	{
-		parent::Controller();	
+		parent::__construct();
 		$this->load->model('professionals_model');
 	}
 	
@@ -53,6 +53,9 @@ function content()
 		$data['rightcolumn'] = 'sidebar/channel_partner';
 		$data['page'] = $id;
 		$is_logged_in = $this->session->userdata('is_logged_in');
+		
+		//display greybox module - this should eventually be controlled by some table or something
+		$data['greybox'] = 1;
 		
 		if($is_logged_in!=NULL)
 			{

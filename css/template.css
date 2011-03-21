@@ -40,7 +40,9 @@ h3 {
 }
 
 .content_image {
-width:150px; 
+border:1px solid #aaaaaa;
+width:200px; 
+height:185px;
 float:left;
 margin-right:10px;
 margin-top:5px;
@@ -77,7 +79,12 @@ padding-top:10px;
 height:160px;
 background:#b0b0b0;
 }
+#widecolumn
+{
+padding:10px;
 
+background:#b0b0b0;
+}
 #top_menu {
 
 color:#ffffff;
@@ -99,6 +106,7 @@ padding-right:35px;
 text-decoration:none;
 color: #ffffff; 
 }
+
 #contact_details {
 margin-top: 15px;
 }
@@ -236,15 +244,34 @@ background:#b44640;
 
 }
 #mainbutton {
+
 width: 180px;
 height: 45px;
 
 }
 #login_button {
-
+padding-top:10px;
 width: 180px;
-height: 130px;
+height: 125px;
+text-align: center;
+}
+#inputs {
+width:180px;
 
+margin-left:2px;
+}
+#inputs input {
+position:relative;
+margin-top: 10px;
+margin-left:auto;
+margin-right:auto;
+padding-top:3px;
+padding-bottom:3px;
+width:160px;
+border:0px;
+}
+#submit_button {
+margin-top:5px;
 }
 #big_box {
 
@@ -252,6 +279,13 @@ width: 180px;
 height: 307px;
 
 }
+
+#social_links img {
+padding-right:7px;
+width:28px;
+height:28px;
+}
+
 
 .cleditorMain {border:1px solid #999; padding:0 1px 1px; background-color:white}
 .cleditorMain iframe {border:none; margin:0; padding:0}
