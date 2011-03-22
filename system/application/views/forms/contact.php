@@ -3,8 +3,8 @@
 $data = array(
 			'name' => 'message',
 			'id' => 'message',
-              'rows'   => '4',
-              'cols'        => '22'
+              'rows'   => '2',
+              'cols'        => '12'
             
             );
 $referrals = array(
@@ -20,25 +20,35 @@ $referrals = array(
 	
 	
 	<p class="form_name">
-	<?=form_input('name', set_value('name', $name))?><?=form_label('Name')?>
+		<?=form_label('Name')?><br/>
+		
+	<?=form_input('name', set_value('name', $name))?>
 	</p>
 	
 	<p class="form_phone">
-	<?=form_input('phone', set_value('phone', $phone))?><?=form_label('Phone')?>
+		<?=form_label('Phone')?><br/>
+		
+	<?=form_input('phone', set_value('phone', $phone))?>
 	</p>
 	
 	<p class="form_company">
-	<?=form_input('business_name', set_value('business_name', $business_name))?><?=form_label('Company Name')?>
+		<?=form_label('Company Name')?><br/>
+		
+	<?=form_input('business_name', set_value('business_name', $business_name))?>
 	</p>
 	
 	<p class="form_email">
-	<?=form_input('email', set_value('email', $email))?><?=form_label('Email')?>
+		<?=form_label('Email')?><br/>
+		
+	<?=form_input('email', set_value('email', $email))?>
 	</p>
 	
 	
 	
 	<p class="form_subject">
-	<?=form_input('subject')?><?=form_label('Subject')?>
+		<?=form_label('Subject')?><br/>
+		
+	<?=form_input('subject')?>
 	</p>
 	
 	<p class="form_message">
@@ -46,7 +56,9 @@ $referrals = array(
 	</p>
 	
 	<p class="form_referral">
-	<?=form_dropdown('referral', $referrals)?><?=form_label('How did you hear about us')?>
+		<?=form_label('How did you hear about us')?><br/>
+		
+	<?=form_dropdown('referral', $referrals)?>
 	</p>
 	
 Enter the word you see below<br/>

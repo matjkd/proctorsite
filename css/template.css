@@ -228,6 +228,7 @@ display: none;
 #partners li{
 	float:left;
 	display:inline;
+	margin-right:20px;
 }
 
 #partners ul{
@@ -283,12 +284,25 @@ border:0px;
 margin-top:5px;
 }
 #big_box {
-
+padding-top:10px;
+color:#ffffff;
+line-height:15px;
 width: 180px;
-height: 307px;
+height: 302px;
 
 }
-
+#big_box a {
+color:#ffffff;
+}
+#big_box h1 {
+color:#ffffff;
+font-size:140%;
+line-height:25px;
+}
+#big_box h2 {
+color:#ffffff;
+font-size:120%;
+}
 #social_links img {
 padding-right:7px;
 width:28px;
@@ -433,13 +447,16 @@ input:focus, textarea:focus {
 	-webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
 	}
 #contact_form label {
-	margin-left: 10px;
 	color: #999999;
 	}
+	
+#contact_form p {
+margin-top:10px;
+}
 
 #contact_form textarea {
-	width: 400px;
-	max-width: 400px;
+	width: 300px;
+	max-width: 300px;
 	height: 100px;
 	line-height: 150%;
 }

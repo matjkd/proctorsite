@@ -1,10 +1,10 @@
 <?php
 
-class Channel extends Controller {
-
-	function Channel()
+class Channel extends MY_Controller
+{
+function __construct()
 	{
-		parent::Controller();
+		parent::__construct();
 		$this->load->model('forms_model');	
 	}
 	
@@ -51,7 +51,7 @@ function request()
 					
 					$data['errors'] = validation_errors();
 				
-					$data['main'] = 'sidebar/forms/request';
+					$data['main'] = 'sidebar/forms/channel_partner';
 					$this->load->vars($data);
 					$this->load->view('form_template');
 					
@@ -70,12 +70,12 @@ function request()
     			$name = $this->input->post('name');
 				
 				
-				$this->email->from('info@proctorconsulting.co.uk', 'Proctor Consulting');
-				$this->email->to('chloe@lease-desk.com'); 
-				$this->email->cc('mat@redstudio.co.uk', 'debra.taylor@lease-desk.com'); 
+				$this->postmark->from('noreply@lease-desk.com', 'Lease Desk Limited');
+				$this->postmark->to('chloe@lease-desk.com'); 
+				$this->postmark->cc('mat@redstudio.co.uk'); 
 				
-				$this->email->subject('Channel Partner Program');
-				$this->email->message("$name has completed the request form.
+				$this->postmark->subject('Channel Partner Program');
+				$this->postmark->message_plain("$name has completed the request form.
 				
 			
 				 Business Name: $business_name 
@@ -85,17 +85,17 @@ function request()
 				 
 				 Message: $message");	
 				
-				$this->email->send();
+				$this->postmark->send();
 				
 				// send email to webCRM
-				$this->email->clear();
+				$this->postmark->clear();
 				
-				$this->email->to('cm3208SPoYUg@b2b-email.net');
-				$this->email->from('info@proctorconsulting.co.uk', 'Proctor Consulting');
-				$this->email->cc('mat@redstudio.co.uk'); 
+				$this->postmark->to('cm3208SPoYUg@b2b-email.net');
+				$this->postmark->from('noreply@lease-desk.com', 'Lease Desk Limited');
+				$this->postmark->cc('mat@redstudio.co.uk'); 
 				
-				$this->email->subject('/*/AUTO/*/');
-				$this->email->message("Start:DateTime
+				$this->postmark->subject('/*/AUTO/*/');
+				$this->postmark->message_plain("Start:DateTime
 
 End
 Start:Organisation
@@ -115,7 +115,7 @@ Start:OpportunityDelivery
 End
 				
 				");	
-				$this->email->send();
+				$this->postmark->send();
 				//end mailto webCRM
 				
 				$data['main'] = 'sidebar/forms/request_sent';

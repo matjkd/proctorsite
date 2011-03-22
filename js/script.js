@@ -69,13 +69,23 @@ $(document).ready(function() {
 $(document).ready(function() {
     $('.cycle').cycle({
 		fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
-		speedIn:  1500, 
-	    speedOut: 1500, 
+		speedIn:  500, 
+	    speedOut: 500, 
 	   timeout:  8000 
 	});
 	$('.cycle').css("display", "block");
 });
 
+//sidebox slideshow
+$(document).ready(function() {
+    $('.cycleside').cycle({
+		fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+		speedIn:  500, 
+	    speedOut: 500, 
+	   timeout:  8000 
+	});
+	$('.cycleside').css("display", "block");
+});
 	
 
 //leasedesk-slider
@@ -84,14 +94,29 @@ $(document).ready(function() {
 	$(document).ready(function() {
     $('.leasedesk-cycle').cycle({
 		fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
-		speedIn:  250, 
-	    speedOut: 250, 
+		speedIn:  1250, 
+	    speedOut: 1250, 
 	   timeout:  6000 
 	});
 	$('.leasedesk-cycle').css("display", "block");
 });
 
-
+// popup dialog for channel partner thing
+$.fx.speeds._default = 300;
+$(document).ready(function() {
+	$('#dialog').dialog({
+		autoOpen: false,
+		show: "blind",
+		modal: true,
+		width:500,
+		height:550
+	});
+	
+	$('#openchannel').click(function() {
+		$('#dialog').dialog('open');
+		return false;
+	});
+});
 
 // partners slider
   $(document).ready(function(){
@@ -167,3 +192,14 @@ jQuery(function() {
 	    });
 });
 
+// buttons and jquery ui
+
+	$(function() {
+		$("#datepicker").datepicker({showOtherMonths: true, selectOtherMonths: true, dateFormat: 'D, dd M yy' });
+	});
+
+	$(function() {
+		$("button, input:submit").button();
+		
+		
+	});

@@ -5,9 +5,14 @@
  <link rel="shortcut icon" href="http://www.channel-resource.com/favicon.png" >
  
 
-<link rel='stylesheet' href='<?=base_url()?>css/jquery-ui-1.8.custom.css' type='text/css' />
-<link rel='stylesheet' href='<?=base_url()?>css/demo_table_jui.css' type='text/css' />
-<link rel='stylesheet' href='<?=base_url()?>css/forms.css' type='text/css' />
+  <!-- CSS : implied media="all" -->
+   <link rel="stylesheet" href="<?=base_url()?>css/custom-theme/jquery-ui-1.8.2.custom.css">
+   <link rel="stylesheet" href="<?=base_url()?>css/prettyPhoto.css">
+   <link rel="stylesheet" href="<?=base_url()?>css/style.css?v=2">
+   <link rel="stylesheet" href="<?=base_url()?>css/form.css?v=2">
+   <link rel="stylesheet" href="<?=base_url()?>css/960.css">
+ 
+   
 
 <script type='text/javascript' src='http://www.google.com/jsapi'></script>
 
@@ -30,7 +35,7 @@
 		
 		
 	});
-	</script>
+</script>
 
 
 
@@ -40,7 +45,7 @@
 <![endif]-->
 
 <title>
-<?=$title?>
+Form
 </title>
 </head>
 
