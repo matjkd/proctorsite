@@ -1,10 +1,10 @@
 <?php
 
-class Leasedesk extends My_Controller {
+class Leasedesk extends MY_Controller {
 
-	function Leasedesk()
+function __construct()
 	{
-		parent::Controller();	
+		parent::__construct();
 		
 	}
 	function index()

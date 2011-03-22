@@ -19,7 +19,7 @@ class MY_Controller extends Controller {
 			$config_data['config_address3'] = $row->address3;
 			$config_data['config_address4'] = $row->address4;
 			$config_data['config_address5'] = $row->address5;
-			
+				$config_data['config_address6'] = $row->address6;
 			$config_data['config_address'] = "".$row->address1.", ".$row->address2.", ".$row->address3.", ".$row->address4.", ".$row->address5."";
 			
 			$config_data['config_version'] = "0.0.9";

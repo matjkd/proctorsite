@@ -12,7 +12,7 @@
 
 </head>
 
-<body>
+<body onload="initialize()">
  <!--[if lt IE 7]>
   <div style='border: 1px solid #F7941D; background: #FEEFDA; text-align: center; clear: both; height: 75px; position: relative;'>
     <div style='position: absolute; right: 3px; top: 3px; font-family: courier new; font-weight: bold;'><a href='#' onclick='javascript:this.parentNode.parentNode.style.display="none"; return false;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-cornerx.jpg' style='border: none;' alt='Close this notice'/></a></div>
@@ -39,7 +39,7 @@
     	
     	<!-- Logo here --> 
 	    <div class="grid_19">
-		<div id="logo"><img width="385px" src="<?=base_url()?>images/logos/leasedesk_logo.jpg"/></div>
+		<div id="logo"><img width="267px" src="<?=base_url()?>images/logos/leasedesk_shortlogo.jpg"/></div>
 		</div>
 	    
 		<div class="grid_5" id="contact_details">
@@ -155,10 +155,5 @@
 	</div>
 </div>
 <?php $this->load->view('global/footer'); ?>
-
-
-
-
-
 </body>
 </html>

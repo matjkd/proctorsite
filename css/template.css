@@ -11,6 +11,11 @@ body {
 			color: #222;
 			line-height: 20px;
 }
+p {
+	line-height:20px;
+	font-size:12px;
+	margin:10px 0 10px 0;
+}
 img {
 	
 	border-style: none
@@ -163,6 +168,7 @@ margin-top: 15px;
 .footer2 {
 	background:#151515;
 	height:200px;
+	color: #666666;
 }
 #partners_container {
 height:70px;
@@ -326,7 +332,7 @@ height:28px;
 	width: 30px;
 	height: 30px;
 	text-indent: -999999px;
-	background: url(gray_next.png) no-repeat 0 -30px;
+	background: url(/images/slider/gray_next.png) no-repeat 0 -30px;
 }
 
 /*previous button*/
@@ -338,7 +344,7 @@ height:28px;
 	width: 30px;
 	height: 30px;
 	text-indent: -999999px;
-	background: url(gray_prev.png) no-repeat 0 -30px;
+	background: url(/images/slider/gray_prev.png) no-repeat 0 -30px;
 }
 
 /*pager links*/

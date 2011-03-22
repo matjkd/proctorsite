@@ -64,13 +64,13 @@ $(document).ready(function() {
  });
 });
 
-	
+
 //slideshow
 $(document).ready(function() {
     $('.cycle').cycle({
 		fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
-		speedIn:  3500, 
-	    speedOut: 3500, 
+		speedIn:  1500, 
+	    speedOut: 1500, 
 	   timeout:  8000 
 	});
 	$('.cycle').css("display", "block");
@@ -96,7 +96,7 @@ $(document).ready(function() {
 // partners slider
   $(document).ready(function(){
         $('#partners').bxSlider({
-            displaySlideQty: 4,
+            displaySlideQty: 5,
             moveSlideQty: 1,
             infiniteLoop: true,
             auto: false,  
@@ -167,6 +167,3 @@ jQuery(function() {
 	    });
 });
 
-$(function() {
-		$( "#datepicker" ).datepicker({ dateFormat: 'yy-mm-dd' });
-	});

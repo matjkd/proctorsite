@@ -71,7 +71,7 @@ function contact()
 	{
 		$id = "contact_us";
 		$data['content'] =	$this->content_model->get_content($id);
-		$data['slideshow'] = "slideshow/main_slideshow";
+		//$data['slideshow'] = "slideshow/main_slideshow";
 		$data['menu'] =	$this->content_model->get_menus();
 		$data['main'] = "pages/contact";
 		$data['title'] = 'Contact Us';
