@@ -39,7 +39,7 @@
     	
     	<!-- Logo here --> 
 	    <div class="grid_19">
-		<div id="logo"><img width="267px" src="<?=base_url()?>images/logos/leasedesk_shortlogo.jpg"/></div>
+		<div id="logo"><img width="326px" src="<?=base_url()?>images/logos/lease-desk.png"/></div>
 		</div>
 	    
 		<div class="grid_5" id="contact_details">
@@ -85,7 +85,7 @@
 <div class="main_content">
 	<div class="container_24">
 		
-		<div class="grid_14">
+		<div class="grid_14" id="main_body">
 			
 			<?php $this->load->view('global/warning'); ?>
 			<?php $this->load->view($main); ?>

@@ -84,9 +84,9 @@ $(document).ready(function() {
 	$(document).ready(function() {
     $('.leasedesk-cycle').cycle({
 		fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
-		speedIn:  1500, 
-	    speedOut: 1500, 
-	   timeout:  8000 
+		speedIn:  250, 
+	    speedOut: 250, 
+	   timeout:  6000 
 	});
 	$('.leasedesk-cycle').css("display", "block");
 });

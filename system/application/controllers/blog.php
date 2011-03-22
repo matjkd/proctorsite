@@ -41,7 +41,7 @@ function item()
 		$is_logged_in = $this->session->userdata('is_logged_in');
 		
 			//display widecolumn module - this should eventually be controlled by some table or something
-		$data['widecolumn'] = 1;
+		$data['widecolumn'] = 'sidebar/benefits_of_leasedesk';
 		
 		if($is_logged_in!=NULL)
 			{

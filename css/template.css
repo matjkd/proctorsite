@@ -43,7 +43,10 @@ h3 {
 	margin-top:5px;
 	min-height:300px;
 }
-
+#main_body {
+min-height:325px;
+margin-top:10px;
+}
 .content_image {
 border:1px solid #aaaaaa;
 width:200px; 
@@ -411,4 +414,63 @@ height:28px;
 .bx-auto a {
 	color: #666;
 	font-size: 12px;
+}
+/* Contact Form */
+#contact_form input, textarea {
+padding:6px;
+border: solid 1px #d0d0d0;
+width:250px;
+background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));
+	background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);
+	box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+
+}
+#contact_form input:hover, textarea:hover,
+input:focus, textarea:focus {
+	border-color: #a0a0a0;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
+	}
+#contact_form label {
+	margin-left: 10px;
+	color: #999999;
+	}
+
+#contact_form textarea {
+	width: 400px;
+	max-width: 400px;
+	height: 100px;
+	line-height: 150%;
+}
+
+/* page sections */
+#leftside {
+	width: 45%;
+	float: left;
+	
+	padding: 5px;
+}
+#rightside {
+	width: 50%;
+	float: right;
+	
+	padding: 5px;
+}
+/* content tables */
+.sectiontableheader {
+	background: #333333;
+	border-right: 1px solid #CCCCCC;
+	padding: 4px;
+}
+
+tr.sectiontableentry0 td,
+tr.sectiontableentry1 td,
+tr.sectiontableentry2 td {
+	padding: 2px;
+	height: 25px;
+}
+
+tr.sectiontableentry2 td {
+	background: #eeeeee;
 }

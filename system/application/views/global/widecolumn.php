@@ -1,3 +1,3 @@
 <div id="widecolumn">
-<?php $this->load->view('sidebar/benefits_of_leasedesk'); ?>
+<?php $this->load->view($widecolumn); ?>
 </div> 

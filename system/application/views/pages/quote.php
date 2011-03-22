@@ -22,6 +22,7 @@ function onSelectChange2(){
 }
 
 </script>
+
 <div id="leftside">
 <?php 
 $attributes = array('id' => 'quoteform');

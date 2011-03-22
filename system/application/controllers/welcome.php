@@ -6,6 +6,7 @@ function __construct()
 	{
 		parent::__construct();
 		$this->load->model('professionals_model');
+		$this->load->model('captcha_model');
 	}
 	
 	function index()
@@ -69,6 +70,16 @@ function content()
 	
 function contact()
 	{
+			
+		$data['captcha'] = $this->captcha_model->initiate_captcha();
+    	$data['email'] = $this->input->post('email');
+    	$data['phone'] = $this->input->post('phone');
+    	$data['message'] = $this->input->post('message');
+    	$data['business_name'] = $this->input->post('business_name');
+		$data['referral'] = $this->input->post('referral');
+    	$data['name'] = $this->input->post('name');
+		$data['errors'] = validation_errors();	
+			
 		$id = "contact_us";
 		$data['content'] =	$this->content_model->get_content($id);
 		//$data['slideshow'] = "slideshow/main_slideshow";
@@ -78,6 +89,9 @@ function contact()
 		$data['news'] = $this->news_model->list_news();
 		$data['sidebar'] = 'sidebar/links';
 		$data['page'] = $id;
+		
+		$data['widecolumn'] = 'sidebar/map';
+		
 		$is_logged_in = $this->session->userdata('is_logged_in');
 		
 		if($is_logged_in!=NULL)
@@ -144,6 +158,9 @@ function lease_rate_calc()
 		$data['page'] = $id;
 		$is_logged_in = $this->session->userdata('is_logged_in');
 		
+			//display widecolumn module - this should eventually be controlled by some table or something
+		$data['widecolumn'] = 'sidebar/benefits_of_leasedesk';
+		
 		if($is_logged_in!=NULL)
 			{
 			$data['edit'] = site_url("admin/edit/$id");
@@ -184,6 +201,9 @@ function lease_rate_calc()
 		$data['sidebar'] = 'sidebar/links';
 		$data['page'] = $id;
 		$is_logged_in = $this->session->userdata('is_logged_in');
+		
+		//display widecolumn module - this should eventually be controlled by some table or something
+		$data['widecolumn'] = 'sidebar/benefits_of_leasedesk';
 		
 		if($is_logged_in!=NULL)
 			{

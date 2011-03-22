@@ -1,13 +1,17 @@
-<div id="map_canvas" style="width: 520px; height: 310px;">map div</div> 
+<img src="<?=base_url()?>images/titles/contact.png"/>
 
-<div style="float:left; width:200px; padding-top:10px;">
-Proctor Consulting,<br />
-Lake View Drive,<br />
-Sherwood Park,<br />
-Nottingham,<br />
-NG15 0DT<br />
 
-E&nbsp;<a href="mailto:info@proctorconsulting.co.uk">info@proctorconsulting.co.uk</a></p>
-Switchboard:01302 245310<br />
+<br/>
 
-</div>
+<?php echo $config_company_name; ?>.<br/>
+
+<?=$config_address1?>,<br/>
+<?=$config_address2?>,<br/>
+<?=$config_address5?>,<br/>
+<?=$config_address6?> <br/>
+
+E&nbsp;<a href="mailto:<?=$config_email?>"><?=$config_email?></a></p>
+Switchboard:<?=$config_phone?><br />
+
+
+<?=$this->load->view('forms/contact')?>
