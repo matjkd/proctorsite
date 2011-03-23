@@ -48,7 +48,7 @@ function content()
 		
 		endforeach;
 		$data['menu'] =	$this->content_model->get_menus();
-		$data['slideshow'] = "slideshow/main_slideshow";
+		$data['slideshow'] = "slideshow/main_slideshow2";
 		$data['news'] = $this->news_model->list_news();
 		$data['sidebar'] = 'sidebar/links';
 		$data['rightcolumn'] = 'sidebar/channel_partner';

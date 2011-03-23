@@ -1,3 +1,5 @@
+<a target="_blank" href="<?=base_url()?>feed"><img style="float:right;" src="<?=base_url()?>images/icons/social/rss.png" /></a>
+<img src="<?=base_url()?>images/titles/latest_news.png"/>
 <?php foreach($content as $row):?>
 
 <img src="<?=base_url()?>images/headings/<?=$row['menu_title'];?>.png">

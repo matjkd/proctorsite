@@ -61,7 +61,7 @@ $referrals = array(
 	<?=form_dropdown('referral', $referrals)?>
 	</p>
 	
-Enter the word you see below<br/>
+<?=form_label('Enter the word you see below')?><br/>
 
 
 <?=form_label($captcha['image'])?><br/>

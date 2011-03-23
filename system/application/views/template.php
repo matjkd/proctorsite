@@ -68,7 +68,7 @@
 			<div class="menu_container">
     			<div class="container_24">
     				<div class="grid_14">
-    					Take the tour
+    					Take the tour (coming soon)
     				</div>
     			</div>
     		</div>

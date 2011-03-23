@@ -56,7 +56,40 @@ function item()
 		$this->load->vars($data);
 		$this->load->view('template');
 	}
-
+function post($post)
+	{
+		
+		$id = 'news';
+		$data['menu'] =	$this->content_model->get_menus();
+		$data['slideshow'] = "slideshow/main_slideshow";
+		$data['news'] = $this->news_model->get_news($post);
+		$data['sidebar'] = 'sidebar/links';
+		$data['rightcolumn'] = 'sidebar/channel_partner';
+		$data['page'] = $id;
+		$is_logged_in = $this->session->userdata('is_logged_in');	
+			
+		$data['content'] =	$this->content_model->get_content($id);
+	
+		$data['main'] = "pages/news";
+		
+		$is_logged_in = $this->session->userdata('is_logged_in');
+		
+			//display widecolumn module - this should eventually be controlled by some table or something
+		$data['widecolumn'] = 'sidebar/benefits_of_leasedesk';
+		
+		if($is_logged_in!=NULL)
+			{
+			$data['edit'] = site_url("admin/editnews/");
+			$data['create_news'] = site_url("admin/create_news");
+	        }
+			
+         $data['title'] = 'Proctor Consulting Blog';
+		              
+			
+		$data['info'] = "infoblock/times";
+		$this->load->vars($data);
+		$this->load->view('template');
+	}
 	
 }
 

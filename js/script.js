@@ -75,6 +75,18 @@ $(document).ready(function() {
 	});
 	$('.cycle').css("display", "block");
 });
+//slideshow text
+$(document).ready(function() {
+    $('.cycletext').cycle({
+		fx: 'scrollUp', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+		speedIn:  500, 
+	    speedOut: 500, 
+	   timeout:  8000 
+	});
+	$('.cycletext').css("display", "block");
+
+});
+
 
 //sidebox slideshow
 $(document).ready(function() {
