@@ -1,10 +1,11 @@
 <?php
 
-class Admin extends My_Controller {
+class Admin extends MY_Controller
 
-	function Admin()
+{
+function __construct()
 	{
-		parent::Controller();
+		parent::__construct();
 		$this->load->model('professionals_model');
 		$this->load->library(array('encrypt', 'form_validation'));	
 		$this->is_logged_in();

@@ -6,7 +6,7 @@
 
 <div id="mainbutton" class="sidebox">
 	
-	<a target="_blank" href="http://www.channel-resource.com/">
+	<a id="channelbutton" href="#">
 	<img width="179px" height="45px" src="<?=base_url()?>images/icons/channel_resource.png"/>
 	</a>
 	
@@ -15,9 +15,21 @@
 
 <div id="mainbutton" class="sidebox">
 	
-	<a target="_blank" href="http://www.customer-resource.com/">
+	<a id="customerbutton" href="#">
 	<img width="179px" height="45px" src="<?=base_url()?>images/icons/customer_resource.png"/>
 	</a>
 	
+</div>
+
+<div id="site_login">	
+<?=$this->load->view('sidebar/site-login')?>
+</div>
+
+<div id="channel_login" style="display:none;">	
+<?=$this->load->view('sidebar/channel-resource-login')?>
+</div>
+
+<div id="customer_login" style="display:none;">	
+<?=$this->load->view('sidebar/customer-resource-login')?>
 </div>
 

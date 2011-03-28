@@ -57,8 +57,9 @@ margin-top:5px;
 }
 .header {
 	
-	border-bottom:1px #cccccc solid;
-	background: url('/images/backgrounds/headerback.jpg') repeat-x #999999;
+	border-bottom:1px #4e4e4e solid;
+	background: url('/images/backgrounds/headerback2.jpg') no-repeat #999999;
+	background-position: center top;
 	
 }
 #logo {
@@ -98,16 +99,17 @@ background:#b0b0b0;
 color:#ffffff;
 float:left;
 padding: 0px;
+margin-left: 5px;
 height:24px;
 
 }
 #top_menu ul {
-margin:8px 0px;
+margin:5px 0px 8px;
 padding-left:0px;
 }
 #top_menu li {
 display:inline;
-padding-right:35px;
+padding-right:25px;
 }
 
 #top_menu a {
@@ -172,6 +174,7 @@ margin-top: 15px;
 	background:#151515;
 	height:200px;
 	color: #666666;
+	padding-top:10px;
 }
 #partners_container {
 height:70px;
@@ -241,7 +244,7 @@ padding-left:5px;
 padding-right:5px;
 margin-bottom:10px;
 border:dashed 0px #191919;
-
+color:#ffffff;
 -moz-border-radius: 5px;
 -webkit-border-radius: 5px;
 border-radius: 5px;

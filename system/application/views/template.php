@@ -96,7 +96,7 @@
 				
 				<?php $this->load->view('global/mainbuttons'); ?> 
 		
-				<?php $this->load->view('sidebar/login_box'); ?> 
+					<?php // $this->load->view('sidebar/site-login'); ?> 
 			
 			</div>
 			
@@ -129,6 +129,7 @@
 	?> 
 	
 <div class="clear"></div>
+ <!--
 <div class="footer1">
 	<div class="container_24" >
 		
@@ -139,6 +140,7 @@
 	
 	</div>
 </div>
+-->
 
 <div class="footer2">
 	<div class="container_24">

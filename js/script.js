@@ -144,7 +144,101 @@ $(document).ready(function() {
         });
     });
 
+// top menu fader
+ 	$(function() {
+		var fadedelay = 100;
+	    $('#top_menu li a').hover(function () {
+	        $(this).animate({
+					
+					color: "#cccccc"
+					
+				}, 100 );
+			
+	    },
+	    function () {
+	        $(this).animate({
+					
+					color: "#ffffff"
+					
+				}, 100 );
+			
+	    });
+	     
+	 });
+//big buttons fader
+	$(function() {
+		var fadedelay = 100;
+	    $('#mainbutton a').hover(function () {
+	        $(this).parent().animate({
+					
+					backgroundColor: "#d76863"
+					
+				}, 100 );
+			
+	    },
+	    function () {
+	        $(this).parent().animate({
+					
+					backgroundColor: "#b44640"
+					
+				}, 100 );
+			
+	    });
+	     
+	 });
+//social links hover
+$(function() {
+		var fadedelay = 100;
+	    $('#social_links img').hover(function () {
+	        $('#social_links img').not(this).animate({
+					width:"20px",
+					height:"20px"
+					
+				}, 100 );
+	        $(this).animate({
+					width:"40px",
+					height:"40px"
+					
+				}, 100 );
+			
+	    },
+	    function () {
+	    	$('#social_links img').not(this).animate({
+					width:"28px",
+					height:"28px"
+					
+				}, 100 );
+	        $(this).animate({
+					width:"28px",
+					height:"28px"
+					
+					
+				}, 100 );
+			
+	    });
+	     
+	 });
 
+//login fader
+$(function() {
+		var logindelay = 300;
+		
+	    $('#channelbutton').click(function () {
+	    	$('#site_login').fadeOut(logindelay);
+	    	$('#customer_login').fadeOut(logindelay);
+	        $('#channel_login').delay(logindelay).fadeIn(logindelay);
+	         
+	    });
+	    
+	    $('#customerbutton').click(function () {
+	    	$('#site_login').fadeOut(logindelay);
+	    	$('#channel_login').fadeOut(logindelay);
+	        $('#customer_login').delay(logindelay).fadeIn(logindelay);
+	         
+	    });
+	   
+	    
+	 });
     
 //team profile fader
 	
