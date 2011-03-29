@@ -306,10 +306,13 @@ line-height:25px;
 color:#ffffff;
 font-size:120%;
 }
-#social_links img {
-padding-right:7px;
+
+#social_link {
+float:left;
 width:28px;
 height:28px;
+padding:1px;
+overflow: visible;
 }
 
 

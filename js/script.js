@@ -190,28 +190,31 @@ $(document).ready(function() {
 $(function() {
 		var fadedelay = 100;
 	    $('#social_links img').hover(function () {
-	        $('#social_links img').not(this).animate({
-					width:"20px",
-					height:"20px"
+	        $('#social_links img').not(this).css({
+					width:"28px",
+					height:"28px",
+					padding: "1px"
 					
 				}, 100 );
-	        $(this).animate({
-					width:"40px",
-					height:"40px"
-					
+	        $(this).css({
+					width:"32px",
+					height:"32px",
+					padding: "0px"
 				}, 100 );
 			
 	    },
 	    function () {
-	    	$('#social_links img').not(this).animate({
+	    	$('#social_links img').not(this).css({
 					width:"28px",
 					height:"28px"
+					,
+					padding: "1px"
 					
 				}, 100 );
-	        $(this).animate({
+	        $(this).css({
 					width:"28px",
-					height:"28px"
-					
+					height:"28px",
+					padding: "1px"
 					
 				}, 100 );
 			

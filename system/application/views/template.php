@@ -43,7 +43,8 @@
 		</div>
 	    
 		<div class="grid_5" id="contact_details">
-		<img width="183px" height="68px" src="<?=base_url()?>images/logos/contact_details.png"/>
+		<img width="183px" height="38px" src="<?=base_url()?>images/logos/contact_details.png"/>
+		<?=$this->load->view('sidebar/social_links')?>
 		</div>
 	    	
     	</div>
@@ -151,7 +152,7 @@
 		</div>
 	
 		<div class="grid_5">
-			<?=$this->load->view('sidebar/social_links')?>
+			
 		</div>
 	
 	</div>
