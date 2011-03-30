@@ -4,40 +4,15 @@
 	
 	<div class="cycleside" style="display:none;">
 	
-		<div align="center">
-			<div style="height:245px;">
-			<h1>New Channel Partner Program</h1>
-			<br/>
-			Generate new revenue by referring or reselling Lease-Desk.Com<br/><br/>
-			
-			
-			
-			<img width="85px;" src="<?=base_url()?>images/general/screenshotsmall.jpg" /><img width="85px;" src="<?=base_url()?>images/general/screenshotsmall.jpg" /><br/><br/>
-			</div>
-			
-			<div>
-			Become a Lease-Desk.Com Channel Partner	
-			<h2><a href="#" id="openchannel">Click Here for more info</a></h2>
-			</div>
-		</div>
+	<a href="#" id="openchannel"><img width="192px" height="308px" src="<?=base_url()?>images/slides/partner/partner1.png"/></a>
+	<a href="#" id="openchannel"><img width="192px" height="308px" src="<?=base_url()?>images/slides/partner/partner2.png"/></a>
+	<a href="#" id="openchannel"><img width="192px" height="308px" src="<?=base_url()?>images/slides/partner/partner3.png"/></a>
+	<a href="#" id="openchannel"><img width="192px" height="308px" src="<?=base_url()?>images/slides/partner/partner4.png"/></a>
+	<a href="#" id="openchannel"><img width="192px" height="308px" src="<?=base_url()?>images/slides/partner/partner5.png"/></a>
+	
+
+	
 		
-		<div align="center">
-			<div style="height:245px;">
-			<h1>Do you sell into a Channel or have a Network of VARS</h1><br/>
-			
-			Are they taking every possible step to 'upsell' their existing customer base?<br/><br/>
-			
-			
-			Are you interested in growing your business revenues and profitability?<br/>
-			<br/>
-			</div>
-		
-			<div>
-			Become a Lease-Desk.Com Channel Partner	
-			<h2><a href="#" id="openchannel">Click Here for more info</a></h2>
-			</div>
-			
-		</div>
 	
 	</div>
 	

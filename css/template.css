@@ -287,10 +287,10 @@ border:0px;
 margin-top:5px;
 }
 #big_box {
-padding-top:10px;
+padding:0px 0 10px 0;
 color:#ffffff;
 line-height:15px;
-width: 180px;
+width: 192px;
 height: 302px;
 
 }
