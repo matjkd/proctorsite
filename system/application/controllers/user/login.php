@@ -136,9 +136,9 @@ function __construct()
 		$is_logged_in = $this->session->userdata('is_logged_in');
 		if(!isset($is_logged_in) || $is_logged_in == true)
 		{
-			redirect($this->uri->uri_string());
+			redirect('welcome/');
 		}		
-		$this->index();
+		redirect('welcome/');
 	}
 	
 	

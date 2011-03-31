@@ -118,7 +118,11 @@ color: #ffffff;
 }
 
 #contact_details {
-margin-top: 15px;
+margin-top: 32px;
+}
+#contact_details h1 {
+color: #b44640;
+margin-bottom:5px;
 }
 
 .top_shadow {
@@ -155,6 +159,7 @@ margin-top: 15px;
 	overflow:hidden;
 	position:absolute;
 	float:left;
+	
 	
 }
 
@@ -256,6 +261,9 @@ box-shadow: 0px 2px 3px #1C1A1A;
 background:#b44640;
 
 }
+.sidebox a {
+color:#ffffff;
+}
 #mainbutton {
 
 width: 180px;
@@ -314,7 +322,15 @@ height:28px;
 padding:1px;
 overflow: visible;
 }
-
+.cycletext {
+display:none; float:left;
+}
+.cycle {
+display:none; float:left;
+}
+.cycleside {
+display:none;
+}
 
 .cleditorMain {border:1px solid #999; padding:0 1px 1px; background-color:white}
 .cleditorMain iframe {border:none; margin:0; padding:0}
@@ -497,3 +513,4 @@ tr.sectiontableentry2 td {
 tr.sectiontableentry2 td {
 	background: #eeeeee;
 }
+

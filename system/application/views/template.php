@@ -11,8 +11,13 @@
 <?=$this->load->view('global/header')?>
 
 </head>
-
+<?php if($page == "contact_us") { ?>
 <body onload="initialize()">
+
+<?php } else { ?>
+	<body>
+<?php } ?>		
+
  <!--[if lt IE 7]>
   <div style='border: 1px solid #F7941D; background: #FEEFDA; text-align: center; clear: both; height: 75px; position: relative;'>
     <div style='position: absolute; right: 3px; top: 3px; font-family: courier new; font-weight: bold;'><a href='#' onclick='javascript:this.parentNode.parentNode.style.display="none"; return false;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-cornerx.jpg' style='border: none;' alt='Close this notice'/></a></div>
@@ -33,7 +38,7 @@
 
 
 
-   <header>
+   <div>
    	<div class="logotop">
     	<div class="container_24">
     	
@@ -43,7 +48,7 @@
 		</div>
 	    
 		<div class="grid_5" id="contact_details">
-		<img width="183px" height="38px" src="<?=base_url()?>images/logos/contact_details.png"/>
+		<h1>tel: +44(0) 1302 245 310</h1>
 		<?=$this->load->view('sidebar/social_links')?>
 		</div>
 	    	
@@ -75,7 +80,7 @@
     		</div>
 		</div>
 		<?php }  ?>
-    </header>
+    </div>
 
 
 

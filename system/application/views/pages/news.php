@@ -1,4 +1,3 @@
-<a target="_blank" href="<?=base_url()?>feed"><img style="float:right;" src="<?=base_url()?>images/icons/social/rss.png" /></a>
 <img src="<?=base_url()?>images/titles/latest_news.png"/>
 <?php foreach($content as $row):?>
 
@@ -7,7 +6,7 @@
 
 if(isset($create_news))
 {
-	echo " - <a href='$create_news'><img width='20px' height='20px' alt='edit' src='".base_url()."images/icons/add.png'></a>";
+	echo "  <a href='$create_news'><img width='16px' height='16px' alt='edit' src='".base_url()."images/icons/add.png'></a>";
 }
 ?>
 
@@ -20,7 +19,7 @@ foreach($news as $news):?>
 <p><h3>
 <?=$news['news_title'];?> <?php if(isset($edit))
 {
-	echo " - <a href='".base_url()."admin/editnews/".$news['news_id']."'><img width='20px' height='20px' alt='edit' src='".base_url()."images/icons/edit_page.png'></a>";
+	echo "  <a style='float:right;' href='".base_url()."admin/editnews/".$news['news_id']."'><img width='16px' height='16px' alt='edit' src='".base_url()."images/icons/social/edit_16.png'></a>";
 }
 ?>
 </h3>
@@ -34,8 +33,26 @@ foreach($news as $news):?>
  Added by <?=$news['added_by'];?></div>
 
 </p>
-<?=$news['news_content'];?>
+<?php 
+$needle = "[readmore]";
+$haystack = $news['news_content'];
+$pos = strpos($haystack, $needle);
+
+// Note our use of ===.  Simply == would not work as expected
+// because the position of 'a' was the 0th (first) character.
+if ($pos === false) {
+   //The string '$needle' was not found in the string $haystack
+   $content = $haystack;
+} else {
+   //The string $needle' was found in the string $haystack
+   $content = substr(strrev(strstr(strrev($haystack), strrev($needle))), 0, -strlen($needle)); 
+}
 
 
-<br/>
+echo $content; 
+?>
+
+
+<a href="<?=base_url()?>blog/post/<?=$news['news_id']?>">Read More</a><br/>
+<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="<?=base_url()?>blog/post/<?=$news['news_id']?>" show_faces="true" width="450" font=""></fb:like>
 <?php endforeach; ?>

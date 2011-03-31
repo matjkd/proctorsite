@@ -20,6 +20,7 @@ function __construct()
 		
 		$id = $this->uri->segment(3);
 		$data['page'] = $id;
+		$data['title'] = "edit page";
 		$data['content'] =	$this->content_model->get_content($id);
 		$data['news'] = $this->news_model->list_news();
 		$data['main'] = "admin/edit_content";

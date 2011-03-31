@@ -7,12 +7,24 @@ function __construct()
 		parent::__construct();
 		$this->load->model('professionals_model');
 		$this->load->model('captcha_model');
+		$this->logged_in();
 	}
 	
 	function index()
 	{
 		
 		redirect('/welcome/content');
+	}
+	function logged_in()
+	{
+		$is_logged_in = $this->session->userdata('is_logged_in');
+		$role = $this->session->userdata('role');
+		if($is_logged_in!=NULL || $role ==1)
+			{
+			$globaldata['edit'] = "yes";
+			$this->load->vars($globaldata);
+	        }
+			
 	}
 	
 function introduction()
@@ -58,10 +70,7 @@ function content()
 		//display greybox module - this should eventually be controlled by some table or something
 		$data['greybox'] = 1;
 		
-		if($is_logged_in!=NULL)
-			{
-			$data['edit'] = site_url("admin/edit/$id");
-	        }
+		
 			
         $this->load->vars($data);
 		$this->load->view('template');
@@ -92,16 +101,7 @@ function contact()
 		
 		$data['widecolumn'] = 'sidebar/map';
 		
-		$is_logged_in = $this->session->userdata('is_logged_in');
 		
-		if($is_logged_in!=NULL)
-			{
-			$data['edit'] = site_url("admin/edit/$id");
-	        }
-			
-                       
-			
-	
 		$this->load->vars($data);
 		$this->load->view('template');
 }
@@ -129,12 +129,8 @@ function management_team()
 		$data['sidebar'] = 'sidebar/links';
 		$data['rightcolumn'] = 'sidebar/channel_partner';
 		$data['page'] = $id;
-		$is_logged_in = $this->session->userdata('is_logged_in');
-		$data['member'] = $this->professionals_model->get_professional($member);
-		if($is_logged_in!=NULL)
-			{
-			$data['edit'] = site_url("admin/edit/$id");
-	        }
+		
+		
 		         
 		$this->load->vars($data);
 		$this->load->view('template');
@@ -161,10 +157,7 @@ function lease_rate_calc()
 			//display widecolumn module - this should eventually be controlled by some table or something
 		$data['widecolumn'] = 'sidebar/benefits_of_leasedesk';
 		
-		if($is_logged_in!=NULL)
-			{
-			$data['edit'] = site_url("admin/edit/$id");
-	        }
+		
 	        
 	     	$data['quote_ref'] ='';
 						$data['capital'] ='';
@@ -205,10 +198,10 @@ function lease_rate_calc()
 		//display widecolumn module - this should eventually be controlled by some table or something
 		$data['widecolumn'] = 'sidebar/benefits_of_leasedesk';
 		
-		if($is_logged_in!=NULL)
-			{
-			$data['edit'] = site_url("admin/edit/$id");
-	        }		
+		$is_logged_in = $this->session->userdata('is_logged_in');
+		
+		
+				
 		//validate the calculator entries
 		
 		$this->form_validation->set_rules('amount_type', 'capital type', 'trim|required');

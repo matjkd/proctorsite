@@ -43,8 +43,8 @@ window.log = function(){
 		
 	});
 	
-// intline input titles
-$(document).ready(function() {
+// inline input titles
+$(function()  {
  $('input[title]').each(function() {
   if($(this).val() === '') {
    $(this).val($(this).attr('title')); 
@@ -66,7 +66,7 @@ $(document).ready(function() {
 
 
 //slideshow
-$(document).ready(function() {
+$(function() {
     $('.cycle').cycle({
 		fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
 		speedIn:  500, 
@@ -76,7 +76,7 @@ $(document).ready(function() {
 	$('.cycle').css("display", "block");
 });
 //slideshow text
-$(document).ready(function() {
+$(function() {
     $('.cycletext').cycle({
 		fx: 'scrollUp', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
 		speedIn:  500, 
@@ -89,7 +89,7 @@ $(document).ready(function() {
 
 
 //sidebox slideshow
-$(document).ready(function() {
+$(function()  {
     $('.cycleside').cycle({
 		fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
 		speedIn:  500, 
@@ -115,11 +115,11 @@ $(document).ready(function() {
 
 // popup dialog for channel partner thing
 $.fx.speeds._default = 300;
-$(document).ready(function() {
+$(function()  {
 	$('#dialog').dialog({
 		autoOpen: false,
 		show: "blind",
-		modal: true,
+		modal: false,
 		width:500,
 		height:550
 	});
@@ -131,7 +131,7 @@ $(document).ready(function() {
 });
 
 // partners slider
-  $(document).ready(function(){
+$(function() {
         $('#partners').bxSlider({
             displaySlideQty: 5,
             moveSlideQty: 1,
@@ -278,12 +278,12 @@ $(function() {
 	 });	
 //pretty photo
 
-$(document).ready(function(){
+$(function() {
 			$("a[rel^='prettyPhoto']").prettyPhoto();
 		});
 		
 // team slider
-  $(document).ready(function(){
+ $(function() {
         $('#team').bxSlider({
             displaySlideQty: 5,
             moveSlideQty: 1,

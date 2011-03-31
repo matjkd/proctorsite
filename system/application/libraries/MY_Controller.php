@@ -32,6 +32,7 @@ class MY_Controller extends Controller {
 			
 			$config_data['current_year'] = date('Y');
 			
+			$config_data['latest_news'] = $this->news_model->get_latest_news();
 			//age of company
 			$startdate = 2009;
 			$currentyear = date('Y');

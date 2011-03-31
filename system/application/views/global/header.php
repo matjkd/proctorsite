@@ -26,9 +26,21 @@
    <link rel="stylesheet" href="<?=base_url()?>css/template.css">
    
    <link rel="stylesheet" media="handheld" href="<?=base_url()?>css/handheld.css?v=2">  
+   
+   
+<!--[if IE 6]>
+<link rel="stylesheet" href="<?=base_url()?>css/ie6.css" /> 
+<![endif]-->
+
+<!--[if IE 7]>
+<link rel="stylesheet" href="<?=base_url()?>css/ie7.css" /> 
+<![endif]-->
+
+<!--[if IE 8]>
+<link rel="stylesheet" href="<?=base_url()?>css/ie8.css" /> 
+<![endif]-->
  
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
   <script src="<?=base_url()?>js/libs/modernizr-1.6.min.js"></script>
    
    
-<head>

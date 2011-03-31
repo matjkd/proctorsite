@@ -17,5 +17,6 @@
 	 &copy; Copyright 2011 Proctor Consulting
 	
 </div>
+<?php $this->load->view('global/footer'); ?>
 </body>
 </html>

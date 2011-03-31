@@ -5,15 +5,26 @@ class Blog extends MY_Controller {
 	 function __construct()
     {
         parent::__construct();
-			
+		$this->logged_in();
 	}
 	
 	function index()
 	{
 		redirect('blog/item');
 	}
-	
-function item()
+	function logged_in()
+	{
+		$is_logged_in = $this->session->userdata('is_logged_in');
+		$role = $this->session->userdata('role');
+		if($is_logged_in!=NULL || $role ==1)
+			{
+			$globaldata['edit'] = "yes";
+			$globaldata['create_news'] = site_url("admin/create_news");
+			$this->load->vars($globaldata);
+	        }
+			
+	}
+	function item()
 	{
 		
 		if(($this->uri->segment(3))==NULL)
@@ -27,7 +38,7 @@ function item()
 			
 		
 		$data['menu'] =	$this->content_model->get_menus();
-		$data['slideshow'] = "slideshow/main_slideshow";
+		$data['slideshow'] = "slideshow/main_slideshow2";
 		$data['news'] = $this->news_model->list_news();
 		$data['sidebar'] = 'sidebar/links';
 		$data['rightcolumn'] = 'sidebar/channel_partner';
@@ -43,11 +54,7 @@ function item()
 			//display widecolumn module - this should eventually be controlled by some table or something
 		$data['widecolumn'] = 'sidebar/benefits_of_leasedesk';
 		
-		if($is_logged_in!=NULL)
-			{
-			$data['edit'] = site_url("admin/editnews/");
-			$data['create_news'] = site_url("admin/create_news");
-	        }
+		
 			
          $data['title'] = 'Proctor Consulting Blog';
 		              
@@ -61,7 +68,7 @@ function post($post)
 		
 		$id = 'news';
 		$data['menu'] =	$this->content_model->get_menus();
-		$data['slideshow'] = "slideshow/main_slideshow";
+		$data['slideshow'] = "slideshow/main_slideshow2";
 		$data['news'] = $this->news_model->get_news($post);
 		$data['sidebar'] = 'sidebar/links';
 		$data['rightcolumn'] = 'sidebar/channel_partner';
@@ -70,18 +77,14 @@ function post($post)
 			
 		$data['content'] =	$this->content_model->get_content($id);
 	
-		$data['main'] = "pages/news";
+		$data['main'] = "pages/newsitem";
 		
 		$is_logged_in = $this->session->userdata('is_logged_in');
 		
 			//display widecolumn module - this should eventually be controlled by some table or something
 		$data['widecolumn'] = 'sidebar/benefits_of_leasedesk';
 		
-		if($is_logged_in!=NULL)
-			{
-			$data['edit'] = site_url("admin/editnews/");
-			$data['create_news'] = site_url("admin/create_news");
-	        }
+		
 			
          $data['title'] = 'Proctor Consulting Blog';
 		              
