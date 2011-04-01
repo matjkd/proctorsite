@@ -6,7 +6,7 @@
 
 <div id="mainbutton" class="sidebox">
 	
-	<a id="channelbutton" href="#">
+	<a id="channelbutton" >
 	<img width="179px" height="45px" src="<?=base_url()?>images/icons/channel_resource.png"/>
 	</a>
 	
@@ -15,7 +15,7 @@
 
 <div id="mainbutton" class="sidebox">
 	
-	<a id="customerbutton" href="#">
+	<a id="customerbutton" >
 	<img width="179px" height="45px" src="<?=base_url()?>images/icons/customer_resource.png"/>
 	</a>
 	
