@@ -35,6 +35,54 @@ function __construct()
 		
 		redirect ("admin/edit/$id");
 	}
+	function create_news()
+	{
+		$data['page'] = "news";
+		$data['content'] =	$this->content_model->get_content('news');
+		$data['main'] = "admin/create_news";
+		$data['menu'] =	$this->content_model->get_menus();
+		$data['news'] = $this->news_model->list_news();
+		$this->load->vars($data);
+		$this->load->view('template');
+	}
+	function submit_news()
+	{			
+		$this->form_validation->set_rules('news_title','Title','max_length[255]');			
+		$this->form_validation->set_rules('news_content','Content','max_length[1024]');
+		$this->form_validation->set_rules('page_type','Page Type','max_length[11]');
+		$this->form_validation->set_error_delimiters('<br /><span class="error">', '</span>');
+	
+		if ($this->form_validation->run() == FALSE) // validation hasn'\t been passed
+		{
+				
+			$this->load->view('blog');
+		}
+		else // passed validation proceed to post success logic
+		{
+		 	// build array for the model
+			$form_data = array(
+					    'news_content' => $this->input->post('content'),
+    					'added_by' => $this->input->post('added_by'),
+    					'date_added' => $this->input->post('date_added'),
+    					'news_title' => $this->input->post('title'),
+    					//page type 1 is blog, or news, doesn't matter as its not used yet
+    					'page_type' => 1
+						);
+					
+			// run insert model to write data to db
+		
+			if ($this->news_model->SaveForm($form_data) == TRUE) // the information has therefore been successfully saved in the db
+			{
+				redirect('blog');   // or whatever logic needs to occur
+			}
+			else
+			{
+			echo 'An error occurred saving your information. Please try again later';
+			// Or whatever error handling is necessary
+			}
+		}
+	}
+	
 	function create_company()
 	{
 		

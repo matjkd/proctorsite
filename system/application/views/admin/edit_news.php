@@ -1,10 +1,13 @@
+type [readmore] to create a break. So when you view the news as a list it only displays what comes before the [readmore], clicking readmore will show the entire article.
+
+
 <?php foreach($news as $row):?>
 
 <?php  $id = $row['news_id'];?>
 
 
 <?=form_open("admin/edit_news/$id")?> 
-<?=form_input('title', $row['news_title'])?>
+Title:<?=form_input('title', $row['news_title'])?>
 
 <br/>
 Added By: <?=form_input('added_by', $row['added_by'])?><br/>

@@ -1,25 +1,48 @@
 <div id="rightside" class="ajax_box">
-
+<div id="calculator"> 
 <?php 
 
 foreach($quote_results as $key => $row):
+?>
+<p> 	
+<?=form_label('Capital Amount')?><br/>
+&pound;<?=number_format($row['capital'], 2)?><br/>
+</p>
 
+<p> 	
+<?=form_label('Interest Rate')?><br/>
+<?=$row['interest_rate']?><br/>
+</p>
 
-	$this->table->add_row('Capital Amount', "&pound;".number_format($row['capital'], 2)."");
-	$this->table->add_row('Interest Rate', $row['interest_rate']);
-	$this->table->add_row('Rate Per Thousand', $row['rate_per_1000']);
-	
-	$this->table->add_row('Payment Type', $row['payment_type']);
-	$this->table->add_row('Payment Frequency', $row['payment_frequency']);
-	$this->table->add_row('Payment Profile', $row['initial']."+".$row['regular']);
-	$this->table->add_row('Initial', "&pound;".$row['initial_result']."");
-	$this->table->add_row('Regular', "&pound;".$row['regular_result']."");
-	$this->table->add_row('', '');
-echo $this->table->generate();
-	$this->table->clear();
-	
-	
-endforeach;	
-	?>
+<p> 	
+<?=form_label('Rate Per Thousand')?><br/>
+<?=$row['rate_per_1000']?><br/>
+</p>
 
+<p> 	
+<?=form_label('Payment Type')?><br/>
+<?=$row['payment_type']?><br/>
+</p>
+
+<p> 	
+<?=form_label('Payment Frequency')?><br/>
+<?=$row['payment_frequency']?><br/>
+</p>
+
+<p> 	
+<?=form_label('Payment Profile')?><br/>
+<?=$row['initial']."+".$row['regular']?><br/>
+</p>
+
+<p> 	
+<?=form_label('Initial')?><br/>
+&pound;<?=$row['initial_result']?><br/>
+</p>
+
+<p> 	
+<?=form_label('Regular')?><br/>
+&pound;<?=$row['regular_result']?><br/>
+</p>
+<?php endforeach;?>
+</div>
 </div>

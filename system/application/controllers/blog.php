@@ -16,7 +16,7 @@ class Blog extends MY_Controller {
 	{
 		$is_logged_in = $this->session->userdata('is_logged_in');
 		$role = $this->session->userdata('role');
-		if($is_logged_in!=NULL || $role ==1)
+		if($is_logged_in!=NULL && $role ==1)
 			{
 			$globaldata['edit'] = "yes";
 			$globaldata['create_news'] = site_url("admin/create_news");

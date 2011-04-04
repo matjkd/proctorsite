@@ -1,4 +1,8 @@
 <img src="<?=base_url()?>images/titles/latest_news.png"/>
+
+<?php if(isset($edit)) { ?>
+	<a style='float:right;' href="<?=base_url()?>admin/create_news"><img width="16px" height="16px" alt="edit" src="<?=base_url()?>images/icons/social/add_16.png"></a>
+<?php } ?>
 <?php foreach($content as $row):?>
 
 <img src="<?=base_url()?>images/headings/<?=$row['menu_title'];?>.png">

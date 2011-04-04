@@ -19,7 +19,7 @@ function __construct()
 	{
 		$is_logged_in = $this->session->userdata('is_logged_in');
 		$role = $this->session->userdata('role');
-		if($is_logged_in!=NULL || $role ==1)
+		if($is_logged_in!=NULL && $role ==1)
 			{
 			$globaldata['edit'] = "yes";
 			$this->load->vars($globaldata);
@@ -65,6 +65,7 @@ function content()
 		$data['sidebar'] = 'sidebar/links';
 		$data['rightcolumn'] = 'sidebar/channel_partner';
 		$data['page'] = $id;
+		
 		$is_logged_in = $this->session->userdata('is_logged_in');
 		
 		//display greybox module - this should eventually be controlled by some table or something

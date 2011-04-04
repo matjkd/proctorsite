@@ -312,3 +312,15 @@ jQuery(function() {
 		
 		
 	});
+	
+//tips
+	$(function() {
+		$('#tips1').tipsy({gravity: 'w', fade: true});
+		$('#tips2').tipsy({gravity: 'w', fade: true});
+		$('#tips3').tipsy({gravity: 'w', fade: true});
+		$('#tips4').tipsy({gravity: 'w', fade: true});
+		$('#tips5').tipsy({gravity: 'w', fade: true});
+		$('#tips6').tipsy({gravity: 'w', fade: true});
+		
+	});
+	
