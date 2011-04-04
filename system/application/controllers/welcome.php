@@ -63,7 +63,7 @@ function content()
 		$data['slideshow'] = "slideshow/main_slideshow2";
 		$data['news'] = $this->news_model->list_news();
 		$data['sidebar'] = 'sidebar/links';
-		$data['rightcolumn'] = 'sidebar/channel_partner';
+		$data['rightcolumn'] = 'sidebar/channel_partner_program';
 		$data['page'] = $id;
 		
 		$is_logged_in = $this->session->userdata('is_logged_in');
@@ -98,6 +98,7 @@ function contact()
 		$data['title'] = 'Contact Us';
 		$data['news'] = $this->news_model->list_news();
 		$data['sidebar'] = 'sidebar/links';
+		$data['rightcolumn'] = 'sidebar/channel_partner_program';
 		$data['page'] = $id;
 		
 		$data['widecolumn'] = 'sidebar/map';
@@ -128,7 +129,7 @@ function management_team()
 		$data['title'] = 'Management Team';
 		$data['news'] = $this->news_model->list_news();
 		$data['sidebar'] = 'sidebar/links';
-		$data['rightcolumn'] = 'sidebar/channel_partner';
+		$data['rightcolumn'] = 'sidebar/channel_partner_program';
 		$data['page'] = $id;
 		
 		
@@ -152,11 +153,13 @@ function lease_rate_calc()
 		$data['title'] = 'Lease Rate Calculator';
 		$data['news'] = $this->news_model->list_news();
 		$data['sidebar'] = 'sidebar/links';
+		$data['rightcolumn'] = 'sidebar/channel_partner_program';
 		$data['page'] = $id;
 		$is_logged_in = $this->session->userdata('is_logged_in');
 		
 			//display widecolumn module - this should eventually be controlled by some table or something
 		$data['widecolumn'] = 'sidebar/benefits_of_leasedesk';
+		$data['widecolumn2'] = 'sidebar/testimonials';
 		
 		
 	        
@@ -193,12 +196,13 @@ function lease_rate_calc()
 		$data['title'] = 'Lease Rate Calculator';
 		$data['news'] = $this->news_model->list_news();
 		$data['sidebar'] = 'sidebar/links';
+		$data['rightcolumn'] = 'sidebar/channel_partner_program';
 		$data['page'] = $id;
 		$is_logged_in = $this->session->userdata('is_logged_in');
 		
 		//display widecolumn module - this should eventually be controlled by some table or something
 		$data['widecolumn'] = 'sidebar/benefits_of_leasedesk';
-		
+		$data['widecolumn2'] = 'sidebar/testimonials';
 		$is_logged_in = $this->session->userdata('is_logged_in');
 		
 		

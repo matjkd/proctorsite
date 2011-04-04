@@ -47,10 +47,12 @@ $frequency = array(12=>'Monthly',4=>'Quarterly',1=>'Annually');
 </p>
 		
 <?=form_hidden('date_added', unix_to_human(now(), TRUE, 'eu'))?>
-</div>
+</div><br/>
+
+
 <?=form_submit('reset', 'Reset')?>
 <?=form_submit('submit', 'Submit')?>
-	
+<?=form_close()?>
 	</div>
 
 </div>	

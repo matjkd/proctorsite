@@ -113,23 +113,55 @@ $(function()  {
 	$('.leasedesk-cycle').css("display", "block");
 });
 
-// popup dialog for channel partner thing
-$.fx.speeds._default = 300;
-$(function()  {
-	$('#dialog').dialog({
-		autoOpen: false,
-		show: "blind",
-		modal: false,
-		width:500,
-		height:550
+//Dialog boxes
+	// popup dialog for channel partner thing
+	$.fx.speeds._default = 300;
+	$(function()  {
+		$('#dialog').dialog({
+			autoOpen: false,
+			show: "blind",
+			modal: false,
+			width:500,
+			height:550
+		});
+		
+		$('#openchannel').click(function() {
+			$('#dialog').dialog('open');
+			return false;
+		});
 	});
+	// popup dialog for send info
 	
-	$('#openchannel').click(function() {
-		$('#dialog').dialog('open');
-		return false;
+	$(function()  {
+		$('#sendinfo').dialog({
+			autoOpen: false,
+			show: "blind",
+			modal: false,
+			width:500,
+			height:550
+		});
+		
+		$('#open_send_info').click(function() {
+			$('#sendinfo').dialog('open');
+			return false;
+		});
 	});
-});
-
+	// popup dialog for request a demo
+	
+	$(function()  {
+		$('#request_demo').dialog({
+			autoOpen: false,
+			show: "blind",
+			modal: false,
+			width:500,
+			height:550
+		});
+		
+		$('#open_request_demo').click(function() {
+			$('#request_demo').dialog('open');
+			return false;
+		});
+	});
 // partners slider
 $(function() {
         $('#partners').bxSlider({

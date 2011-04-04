@@ -107,9 +107,9 @@
 			</div>
 			
 			<div class="grid_5">
-				
-				<?php $this->load->view('sidebar/channel_partner_program'); ?> 
-		
+				<?php if(isset($rightcolumn)) { ?>
+				<?php $this->load->view($rightcolumn); ?> 
+				<?php }?>
 			</div>
 			
 			<div class="grid_10">

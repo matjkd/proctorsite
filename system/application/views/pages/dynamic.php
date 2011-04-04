@@ -1,5 +1,5 @@
 <?php foreach($content as $row):?>
-<img src="<?=base_url()?>images/titles/<?=$row['menu_title']?>.png"/>
+<img src="<?=base_url()?>images/titles/<?=$row['menu_title']?>.png" alt="<?=$row['title']?>"/>
 
 <?php if(isset($edit))
 {
@@ -8,7 +8,7 @@
 
 ?>
 <div class="clear"></div>
-<?php if(isset($row['youtube'])) {?>
+<?php if(isset($row['youtube']) && $row['youtube'] != '') {?>
 	
 	<div class="content_image">
 	
@@ -26,7 +26,7 @@
 <?php endforeach;?>
 
 <?php 
-if(isset($row['extra'])) {
+if(isset($row['extra']) && $row['extra'] != '') {
 
 $this->load->view($row['extra']);	
 	

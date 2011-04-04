@@ -108,6 +108,10 @@ End
 				redirect('welcome/contact', 'refresh');
 				}
 	}
+function send_info() {
+		echo "Coming Soon";
+	
+	}
 
 	
 }
