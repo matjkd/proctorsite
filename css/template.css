@@ -454,7 +454,7 @@ display:none;
 }
 /* Contact Form */
 #contact_form input, textarea {
-padding:6px;
+padding:3px;
 border: solid 1px #d0d0d0;
 width:250px;
 background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));

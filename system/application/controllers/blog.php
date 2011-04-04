@@ -53,7 +53,7 @@ class Blog extends MY_Controller {
 		
 			//display widecolumn module - this should eventually be controlled by some table or something
 		$data['widecolumn'] = 'sidebar/benefits_of_leasedesk';
-			$data['widecolumn2'] = 'sidebar/testimonials';
+		$data['widecolumn2'] = 'sidebar/testimonials';
 		
 			
          $data['title'] = 'Proctor Consulting Blog';
