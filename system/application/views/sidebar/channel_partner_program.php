@@ -17,7 +17,7 @@
 	
 	
 </div>
-<div id="dialog" title="Get More Info">
+<div id="dialog" class="cycleside" title="Get More Info">
 <iframe src ="<?=base_url()?>channel/" width="99%" height=99%>
   <p>Your browser does not support iframes. Go here for standalone form: <?=base_url()?>channel/</p>
 </iframe>

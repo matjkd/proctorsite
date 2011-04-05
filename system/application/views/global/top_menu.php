@@ -2,7 +2,7 @@
 
 <div id="top_menu">
     		<ul>
-    		<li><a href="<?=base_url()?>">HOME</a></li>
+    		<li><a href="<?=base_url()?>">HOME</a></li> 
     	
     		<li><a href="<?=base_url()?>leasedesk">SOFTWARE SOLUTIONS</a></li>
     		<li><a href="<?=base_url()?>welcome/content/consultancy">CONSULTANCY</a></li>
