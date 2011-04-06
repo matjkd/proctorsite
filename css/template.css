@@ -55,7 +55,7 @@ width:200px;
 height:185px;
 float:left;
 margin-right:10px;
-margin-top:5px;
+margin-top:0px;
 }
 .header {
 	
@@ -302,7 +302,7 @@ border-radius: 3px;
 -webkit-box-shadow: 0px 2px 3px #1C1A1A;
 box-shadow: 0px 2px 3px #1C1A1A;
 
-background:#b44640;
+background:#b0261f;
 
 }
 .sidebox a {

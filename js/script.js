@@ -203,7 +203,7 @@ $(function() {
 	    $('#mainbutton a').hover(function () {
 	        $(this).parent().animate({
 					
-					backgroundColor: "#d76863"
+					backgroundColor: "#b44640"
 					
 				}, 100 );
 			
@@ -211,7 +211,7 @@ $(function() {
 	    function () {
 	        $(this).parent().animate({
 					
-					backgroundColor: "#b44640"
+					backgroundColor: "#b0261f"
 					
 				}, 100 );
 			
