@@ -1,4 +1,5 @@
-<div class="container_24" id="greybottom">
+<div id="greybottom">
+<div class="container_24">
 		<div class="grid_14">
 		<?php $this->load->view('sidebar/latest_news'); ?> 
 		</div>
@@ -9,3 +10,4 @@
 		
 		</div>
 	</div>
+</div>

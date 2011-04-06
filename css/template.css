@@ -47,7 +47,7 @@ h3 {
 }
 #main_body {
 min-height:325px;
-margin-top:10px;
+margin-top:0px;
 }
 .content_image {
 border:1px solid #aaaaaa;
@@ -60,7 +60,7 @@ margin-top:5px;
 .header {
 	
 	border-bottom:1px #4e4e4e solid;
-	background: url('/images/backgrounds/headerback2.jpg') no-repeat #999999;
+	background: url('/images/backgrounds/headerback3.jpg') repeat-x #999999;
 	background-position: center top;
 	
 }
@@ -86,9 +86,10 @@ margin-top: 30px;
 }
 #greybottom
 {
-padding-top:10px;
-height:160px;
-background:#b0b0b0;
+padding-top:20px;
+height:180px;
+background: url('/images/backgrounds/footerbox_background.jpg') repeat-x #999999;
+background-position: center top;
 }
 #widecolumn
 {
@@ -190,7 +191,7 @@ margin-bottom:5px;
 	margin-left: auto;
 	margin-right: auto;
 	width:1000px;
-	min-height:196px;
+	height:250px;
 	position:relative;
 	
 	
@@ -293,9 +294,9 @@ padding-right:5px;
 margin-bottom:10px;
 border:dashed 0px #191919;
 color:#ffffff;
--moz-border-radius: 5px;
--webkit-border-radius: 5px;
-border-radius: 5px;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
 
 -moz-box-shadow: 0px 2px 3px #1C1A1A;
 -webkit-box-shadow: 0px 2px 3px #1C1A1A;
@@ -345,7 +346,7 @@ padding:0px 0 10px 0;
 color:#ffffff;
 line-height:15px;
 width: 192px;
-height: 302px;
+height: 361px;
 
 }
 #big_box a {
