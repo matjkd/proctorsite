@@ -354,5 +354,9 @@ jQuery(function() {
 		$('#tips5').tipsy({gravity: 'w', fade: true});
 		$('#tips6').tipsy({gravity: 'w', fade: true});
 		
+		$('#desc1').tipsy({delayIn: 500, delayOut: 1000, gravity: 'e', fade: true, offset: 20 });
+		$('#desc2').tipsy({delayIn: 500, delayOut: 1000, gravity: 'e', fade: true, offset: 20 });
+		$('#desc3').tipsy({delayIn: 500, delayOut: 1000, gravity: 'e', fade: true, offset: 20 });
+		
 	});
 	

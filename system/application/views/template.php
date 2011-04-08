@@ -98,11 +98,29 @@
 			
 		</div>
 		<div class="container_10">
+			
+			<div class="grid_10">
+				
+				<?php 
+				if(isset($widecolumntop))
+				{ ?>
+					
+				<div id="widecolumntop">
+				<?=$this->load->view($widecolumntop);?> 
+				</div>
+				<div id="clear"></div>
+				<?php
+				}
+				?> 
+		
+			</div>
+			
 			<div class="grid_5">
 				
-				<?php $this->load->view('global/mainbuttons'); ?> 
+				<?php if(isset($sidebar)) {?>
+				<?php $this->load->view($sidebar); ?> 
 		
-					<?php // $this->load->view('sidebar/site-login'); ?> 
+					<?php }; ?> 
 			
 			</div>
 			

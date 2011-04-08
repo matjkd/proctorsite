@@ -22,7 +22,7 @@ function __construct()
 		$data['menu'] =	$this->content_model->get_menus();
 		$data['slideshow'] = "slideshow/leasedesk";
 		$data['news'] = $this->news_model->list_news();
-		$data['sidebar'] = 'sidebar/links';
+		$data['sidebar'] = 'global/mainbuttons';
 		$data['rightcolumn'] = 'sidebar/channel_partner_program';
 		$data['bottom'] = 'sidebar/leasedesk_forms';
 		$data['page'] = $id;

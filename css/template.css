@@ -42,7 +42,7 @@ h3 {
 }
 .main_content {
 	
-	margin-top:5px;
+	margin-top:15px;
 	min-height:300px;
 }
 #main_body {
@@ -307,6 +307,28 @@ background:#b0261f;
 }
 .sidebox a {
 color:#ffffff;
+
+}
+
+#testimonials {
+margin-left:20px;
+font-style: italic;
+font-size:120%;
+}
+#widecolumntop {
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+
+-moz-box-shadow: 0px 2px 3px #1C1A1A;
+-webkit-box-shadow: 0px 2px 3px #1C1A1A;
+box-shadow: 0px 2px 3px #1C1A1A;
+padding:10px;
+margin-bottom:20px;
+background:#444444;
+background-position: center;
+color:#ffffff;
+clear:both;
 }
 #mainbutton {
 
