@@ -190,7 +190,7 @@ margin-bottom:5px;
 .slide_container {
 	margin-left: auto;
 	margin-right: auto;
-	width:1000px;
+	width:1060px;
 	height:250px;
 	position:relative;
 	
@@ -393,6 +393,11 @@ overflow: visible;
 }
 .cycletext {
 display:none; float:left;
+margin-left:60px;
+}
+.leasedesk-cycle {
+display:none; float:left;
+margin-left:30px;
 }
 .cycle {
 display:none; float:left;

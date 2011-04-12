@@ -98,11 +98,11 @@ function contact()
 		$data['main'] = "pages/contact";
 		$data['title'] = 'Contact Us';
 		$data['news'] = $this->news_model->list_news();
-		$data['sidebar'] = 'sidebar/links';
-		$data['rightcolumn'] = 'sidebar/channel_partner_program';
+		$data['sidebar'] = 'global/mainbuttons';
+		$data['rightcolumn'] = 'global/customer_login';
 		$data['page'] = $id;
 		
-		$data['widecolumn'] = 'sidebar/map';
+		$data['widecolumntop'] = 'sidebar/map';
 		
 		
 		$this->load->vars($data);

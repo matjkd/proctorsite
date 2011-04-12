@@ -1,5 +1,5 @@
 
-<div class="leasedesk-cycle" style="display:none;">
+<div class="leasedesk-cycle" >
 <img width="1000px" height="196px" src="<?=base_url()?>images/presentation/slide1.png"/>
 <img width="1000px" height="196px" src="<?=base_url()?>images/presentation/slide2.png"/>
 <img width="1000px" height="196px" src="<?=base_url()?>images/presentation/slide3.png"/>
