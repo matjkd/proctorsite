@@ -62,8 +62,8 @@ function content()
 		$data['menu'] =	$this->content_model->get_menus();
 		$data['slideshow'] = "slideshow/main_slideshow2";
 		$data['news'] = $this->news_model->list_news();
-		$data['sidebar'] = 'global/mainbuttons';
-		$data['rightcolumn'] = 'global/customer_login';
+		$data['widecolumn'] = 'global/mainbuttons';
+		
 		$data['widecolumntop'] = 'sidebar/testimonials';
 		$data['page'] = $id;
 		

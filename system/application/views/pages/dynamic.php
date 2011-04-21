@@ -4,12 +4,12 @@
 	
 	<div class="content_image">
 	
-	<a href="http://www.youtube.com/watch?v=<?=$row['youtube']?>" rel="prettyPhoto" title=""><img src="<?=base_url()?>images/icons/leasedesk_video_icon.jpg" alt="YouTube" width="200px" height="185px"  /></a>
+	<a href="http://www.youtube.com/watch?v=<?=$row['youtube']?>" rel="prettyPhoto" title=""><img src="<?=base_url()?>images/icons/leasedesk_video_icon.jpg" alt="YouTube" width="141px" height="130px"  /></a>
 	
 	</div>
 
 <?php } ?>
-<img src="<?=base_url()?>images/titles/<?=$row['menu_title']?>.png" alt="<?=$row['title']?>"/>
+<img src="<?=base_url()?>images/dark_headers/<?=$row['menu_title']?>.png" alt="<?=$row['title']?>"/>
 
 <?php if(isset($edit))
 {

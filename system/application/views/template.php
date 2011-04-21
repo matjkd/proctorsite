@@ -15,10 +15,10 @@
 <body onload="initialize()">
 
 <?php } else { ?>
-	<body>
+<body>
 <?php } ?>		
 
- <!--[if lt IE 7]>
+<!--[if lt IE 7]>
   <div style='border: 1px solid #F7941D; background: #FEEFDA; text-align: center; clear: both; height: 75px; position: relative;'>
     <div style='position: absolute; right: 3px; top: 3px; font-family: courier new; font-weight: bold;'><a href='#' onclick='javascript:this.parentNode.parentNode.style.display="none"; return false;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-cornerx.jpg' style='border: none;' alt='Close this notice'/></a></div>
     <div style='width: 640px; margin: 0 auto; text-align: left; padding: 0; overflow: hidden; color: black;'>
@@ -33,72 +33,66 @@
       <div style='float: left;'><a href='http://www.google.com/chrome' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-chrome.jpg' style='border: none;' alt='Get Google Chrome'/></a></div>
     </div>
   </div>
-  <![endif]-->
+<![endif]-->
 
 
 
 
-   <div>
+   <div class="header">
    	<div class="logotop">
     	<div class="container_24">
     	
     	<!-- Logo here --> 
 	    <div class="grid_19">
-		<div id="logo"><img width="326px" src="<?=base_url()?>images/logos/lease-desk.png"/></div>
+		<div id="logo"><img width="286px" height="58px" src="<?=base_url()?>images/logos/leasedesk_logo.png"/></div>
 		</div>
 	    
 		<div class="grid_5" id="contact_details">
-		<h1>tel: +44(0) 1302 245 310</h1>
+		<h1>tel: +44(0)1302 245 310</h1>
 		<?=$this->load->view('sidebar/social_links')?>
 		</div>
 	    	
     	</div>
     </div>
-    	<div class="menu_container">
-    		<div class="container_24"><?=$this->load->view('global/top_menu')?></div>
-    	</div>
     	
-    	<?php	
-			      if (isset($slideshow))
-			      { ?>
-    	<div class="header">
-    		
-			<div class="slide_container">
-				<div class="slides" align="center">
-				
-			      <?=$this->load->view($slideshow)?> 
-			      
-	
+    	
+	    	<div class="menu_container">
+	    		<div class="container_24"><?=$this->load->view('global/top_menu')?></div>
+	    	</div>
+	    	
+	    	<?php	
+				      if (isset($slideshow))
+				      { ?>
+	    	
+				<div class="slide_container">
+					<div class="slides" align="center">
+					
+				      <?=$this->load->view($slideshow)?> 
+				      
+		
+					</div>
 				</div>
-			</div>
-			<div class="menu_container">
-    			<div class="container_24">
-    				<div class="grid_14">
-    					Take the tour (coming soon)
-    				</div>
-    			</div>
-    		</div>
-		</div>
-		<?php }  ?>
+			
+			
+			<?php }  ?>
+			
     </div>
 
 
 
 
-<div class="top_shadow"></div>
 
 
-<div class="main_content">
-	<div class="container_24">
+<div class="main_content container_24">
+	
 		
-		<div class="grid_14" id="main_body">
-			
-			<?php $this->load->view('global/warning'); ?>
-			<?php $this->load->view($main); ?>
-			
-		</div>
-		<div class="container_10">
-			
+			<div class="grid_14" id="main_body">
+				
+				<?php $this->load->view('global/warning'); ?>
+				<?php $this->load->view($main); ?>
+				
+			</div>
+	
 			<div class="grid_10">
 				
 				<?php 
@@ -115,20 +109,7 @@
 		
 			</div>
 			
-			<div class="grid_5">
-				
-				<?php if(isset($sidebar)) {?>
-				<?php $this->load->view($sidebar); ?> 
-		
-					<?php }; ?> 
 			
-			</div>
-			
-			<div class="grid_5">
-				<?php if(isset($rightcolumn)) { ?>
-				<?php $this->load->view($rightcolumn); ?> 
-				<?php }?>
-			</div>
 			
 			<div class="grid_10">
 				
@@ -140,11 +121,11 @@
 				?> 
 		
 			</div>
-		</div>
-	</div>
+		
+	
 </div>
 <div class="clear"></div>
-	
+ <!--	
 	<?php 
 	if(isset($greybox))
 	{
@@ -153,7 +134,7 @@
 	?> 
 	
 <div class="clear"></div>
- <!--
+
 <div class="footer1">
 	<div class="container_24" >
 		
@@ -167,6 +148,7 @@
 -->
 
 <div class="footer2">
+	<div class="top_shadow"></div>
 	<div class="container_24">
 	
 	
