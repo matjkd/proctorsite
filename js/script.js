@@ -222,33 +222,26 @@ $(function() {
 $(function() {
 		var fadedelay = 100;
 	    $('#social_links img').hover(function () {
-	        $('#social_links img').not(this).css({
-					width:"28px",
-					height:"28px",
-					padding: "1px"
+	        
+			//over	
+	        $(this).animate({
 					
-				}, 100 );
-	        $(this).css({
-					width:"32px",
-					height:"32px",
-					padding: "0px"
-				}, 100 );
+					opacity:"0.5"
+					
+				}, fadedelay );
 			
 	    },
 	    function () {
-	    	$('#social_links img').not(this).css({
-					width:"28px",
-					height:"28px"
-					,
-					padding: "1px"
+	    	$('#social_links img').not(this).animate({
 					
-				}, 100 );
-	        $(this).css({
-					width:"28px",
-					height:"28px",
-					padding: "1px"
+					opacity:"1"
 					
-				}, 100 );
+				}, fadedelay );
+	        $(this).animate({
+					
+					opacity:"1"
+					
+				}, fadedelay );
 			
 	    });
 	     

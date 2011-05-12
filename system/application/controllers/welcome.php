@@ -334,7 +334,7 @@ function login()
 		$data['menu'] =	$this->content_model->get_menus();
 		$data['info'] = "infoblock/times";
 		$data['page'] = "login";
-		
+		$data['title'] = $data['page'];
 		 
 	
 		$this->load->vars($data);

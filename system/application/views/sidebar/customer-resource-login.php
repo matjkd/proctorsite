@@ -2,7 +2,7 @@
 
 	<div style="width:318px; float:left;">
 		
-		<a style="float:left" id="desc1" title="Customer resource description and info etc etc etc" >
+		<a style="float:left" id="desc2" title="Customer resource description and info etc etc etc" >
 			<img width="200px" height="21px" src="<?=base_url()?>images/white_headers/customer-resource.png"/>
 		</a>
 
