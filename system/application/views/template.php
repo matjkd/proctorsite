@@ -88,9 +88,11 @@
 		
 			<div class="grid_14" id="main_body">
 				
-				<?php $this->load->view('global/warning'); ?>
-				<?php $this->load->view($main); ?>
-				
+				<div  > 	
+					<?php $this->load->view('global/warning'); ?>
+					<?php $this->load->view($main); ?>
+				</div>
+			
 			</div>
 	
 			<div class="grid_10">

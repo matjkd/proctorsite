@@ -26,6 +26,7 @@ window.log = function(){
 };
 
 
+
 // catch all document.write() calls
 (function(doc){
   var write = doc.write;
@@ -200,18 +201,18 @@ $(function() {
 //big buttons fader
 	$(function() {
 		var fadedelay = 100;
-	    $('#mainbutton a').hover(function () {
-	        $(this).parent().animate({
+	    $('.widebox a').hover(function () {
+	        $(this).closest('.widebox').animate({
 					
-					backgroundColor: "#b44640"
+					backgroundColor: "#bdc4c6"
 					
 				}, 100 );
 			
 	    },
 	    function () {
-	        $(this).parent().animate({
+	        $(this).closest('.widebox').animate({
 					
-					backgroundColor: "#b0261f"
+					backgroundColor: "#dce0e1"
 					
 				}, 100 );
 			
