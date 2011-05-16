@@ -20,9 +20,10 @@ function __construct()
 		
 		endforeach;
 		$data['menu'] =	$this->content_model->get_menus();
-		$data['slideshow'] = "slideshow/leasedesk";
+		$data['slideshow'] = "slideshow/software";
 		$data['news'] = $this->news_model->list_news();
-		$data['sidebar'] = 'global/mainbuttons';
+		$data['widecolumntop'] = 'extras/software_solutions';
+		$data['widecolumn'] = 'global/mainbuttons';
 		$data['rightcolumn'] = 'sidebar/channel_partner_program';
 		$data['bottom'] = 'sidebar/leasedesk_forms';
 		$data['page'] = $id;

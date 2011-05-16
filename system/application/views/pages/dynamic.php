@@ -6,7 +6,7 @@
 //if extra is the frontpage buttons, match the height of the content with the testimonial so the boxes line up. 
 //This will likley break in future (such as long testimonial, or other pages that need boxes lined upso we need a better solution
 //This will do for now though as a temp solution
- if($row['extra']=='extras/frontpage_buttons') 
+ if($row['menu_title']=='home' || $row['menu_title']=='consultancy' || $row['menu_title']=='peopledevelopment') 
 {?>style="height:170px; margin-bottom:10px;"
 <?php } ?>
 >	

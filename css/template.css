@@ -391,12 +391,17 @@ font-size:120%;
 }
 
 .widebox {
+	width:95%;
 	height:61px;
 	background:#dce0e1;
-	padding-top: 5px;
+	padding-top: 0px;
 padding-left: 10px;
 padding-right: 10px;
+padding-bottom:3px;
+padding-top:2px;
 margin-bottom: 10px;
+margin-top:0;
+float:left;
 }
 
 .widebox div {
@@ -407,6 +412,16 @@ margin-bottom: 10px;
 .widebox div p{
 	
 	margin-left:17px;
+}
+
+#halfwidth {
+	width:45%;
+	margin-right:10px;
+	
+}
+#halfwidtheven {
+	width:45%;
+	margin-right:0px;
 }
 
 
@@ -639,3 +654,95 @@ color:#8a8a8a;
   .tipsy-south { background-position: bottom center; }
   .tipsy-east { background-position: right center; }
   .tipsy-west { background-position: left center; }
+  
+/* Scrolling horizontal */
+	/* main vertical scroll */
+	#mainscroller {
+		position:relative;
+		overflow:hidden;
+		height: 450px;
+	}
+	
+	/* root element for pages */
+	#pages {
+		position:absolute;
+		height:20000em;
+	}
+	
+	/* single page */
+	.page {
+		padding:10px;
+		height: 450px;
+		background:#222 url(http://static.flowplayer.org/img/global/gradient/h600.png) 0 0 repeat-x;
+		width:520px;
+	}
+	
+	/* root element for horizontal scrollables */
+	.scrollable {
+		position:relative;
+		overflow:hidden;
+		width: 510px;
+		height: 450px;
+	}
+	
+	/* root element for scrollable items */
+	.scrollable .items {
+		width:20000em;
+		position:absolute;
+		clear:both;
+	}
+	
+	/* single scrollable item */
+	.item {
+		float:left;
+		cursor:pointer;
+		width:500px;
+		height:450px;
+		padding:10px;
+	}
+	
+	/* main navigator */
+	#main_navi {
+	
+		padding:0px !important;
+		margin:0px !important;
+	}
+	
+	#main_navi li {
+		background-color:#333;
+		border-top:0px solid #666;
+		clear:both;
+		color:#FFFFFF;
+		font-size:12px;
+		height:61px;
+		list-style-type:none;
+		padding:3px 0 2px 0;
+		margin-bottom:10px;
+		cursor:pointer;
+	}
+	
+	#main_navi li:hover {
+		background-color:#444;
+	}
+	
+	#main_navi li.active {
+		background-color:#555;
+	}
+	
+	#main_navi img {
+		float:left;
+		margin-right:10px;
+	}
+	
+	#main_navi strong {
+		display:block;
+	}
+	
+	#mainscroller div.navi {
+		
+		cursor:pointer;
+	}
+	.navi_wrapper {
+		
+		height:400px;
+	}

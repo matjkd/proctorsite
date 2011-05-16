@@ -194,3 +194,4 @@ $pp_pic_holder.attr('class','pp_pic_holder '+settings.theme);$pp_overlay.css({'o
     };
     
 })(jQuery);
+

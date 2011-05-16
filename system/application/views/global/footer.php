@@ -18,6 +18,7 @@
 	<script src="<?=base_url()?>js/libs/editor.js" type="text/javascript"></script>
 	<script src="<?=base_url()?>js/libs/easing.min.js"></script> 
 	<script src="<?=base_url()?>js/libs/bxslider.js"></script>
+	<script src="<?=base_url()?>js/libs/jquerytools.js"></script>
 	<script src="<?=base_url()?>js/script.js"></script>
 	
 	<script src="<?=base_url()?>js/plugins.js"></script>
