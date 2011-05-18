@@ -7,7 +7,7 @@
 //This will likley break in future (such as long testimonial, or other pages that need boxes lined upso we need a better solution
 //This will do for now though as a temp solution
  if($row['menu_title']=='home' || $row['menu_title']=='consultancy' || $row['menu_title']=='peopledevelopment') 
-{?>style="height:170px; margin-bottom:10px;"
+{?>style="margin-bottom:10px;"
 <?php } ?>
 >	
 	

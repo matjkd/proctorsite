@@ -10,7 +10,7 @@ function __construct()
 	function index()
 	{
 		$id = "leasedesk";
-		$data['main'] = "pages/dynamic";
+		$data['main'] = "pages/software_solutions";
 		
 		
 		$data['content'] =	$this->content_model->get_content($id);

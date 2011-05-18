@@ -5,7 +5,7 @@
 body {
 	padding: 0px;
 	margin:0px;
-	background:  url('/images/backgrounds/background.jpg') repeat-x #ffffff;
+	background:  url('/images/backgrounds/background.jpg') repeat-x #4c6e77;
 	font-family: Helvetica, Arial, sans-serif;
 			font-size: 12px;
 			color: #222;
@@ -334,11 +334,16 @@ margin-left:20px;
 font-style: italic;
 font-size:120%;
 }
+
+#testimonial_name{
+	float:right; 
+	padding-bottom:5px;
+}
 #widecolumntop {
-height:160px;
+
 
 padding:0px;
-margin-bottom:20px;
+
 
 background-position: center;
 color:#444444;
@@ -360,7 +365,7 @@ text-align: center;
 
 }
 #inputs input {
-
+width:100px;
 border:0px;
 }
 
@@ -660,7 +665,7 @@ color:#8a8a8a;
 	#mainscroller {
 		position:relative;
 		overflow:hidden;
-		height: 450px;
+		height: 600px;
 	}
 	
 	/* root element for pages */
@@ -672,8 +677,8 @@ color:#8a8a8a;
 	/* single page */
 	.page {
 		padding:10px;
-		height: 450px;
-		background:#222 url(http://static.flowplayer.org/img/global/gradient/h600.png) 0 0 repeat-x;
+		height: 600px;
+		background:#dce0e1;
 		width:520px;
 	}
 	
@@ -682,7 +687,7 @@ color:#8a8a8a;
 		position:relative;
 		overflow:hidden;
 		width: 510px;
-		height: 450px;
+		height: 600px;
 	}
 	
 	/* root element for scrollable items */
@@ -696,9 +701,9 @@ color:#8a8a8a;
 	.item {
 		float:left;
 		cursor:pointer;
-		width:500px;
-		height:450px;
-		padding:10px;
+		width:520px;
+		height:600px;
+		padding:0px;
 	}
 	
 	/* main navigator */
@@ -709,7 +714,7 @@ color:#8a8a8a;
 	}
 	
 	#main_navi li {
-		background-color:#333;
+		background-color:#dce0e1;
 		border-top:0px solid #666;
 		clear:both;
 		color:#FFFFFF;
@@ -722,11 +727,11 @@ color:#8a8a8a;
 	}
 	
 	#main_navi li:hover {
-		background-color:#444;
+		background-color:#bdc4c6;
 	}
 	
 	#main_navi li.active {
-		background-color:#555;
+		background-color:#bdc4c6;
 	}
 	
 	#main_navi img {
@@ -744,5 +749,83 @@ color:#8a8a8a;
 	}
 	.navi_wrapper {
 		
-		height:400px;
+		
 	}
+	
+/* DEPRECATED FILE */
+ 
+ 
+ 
+ 
+/* this makes it possible to add next button beside scrollable */
+.scrollable {
+    float:left; 
+}
+ 
+/* prev, next, prevPage and nextPage buttons */
+a.prev, a.next, a.prevPage, a.nextPage {
+    display:block;
+    width:18px;
+    height:18px;
+    background:url(../img/scrollable/arrow/left.png) no-repeat;
+    float:left;
+    margin:43px 10px;
+    cursor:pointer;
+    font-size:1px;
+}
+ 
+/* mouseover state */
+a.prev:hover, a.next:hover, a.prevPage:hover, a.nextPage:hover {
+    background-position:0px -18px;      
+}
+ 
+/* disabled navigational button */
+a.disabled {
+    visibility:hidden !important;       
+}
+ 
+/* next button uses another background image */
+a.next, a.nextPage {
+    background-image:url(../img/scrollable/arrow/right.png);
+    clear:right;    
+}
+	
+	/*********** navigator ***********/
+
+
+/* position and dimensions of the navigator */
+.navi {
+    margin-left:0px;
+   
+    width:200px;
+    height:20px;
+}
+
+
+/* items inside navigator */
+.navi a {
+    width:12px;
+    height:12px;
+    float:left;
+    margin-right:6px;
+    background:#000000;
+    display:block;
+    font-size:1px;
+}
+
+/* mouseover state */
+.navi a:hover {
+	background:#555555;
+    background-position:0 -8px;      
+}
+
+/* active state (current page state) */
+.navi a.active {
+	background-color:#ff4e4e;
+    background-position:0 -16px;     
+}   
+
+.hide {
+	
+	display:none;
+}

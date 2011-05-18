@@ -325,6 +325,42 @@ function lease_rate_calc()
 		}
 		
 	}
+
+function iframe_calc()
+	{
+		$id = "lease_rate_calc";
+		$data['content'] =	$this->content_model->get_content($id);
+		
+		$data['menu'] =	$this->content_model->get_menus();
+		$data['main'] = "pages/lease_rate_calc";
+		$data['title'] = 'Lease Rate Calculator';
+		$data['page'] = $id;
+		$is_logged_in = $this->session->userdata('is_logged_in');
+		
+		        
+	     	$data['quote_ref'] ='';
+						$data['capital'] ='';
+						$data['capital_type'] ='';
+						$data['amount_type'] ='';
+						$data['interest_type'] = '';
+						$data['calculate_by'] = '';
+						$data['interest_rate'] = '';
+						$data['rate_per_1000'] = '';
+						$data['periodic_payment'] = '';
+						$data['payment_type'] = '';
+						$data['payment_frequency'] = '';
+						$data['initial'] = '';
+						$data['regular'] = '';
+						$data['number_of_ports'] = '';
+						$data['annual_support_costs'] = '';
+						$data['other_monthly_costs'] = '';
+						$data['user_id'] = '';
+						
+						
+		$this->load->vars($data);
+		$this->load->view('iframe');
+		
+	}
 function login()
 	{
 		

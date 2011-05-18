@@ -11,10 +11,13 @@
 	</div>
 	
 	<div style="width:41px; padding-top:5px; float:left;">
-		<a href="<?=base_url()?>welcome/lease_rate_calc">
+		<a href="#calc-1" rel="prettyPhoto">
 		<img src="<?=base_url()?>images/icons/calc_icon.png" border="0" />
 		</a>
 		</form>
 	</div>
 </div>
 
+<div id="calc-1" class="hide">
+<?=$this->load->view('popups/calculator')?>
+</div>

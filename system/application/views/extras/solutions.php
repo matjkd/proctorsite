@@ -18,11 +18,15 @@
  
 					<!-- items  --> 
 					<div class="item"> 
-						blurb blurb blurb
+						<?=$this->load->view('pages/software_solutions/lifecycle1')?>
 					</div> 
 					<div class="item"> 
 						<img src="http://farm1.static.flickr.com/200/507751258_5f13e3d802.jpg" /> 
 					</div> 
+					<div class="item"> 
+						<img src="http://farm1.static.flickr.com/30/37446217_14bc95631a.jpg" /> 
+					</div> 
+
 					<div class="item"> 
 						<img src="http://farm1.static.flickr.com/30/37446217_14bc95631a.jpg" /> 
 					</div> 
@@ -117,6 +121,35 @@
  
 		</div> 
  
+
+
+		<!-- page #5 --> 
+		<div class="page"> 
+ 
+			<div class="navi"></div> 
+ 
+			<!-- inner scrollable #4 --> 
+			<div class="scrollable"> 
+ 
+				<!-- root element for scrollable items --> 
+				<div class="items"> 
+ 
+					<!-- items on the first page --> 
+					<div class="item"> 
+						<img src="http://farm4.static.flickr.com/3155/2636513939_cd75b704ec.jpg" /> 
+					</div> 
+					<div class="item"> 
+						<img src="http://farm1.static.flickr.com/40/122343298_22333fb8e3.jpg" /> 
+					</div> 
+					<div class="item"> 
+						<img src="http://farm4.static.flickr.com/3105/2618870872_cf22d3cdb1.jpg" /> 
+					</div> 
+ 
+				</div> 
+ 
+			</div> 
+ 
+		</div> 
 	</div> 
  
 </div> 
