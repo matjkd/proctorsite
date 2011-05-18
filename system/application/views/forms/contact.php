@@ -20,38 +20,33 @@ $referrals = array(
 	
 	
 	<p class="form_name">
-		<?=form_label('Name')?><br/>
-		
-	<?=form_input('name', set_value('name', $name))?>
+ <input type="text" id="name" name="name" title="Name" />  		
+
 	</p>
 	
 	<p class="form_phone">
-		<?=form_label('Phone')?><br/>
+ <input type="text" id="phone" name="phone" title="Phone" />  
 		
-	<?=form_input('phone', set_value('phone', $phone))?>
 	</p>
 	
 	<p class="form_company">
-		<?=form_label('Company Name')?><br/>
+ <input type="text" id="business_name" name="business_name" title="Company Name" />  
 		
-	<?=form_input('business_name', set_value('business_name', $business_name))?>
 	</p>
 	
 	<p class="form_email">
-		<?=form_label('Email')?><br/>
-		
-	<?=form_input('email', set_value('email', $email))?>
+ <input type="text" id="email" name="email" title="Email Address" />  		
+
 	</p>
 	
 	
 	
 	<p class="form_subject">
-		<?=form_label('Subject')?><br/>
-		
-	<?=form_input('subject')?>
+	 <input type="text" id="subject" name="subject" title="Subject" />  
 	</p>
 	
 	<p class="form_message">
+<?=form_label('Message')?><br/>
 	<?=form_textarea($data, set_value('message', $message))?>
 	</p>
 	

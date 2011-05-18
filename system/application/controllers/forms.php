@@ -109,7 +109,8 @@ End
 				}
 	}
 function send_info() {
-		echo "Coming Soon";
+	
+		$this->load->view('sidebar/forms/send_info');
 	
 	}
 

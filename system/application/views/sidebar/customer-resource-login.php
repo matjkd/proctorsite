@@ -2,7 +2,7 @@
 
 	<div style="width:318px; float:left;">
 		
-		<a style="float:left" id="desc2" title="Customer resource description and info etc etc etc" >
+		<a style="float:left" id="desc2" title="All of the resources our customer need: Interactive Help & User Guides, Support Call Logging and tracking alongside powerful financial calculators & business modelling tools." >
 			<img width="200px" height="21px" src="<?=base_url()?>images/white_headers/customer-resource.png"/>
 		</a>
 

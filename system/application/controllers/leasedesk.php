@@ -5,13 +5,14 @@ class Leasedesk extends MY_Controller {
 function __construct()
 	{
 		parent::__construct();
+		$this->load->model('captcha_model');
 		
 	}
 	function index()
 	{
 		$id = "leasedesk";
 		$data['main'] = "pages/software_solutions";
-		
+		$data['captcha'] = $this->captcha_model->initiate_captcha();
 		
 		$data['content'] =	$this->content_model->get_content($id);
 		foreach($data['content'] as $row):

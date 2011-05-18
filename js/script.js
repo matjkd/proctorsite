@@ -116,13 +116,13 @@ $(function()  {
 
 //Dialog boxes
 	// popup dialog for channel partner thing
-	$.fx.speeds._default = 300;
+	$.fx.speeds._default = 200;
 	$(function()  {
 		$('#dialog').dialog({
 			autoOpen: false,
-			show: "blind",
+			show: "Fade",
 			modal: false,
-			width:500,
+			width:400,
 			height:550
 		});
 		
@@ -131,19 +131,20 @@ $(function()  {
 			return false;
 		});
 	});
+	
 	// popup dialog for send info
 	
 	$(function()  {
-		$('#sendinfo').dialog({
+		$('#dialog2').dialog({
 			autoOpen: false,
-			show: "blind",
+			show: "Fade",
 			modal: false,
-			width:500,
+			width:400,
 			height:550
 		});
 		
-		$('#open_send_info').click(function() {
-			$('#sendinfo').dialog('open');
+		$('#openchannel2').click(function() {
+			$('#dialog2').dialog('open');
 			return false;
 		});
 	});
@@ -390,3 +391,4 @@ if($("#main_navi").length>0) {
 		 
 		});
 }
+//datepicker

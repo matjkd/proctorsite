@@ -3,7 +3,7 @@
 
 	<div style="width:318px; float:left;">
 		
-		<a style="float:left" id="desc1" title="Channel Resource description and info etc etc etc" >
+		<a style="float:left" id="desc1" title="All the resources needed for our sales team and Channel Partners to evaluate the right solution for their customers, register prospects and access Audio & Web Conferencing Facilities." >
 			<img width="200px" height="21px" src="<?=base_url()?>images/white_headers/channel-resource.png"/>
 		</a>
 

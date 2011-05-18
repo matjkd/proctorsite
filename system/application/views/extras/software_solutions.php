@@ -4,8 +4,14 @@
  
 	<li class="active"> 
 	
-		<img src="<?=base_url()?>images/icons/softwaresolutions/lifecycle_management.png"/>
+		<img src="<?=base_url()?>images/icons/softwaresolutions/lease-desk_intro.png"/>
 		
+	</li> 
+
+	<li> 
+		
+			<img src="<?=base_url()?>images/icons/softwaresolutions/lifecycle_management.png"/>
+			
 	</li> 
 	
 	<li> 
