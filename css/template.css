@@ -208,6 +208,7 @@ margin-bottom:5px;
 .slide_container {
 	margin-left: auto;
 	margin-right: auto;
+
 	width:942px;
 	height:244px;
 	position:relative;
@@ -437,10 +438,7 @@ height:28px;
 padding:1px;
 overflow: visible;
 }
-.cycletext {
-display:none; float:left;
-margin-left:60px;
-}
+
 .cycle {
 display:none; float:left;
 }
