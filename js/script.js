@@ -155,7 +155,7 @@ $(function()  {
 			autoOpen: false,
 			show: "blind",
 			modal: false,
-			width:500,
+			width:400,
 			height:550
 		});
 		

@@ -36,23 +36,3 @@
 	</div>
 	
 </div>
-
-<div id="inline-1" class="hide">
-Outsourcing bullet points
-</div>
-
-<div id="inline-2" class="hide">
-Financial bullet points
-</div>
-
-<div id="inline-3" class="hide">
-sales and marketing bullet points
-</div>
-
-<div id="inline-4" class="hide">
-commerical bullet points
-</div>
-
-<div id="inline-5" class="hide">
-Channel development bullet points
-</div>

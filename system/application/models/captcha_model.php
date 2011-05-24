@@ -38,7 +38,7 @@ class Captcha_model extends Model {
 		
 		// Then see if a captcha exists:
 		
-		$sql = "SELECT COUNT(*) AS count FROM ignite_captcha WHERE word = ? AND ip_address = ? AND captcha_time > ?";
+		$sql = "SELECT COUNT(*) AS count FROM igniter_captcha WHERE word = ? AND ip_address = ? AND captcha_time > ?";
 		
 		
 		$binds = array($_POST['captcha'], $this->input->ip_address(), $expiration);

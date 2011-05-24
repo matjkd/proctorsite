@@ -8,5 +8,5 @@
 <button id="openchannel2">Request Info</button>
 
 <div class="hide" id="dialog2" title="Request Info">
-	<?=$this->load->view('sidebar/forms/request_demo')?>
+	<?=$this->load->view('sidebar/forms/send_info')?>
 </div>

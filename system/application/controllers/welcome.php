@@ -65,6 +65,15 @@ function content()
 		$data['widecolumn'] = 'global/mainbuttons';
 		
 		$data['widecolumntop'] = 'sidebar/testimonials';
+		
+		//show consultancy buttons if consultancy page - come up with a better solution for this
+		if($id == "consultancy")
+		{
+			
+			$data['widecolumntop'] = 'extras/consultancy_side';
+			
+		}
+		
 		$data['page'] = $id;
 		
 		$is_logged_in = $this->session->userdata('is_logged_in');
@@ -98,12 +107,11 @@ function contact()
 		$data['main'] = "pages/contact";
 		$data['title'] = 'Contact Us';
 		$data['news'] = $this->news_model->list_news();
-		$data['sidebar'] = 'global/mainbuttons';
-		$data['rightcolumn'] = 'global/customer_login';
+		
 		$data['page'] = $id;
 		
 		$data['widecolumntop'] = 'sidebar/map';
-		
+		$data['widecolumn'] = 'sidebar/address';
 		
 		$this->load->vars($data);
 		$this->load->view('template');
