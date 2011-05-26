@@ -208,5 +208,12 @@ End
 				}	
 	}
 
+function calc_results()
+{
+	echo "Results";
+	$data['test'] = "tecvcvst";
+	$this->load->vars($data);
+}
+
 	
 }

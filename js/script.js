@@ -115,13 +115,32 @@ $(function()  {
 });
 
 //Dialog boxes
+   // popup dialog for channel partner thing
+	$.fx.speeds._default = 200;
+	$(function()  {
+		$('#calc').dialog({
+			autoOpen: false,
+			show: "Fade",
+			modal: true,
+			width:550,
+			height:450
+		});
+		
+		$('#calcbutton').click(function() {
+			$('#calc').dialog('open');
+			return false;
+		});
+	});
+	
+
+    
 	// popup dialog for channel partner thing
 	$.fx.speeds._default = 200;
 	$(function()  {
 		$('#dialog').dialog({
 			autoOpen: false,
 			show: "Fade",
-			modal: false,
+			modal: true,
 			width:400,
 			height:550
 		});
@@ -138,7 +157,7 @@ $(function()  {
 		$('#dialog2').dialog({
 			autoOpen: false,
 			show: "Fade",
-			modal: false,
+			modal: true,
 			width:400,
 			height:550
 		});
@@ -391,4 +410,50 @@ if($("#main_navi").length>0) {
 		 
 		});
 }
-//datepicker
+//calculator
+$(function() {
+  $('.error').hide();
+  $('input.text-input').css({backgroundColor:"#FFFFFF"});
+  $('input.text-input').focus(function(){
+    $(this).css({backgroundColor:"#FFDDAA"});
+  });
+  $('input.text-input').blur(function(){
+    $(this).css({backgroundColor:"#FFFFFF"});
+  });
+
+  $(".button").click(function() {
+		// validate and process form
+		// first hide any error messages
+    $('.error').hide();
+		
+	  var name = $("input#name").val();
+		if (name == "") {
+      $("label#name_error").show();
+      $("input#name").focus();
+      return false;
+    }
+		
+		
+		var dataString = 'name='+ name;
+		//alert (dataString);return false;
+		
+	$.ajax({
+      type: "POST",
+      url: "forms/calc_results",
+      data: dataString,
+      success: function() {
+        $('#results').html("<div id='message'></div>");
+        $('#message').load("forms/cal_results")
+        .append("<p><?=$test?> results to go here</p>")
+        .hide()
+        .fadeIn(1500, function() {
+          $('#message').append("coo");
+        });
+      }
+     });
+    return false;
+	});
+});
+runOnLoad(function(){
+  $("input#name").select().focus();
+});

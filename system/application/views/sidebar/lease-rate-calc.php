@@ -10,14 +10,14 @@
 		
 	</div>
 	
-	<div style="width:41px; padding-top:5px; float:left;">
-		<a href="#calc-1" rel="prettyPhoto">
+	<div style="width:41px; padding-top:5px; float:left;" id="calcbutton">
+		
 		<img src="<?=base_url()?>images/icons/calc_icon.png" border="0" />
-		</a>
+		
 		</form>
 	</div>
 </div>
 
-<div id="calc-1" class="hide">
+<div id="calc" class="hide">
 <?=$this->load->view('popups/calculator')?>
 </div>
