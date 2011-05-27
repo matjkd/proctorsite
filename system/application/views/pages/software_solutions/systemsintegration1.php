@@ -8,4 +8,4 @@ other business systems.</p>
 <p>Integration with the CRM solution allows access to crucial customer lease portfolio information for
 the sales agents without the need to access additional systems.</p>
 
-<img src="<?=base_url()?>images/general/integrationchart.png"/>
+<div style="text-align:center;"><img width="460px" src="<?=base_url()?>images/general/integrationchart.png"/></div>

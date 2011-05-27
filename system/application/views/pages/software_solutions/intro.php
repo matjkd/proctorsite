@@ -30,4 +30,3 @@
 
 <?php endforeach;?>
 
-<?php $this->load->view('popups/send_info')?>
