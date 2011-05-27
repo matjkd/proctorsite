@@ -123,7 +123,7 @@ $(function()  {
 			show: "Fade",
 			modal: true,
 			width:550,
-			height:450
+			height:480
 		});
 		
 		$('#calcbutton').click(function() {
@@ -411,49 +411,43 @@ if($("#main_navi").length>0) {
 		});
 }
 //calculator
-$(function() {
-  $('.error').hide();
-  $('input.text-input').css({backgroundColor:"#FFFFFF"});
-  $('input.text-input').focus(function(){
-    $(this).css({backgroundColor:"#FFDDAA"});
-  });
-  $('input.text-input').blur(function(){
-    $(this).css({backgroundColor:"#FFFFFF"});
-  });
 
-  $(".button").click(function() {
-		// validate and process form
-		// first hide any error messages
-    $('.error').hide();
-		
-	  var name = $("input#name").val();
-		if (name == "") {
-      $("label#name_error").show();
-      $("input#name").focus();
-      return false;
-    }
-		
-		
-		var dataString = 'name='+ name;
-		//alert (dataString);return false;
-		
-	$.ajax({
-      type: "POST",
-      url: "forms/calc_results",
-      data: dataString,
-      success: function() {
-        $('#results').html("<div id='message'></div>");
-        $('#message').load("forms/cal_results")
-        .append("<p><?=$test?> results to go here</p>")
-        .hide()
-        .fadeIn(1500, function() {
-          $('#message').append("coo");
-        });
-      }
-     });
-    return false;
-	});
+ $('.buttonsend').click(function (event) {
+ 	
+ 	//stop from submitting normally
+ 	event.preventDefault();
+ 	
+ 	//add validation here
+ 	
+ 	
+ 	
+ 	//add a loading image
+ 	$("#results").html("<img src='/images/ajax-loader.gif'/>");
+ 	
+ 	
+ 	// get values from form
+ 	var $form = $(this),
+ 	url = $form.attr('action');
+ 	
+    var capitalType = $("#capitalType option:selected").val();
+    var capitalamount =  $('input[name="amount_type"]').val();
+ 	var interestType = $("#interestType option:selected").val();
+    var interestamount =  $('input[name="calculate_by"]').val();
+ 	var paymentType =  $("#paymentType option:selected").val();
+ 	var paymentFrequency =  $("#paymentFrequency option:selected").val();
+	var initial =  $('input[name="initial"]').val();
+	var regular =  $('input[name="regular"]').val();
+	
+  $.post('/forms/calc_results', { capitalType: capitalType, capitalamount: capitalamount, interestType: interestType, 
+  	interestamount: interestamount, paymentType: paymentType, paymentFrequency: paymentFrequency, initial: initial, regular: regular },
+   function(data) {
+   		
+   		$("#results").html(data);
+   	
+        
+ }
+ );
 });
-runOnLoad(function(){
-  $("input#name").select().focus();
-});
+
+	
+

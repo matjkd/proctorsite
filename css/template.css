@@ -14,6 +14,11 @@ body {
 
 ::-moz-selection{ background: #444444; color:#fff; text-shadow: none; }
 ::selection { background:#444444; color:#fff; text-shadow: none; }
+
+.ui-widget {
+font-family: inherit;
+font-size: inherit;
+}
 p {
 	line-height:20px;
 	font-size:12px;
@@ -629,7 +634,7 @@ tr.sectiontableentry2 td {
 }
 /* Calculator */
 #calculator {
-
+height:400px;
 background:#dddddd;
 padding:10px;
 

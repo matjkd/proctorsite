@@ -209,11 +209,38 @@ End
 	}
 
 function calc_results()
-{
-	echo "Results";
-	$data['test'] = "tecvcvst";
-	$this->load->vars($data);
-}
-
+	{
+		//get data from form
+		$data['capital_type'] = $this->input->post('capitalType');
+		$data['amount_type'] = $this->input->post('capitalamount');
+		$data['interest_type'] = $this->input->post('interestType');
+		
+		$data['calculate_by'] = $this->input->post('interestamount');
+		$data['payment_type'] = $this->input->post('paymentType');
+		$data['payment_frequency'] = $this->input->post('paymentFrequency');
+		
+		$data['initial'] = $this->input->post('initial');
+		$data['regular'] = $this->input->post('regular');
+		
+		//CALCULATION STARTS HERE
+		$this->load->library('calculator');
+		$data['quote_results'] = $this->calculator->quote($data['capital_type'], 
+						$data['amount_type'], 
+						$data['interest_type'],
+						$data['calculate_by'],
+						$data['payment_type'],
+						$data['payment_frequency'],
+						$data['initial'],
+						$data['regular']);
+		//CALCULATION ENDS HERE
 	
+		
+		
+		//$data['value3'] =$data['value1'] + $data['value2'];
+		
+		
+		$this->load->vars($data);
+		$this->load->view('popups/calculator_results');
+		
+	}
 }
