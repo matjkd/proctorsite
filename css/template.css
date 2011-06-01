@@ -449,6 +449,7 @@ display:none; float:left;
 }
 .cycleside {
 display:none;
+min-height:201px;
 }
 
 .cleditorMain {border:1px solid #999; padding:0 1px 1px; background-color:white}

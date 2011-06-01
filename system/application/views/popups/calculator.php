@@ -56,7 +56,7 @@ $frequency = array(12=>'Monthly',4=>'Quarterly',1=>'Annually');
 
 
 
-<input type="submit" name="submit" class="buttonsend" id="submit_btn" value="Send" />  
+<input type="submit" name="submit" class="buttonsend" id="submit_btn" value="Calculate" />  
 <?=form_close()?>
 	</div>
 

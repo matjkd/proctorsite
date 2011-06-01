@@ -2,6 +2,7 @@
 <p>Our customers each process hundreds or thousands of proposals a day across multiple lease
 partners. Lease-desk.com is an invaluable aid to this process providing previously unimaginable
 levels of visibility, control & management information.</p>
+<div style="float:left;"><a href="<?=base_url()?>images/general/lifecyclediagram.png" rel="prettyPhoto" title="Lifecycle Management"><img width="340px" src="<?=base_url()?>images/general/lifecyclediagram.png"/></a></div>
 
 <p>Managing a customer lease portfolio across multiple lease partners from either a sales or
 administration focus is now an easy task, no more need to continually update spreadsheets or refer

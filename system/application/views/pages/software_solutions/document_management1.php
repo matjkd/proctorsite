@@ -1,6 +1,7 @@
 <img src="<?=base_url()?>images/dark_headers/document_management.png" alt="Document Management"/>
 <p>A powerful document management solution allows error free creation of complex lease paperwork
 within seconds.</p>
+<div style="text-align:center;"><a href="<?=base_url()?>images/general/document_sharing.png" rel="prettyPhoto" title="Document Sharing"><img width="410px" src="<?=base_url()?>images/general/document_sharing.png"/></a></div>
 
 <p>Our customers use Lease-desk.com to create:</p>
 <ul>

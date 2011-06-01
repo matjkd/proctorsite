@@ -1,4 +1,7 @@
 <img src="<?=base_url()?>images/dark_headers/sales_marketing.png" alt="Sales and Marketing"/>
+
+<div style="float:left;"><a href="<?=base_url()?>images/general/increasedsales.png" rel="prettyPhoto" title="Sales and Marketing"><img width="240px" src="<?=base_url()?>images/general/increasedsales.png"/></a></div>
+
 <p>Accessing management information on proposals and/or the customer lease portfolio has previously
 been an impossible task. Our dashboards share relevant information across complicated hierarchical
 structures across multiple organisations to enable the sales process.</p>
