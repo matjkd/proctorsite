@@ -16,8 +16,7 @@
   <link rel="apple-touch-icon" href="<?=base_url()?>apple-touch-icon.png">
 
 <!-- Load google fonts-->
-<link  href="http://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet" type="text/css" >
-
+<link href="http://fonts.googleapis.com/css?family=Arimo:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
   <!-- CSS : implied media="all" -->
    <link rel="stylesheet" href="<?=base_url()?>css/custom-theme/jquery-ui-1.8.2.custom.css">
    <link rel="stylesheet" href="<?=base_url()?>css/prettyPhoto.css">

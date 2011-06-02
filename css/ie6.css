@@ -1,16 +1,5 @@
-#big_box {
-width:190px;
-}
-.sidebox {
-padding-right: 0px;
-}
-
-.slide_container {
-	height:196px;
-	
-}
-.slides {
-	height:196px;
-	
-	
+.container_24 {
+margin-left: auto;
+margin-right: auto;
+width: 970px;
 }

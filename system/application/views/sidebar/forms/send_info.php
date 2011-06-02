@@ -1,4 +1,4 @@
-<div align="center">
+<div align="left">
 <?php 
 $data = array(
 			'name' => 'message',
@@ -15,40 +15,43 @@ $referrals = array(
 );
 ?>
 <div id="contact_form">
-	<?=form_open('forms/request_demo');?>
-	<br/>
-	
-	
+	<?=form_open('forms/request_info');?>
+
 	<p class="form_name">
-		 <input type="text" id="name" name="name" title="Name" />  
+
+		 <input type="text" id="name" name="name" value="<?php if ($this->session->flashdata('formname')) { echo $this->session->flashdata('formname');} ?>"/>  
+<?=form_label('Name')?>
 	</p>
 	
 	<p class="form_phone">
-		 <input type="text" id="phone" name="phone" title="Phone" />  
+
+		 <input type="text" id="phone" name="phone" value="<?php if ($this->session->flashdata('formphone')) { echo $this->session->flashdata('formphone');} ?>"/>   
+<?=form_label('Phone')?>
 	</p>
 	
 	<p class="form_company">
-		 <input type="text" id="business_name" name="business_name" title="Business Name" />  
+
+		 <input type="text" id="business_name" name="business_name" value="<?php if ($this->session->flashdata('formbusiness_name')) { echo $this->session->flashdata('formbusiness_name');} ?>"/>   
+<?=form_label('Business Name')?>
 	</p>
 	
 	<p class="form_email">
-		 <input type="text" id="email" name="email" title="Email" />  
+
+		 <input type="text" id="email" name="email"value="<?php if ($this->session->flashdata('formemail')) { echo $this->session->flashdata('formemail');} ?>"/>   
+<?=form_label('Email')?>
 	</p>
 	
 	
-	
-	
+
 	
 	<p class="form_message">
 <?=form_label('Your Message')?><br/>
-	<?=form_textarea($data, set_value('message'))?>
+<?php if ($this->session->flashdata('formmessage')) { $message = $this->session->flashdata('formmessage');} else { $message = ""; } ?>
+
+	<?=form_textarea($data, $message)?>
 	</p>
 	
-	<p class="form_referral">
-		<?=form_label('How did you hear about us')?><br/>
-		
-	<?=form_dropdown('referral', $referrals)?>
-	</p>
+	
 	
 <?=form_label('Enter the word you see below')?><br/>
 

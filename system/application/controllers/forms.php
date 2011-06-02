@@ -111,11 +111,98 @@ End
 
 	function request_info()
 	{
+		$this->form_validation->set_rules('email', 'email', 'trim|required|valid_email');
+		$this->form_validation->set_rules('name', 'name', 'trim|required');
+		$this->form_validation->set_rules('phone', 'phone', 'trim|required');
+		$this->form_validation->set_rules('business_name', 'business_name', 'trim|required');
+		$this->form_validation->set_rules('message', 'message', 'trim|required');
+	
 		
+		//set session data for form entries
+		$this->session->set_flashdata('formname', $this->input->post('name'));
+		$this->session->set_flashdata('formphone', $this->input->post('phone'));
+		$this->session->set_flashdata('formbusiness_name', $this->input->post('business_name'));
+		$this->session->set_flashdata('formemail', $this->input->post('email'));
+		$this->session->set_flashdata('formmessage', $this->input->post('message'));
+		
+		//captcha data
+		$word = $this->input->post('captcha');
+		$time = $this->input->post('time');
+		$ip_address = $this->input->post('ip_address');
+			if($this->form_validation->run() == FALSE)
+				{
+					
+					
+					
+					$data['errors'] = validation_errors();
+				
+					$this->session->set_flashdata('message', $data['errors']);
+					
+				
+					
+					redirect('leasedesk', 'refresh');
+					
+				}
+			else
+				{
+				// check captcha
+					// if it returns true the captcha has failed
+						if($this->captcha_model->check($word, $ip_address, $time))
+						{
+								$this->session->set_flashdata('message', 'The captcha was wrong');
+								
+								redirect('leasedesk', 'refresh');
+						}	
+						
+					// end check captcha
+					
+					
+						//add request to database
+						$this->forms_model->add_request();
+						
+						//send email
+						$email = $this->input->post('email');
+						$phone = $this->input->post('phone');
+		    			$business_name = $this->input->post('business_name');
+						$message = $this->input->post('message');
+						$preferred_date = $this->input->post('date');
+						$preferred_time = $this->input->post('time');
+		    			
+		    			$name = $this->input->post('name');
+						
+						
+						$this->postmark->from('noreply@lease-desk.com', 'Lease Desk Limited');
+						//$this->postmark->to('chloe@lease-desk.com'); 
+						$this->postmark->to('mat@redstudio.co.uk'); 
+						//$this->postmark->cc('debra.taylor@lease-desk.com'); 
+						$this->postmark->subject('Request a Demo');
+						$this->postmark->message_html("$name has Requested Info.<br/><br/>
+						
+						
+						 Company Name: $business_name<br/>
+						 Email: $email<br/>
+						 Phone: $phone		 <br/>
+						 Message: $message");	
+						
+						$this->postmark->send();
+		
+						// send email to webCRM
+						$this->postmark->clear();
+					
+					$this->session->set_flashdata('formname', '');
+					$this->session->set_flashdata('formphone', '');
+					$this->session->set_flashdata('formbusiness_name',  '');
+					$this->session->set_flashdata('formemail',  '');
+					$this->session->set_flashdata('formmessage',  '');
+					
+					$this->session->set_flashdata('message', 'Your message has been sent');
+					
+					redirect('leasedesk', 'refresh');
+				}	
 	}
 	function request_demo()
 	{
-		$this->form_validation->set_rules('email', 'email', 'trim|required');
+		$this->form_validation->set_rules('email', 'email', 'trim|required|valid_email');
 		$this->form_validation->set_rules('name', 'name', 'trim|required');
 		$this->form_validation->set_rules('phone', 'phone', 'trim|required');
 		$this->form_validation->set_rules('business_name', 'business_name', 'trim|required');
@@ -202,7 +289,7 @@ End
 					$this->session->set_flashdata('formdate',  '');
 					$this->session->set_flashdata('formmessage',  '');
 					
-					$this->session->set_flashdata('message', 'The form has been sent');
+					$this->session->set_flashdata('message', 'Your message has been sent');
 					
 					redirect('leasedesk', 'refresh');
 				}	

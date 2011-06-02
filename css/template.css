@@ -6,7 +6,7 @@ body {
 	padding: 0px;
 	margin:0px;
 	background:  url('/images/backgrounds/background.jpg') repeat-x #4c6e77;
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: 'Arimo', Helvetica, Arial, sans-serif;
 			font-size: 12px;
 			color: #222;
 			line-height: 20px;
@@ -254,7 +254,7 @@ box-shadow: 3px 2px 13px #000000;
 background:url('/images/backgrounds/footer_graphic.jpg') no-repeat center #353e43;
 
 	height:200px;
-	color: #666666;
+	color: #dddddd;
 	padding-top:0px;
 }
 #partners_container {
@@ -832,4 +832,22 @@ a.next, a.nextPage {
 .hide {
 	
 	display:none;
+}
+
+.bullets {
+	font-weight:bold;
+	padding:20px;
+	color: #555555;
+}
+.bullets ul {
+	padding-left:10px;
+}
+.bullets li {
+	padding-top:5px;
+	
+}
+.bullets h1 {
+	font-size:1.8em;
+	color: #555555;
+	
 }

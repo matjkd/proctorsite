@@ -38,6 +38,7 @@ foreach($news as $news):?>
 
 </p>
 <?php 
+//adds a readmore by cutting all text after the $needlee
 $needle = "[readmore]";
 $haystack = $news['news_content'];
 $pos = strpos($haystack, $needle);

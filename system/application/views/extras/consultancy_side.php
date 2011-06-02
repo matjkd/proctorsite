@@ -38,6 +38,7 @@
 
 
 <div id="inline-1" class="hide">
+<div class="bullets">
 <h1>Lease-Desk Outsourcing</h1>
 <br/>	
 <ul>
@@ -50,8 +51,10 @@
 	
 </ul>
 </div>
+</div>
 
 <div id="inline-2" class="hide">
+	<div class="bullets">
 <h1>Financial Product Development</h1>
 <br/>
 <ul>
@@ -63,8 +66,10 @@
 	<li>Lease company engagement</li>
 </ul>
 </div>
+</div>
 
 <div id="inline-3" class="hide">
+	<div class="bullets">
 <h1>Sales & Marketing</h1>
 <br/>
 <ul>
@@ -75,8 +80,10 @@
 	<li>Search engine optimisation</li>
 </ul>
 </div>
+</div>
 
 <div id="inline-4" class="hide">
+	<div class="bullets">
 <h1>Commercial</h1>
 <br/>
 <ul>
@@ -86,8 +93,10 @@
 <li>Product development</li>
 </ul>
 </div>
+</div>
 
 <div id="inline-5" class="hide">
+	<div class="bullets">
 <h1>HR Development</h1>
 <br/>
 <ul>
@@ -98,4 +107,5 @@
 	<li>Commercial/Financial training</li>
 	<li>Candidate profiling</li>
 </ul>
+</div>
 </div>
