@@ -19,12 +19,49 @@ function list_news()
 		
 		return $data;
 		}
+
+function list_recent_news()
+		{
+			$data = array();
+			$this->db->where('page_type', 1);
+			$this->db->limit(10);
+			$this->db->order_by('news_id', 'DESC');
+			$query = $this->db->get('news');
+			if ($query->num_rows() > 0)
+			{
+				foreach ($query->result_array() as $row)
+				
+				$data[] = $row;
+				
+			}
+		$query->free_result();
+		
+		return $data;
+		}
+		
+function get_latest_news()
+		{
+			$data = array();
+			$this->db->where('page_type', 1);
+			$this->db->limit(1);
+			$this->db->order_by('news_id', 'DESC');
+			$query = $this->db->get('news');
+			if ($query->num_rows() > 0)
+			{
+				foreach ($query->result_array() as $row)
+				
+				$data[] = $row;
+				
+			}
+		$query->free_result();
+		
+		return $data;
+		}
 		
 function get_news($id)
 		{
 			$data = array();
-			$this->db->where('news_id', $id);
-			
+			$this->db->where('news_id', $id);			
 			$query = $this->db->get('news');
 			if ($query->num_rows() == 1)
 			{
@@ -37,7 +74,8 @@ function get_news($id)
 		
 		return $data;
 		}
-	function edit_news($id)
+		
+function edit_news($id)
 		{
 			
 			

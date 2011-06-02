@@ -12,20 +12,20 @@ class Forms_model extends Model {
     {
     	
     				$new_request_insert_data = array(
+    				'request_type' => 'request_demo',
     				'email' => $this->input->post('email'),
     				'phone' => $this->input->post('phone'),
 			    	'business_name' => $this->input->post('business_name'),
-					'postcode' => $this->input->post('postcode'),
-    				'message' => $this->input->post('message'),
-					'preferred_time' => $this->input->post('preferred_time'),
-    				'preferred_date' => $this->input->post('preferred_date'),
+					'message' => $this->input->post('message'),
+					'preferred_date' => $this->input->post('date'),
+					'preferred_time' => $this->input->post('preferredtime'),
     				'name' => $this->input->post('name'),
-    				'date_added' => unix_to_human(now(), TRUE, 'eu')
+    				'date_sent' => now()
 					);
 		
 				
 		
-		$insert = $this->db->insert('request', $new_request_insert_data);
+		$insert = $this->db->insert('requests', $new_request_insert_data);
 		return $insert;
     }
 }

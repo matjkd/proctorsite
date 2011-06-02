@@ -1,10 +1,24 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+<!doctype html>  
 
-<?php $this->load->view('global/header'); ?>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ --> 
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+ 
+<?=$this->load->view('global/header')?>
 
-<body id="bd" class="  fs3"> 
- <!--[if lt IE 7]>
+</head>
+<?php if($page == "contact_us") { ?>
+<body onload="initialize()">
+
+<?php } else { ?>
+<body>
+<?php } ?>		
+
+<!--[if lt IE 7]>
   <div style='border: 1px solid #F7941D; background: #FEEFDA; text-align: center; clear: both; height: 75px; position: relative;'>
     <div style='position: absolute; right: 3px; top: 3px; font-family: courier new; font-weight: bold;'><a href='#' onclick='javascript:this.parentNode.parentNode.style.display="none"; return false;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-cornerx.jpg' style='border: none;' alt='Close this notice'/></a></div>
     <div style='width: 640px; margin: 0 auto; text-align: left; padding: 0; overflow: hidden; color: black;'>
@@ -19,84 +33,137 @@
       <div style='float: left;'><a href='http://www.google.com/chrome' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-chrome.jpg' style='border: none;' alt='Get Google Chrome'/></a></div>
     </div>
   </div>
-  <![endif]-->
-<a name="Top" id="Top"></a>
+<![endif]-->
 
-		
-        <div id="top_menu">
-        	<?php $this->load->view('global/menutop'); ?>	
+
+
+
+   <div class="header">
+   	<div class="logotop">
+    	<div class="container_24">
+    	
+    	<!-- Logo here --> 
+	    <div class="grid_19">
+		<div id="logo"><img width="286px" height="58px" src="<?=base_url()?>images/logos/leasedesk_logo.png"/></div>
 		</div>
-  
-
-
-        <?php $this->load->view('global/main_menu'); ?>
-
-	
-
-	
-  	<div id="ja-container-fr" class="wrap"> 
-  	<div class="main clearfix">
-  	<div id="ja-col1">
-<?php  		
-	
-$this->load->view('sidebar/lease-desk-login');
-
-if(isset($sidebar)) { $this->load->view($sidebar); }
-
-?>
-  </div>     
- 		
-  	
-  	
-  	<!-- CONTENT -->  
-  	<div id="ja-content" style="min-height:420px;"> 
-  	
-    	<div class="main clearfix"> 
-            
-                        <div id="ja-current-content" class="clearfix"> 
-    
-     <div class="slideshow">    
-           
-      <?php	
-      if (isset($slideshow))
-      {
-      $this->load->view($slideshow); 
-      }
-      ?>
-      
-     </div>            
-     <div style="clear:both;"></div>
-									<div class="main_content" <?php if(!isset($rightcolumn)) {?> style="width:670px;"<?php }?>>
-										    
-											
-											<?php $this->load->view('global/warning'); ?> 
-											<?php $this->load->view($main); ?>
-								 <div id='bottom' style="clear:both;"><?php if(isset($bottom)) { $this->load->view($bottom); } ?> </div>
-								 	</div>
-								 	
-								 	<div class="right_column">
-								 	
-								 		<?php if(isset($rightcolumn)) { $this->load->view($rightcolumn); } ?> 
-								 	</div>
-								 	
-            </div> 
-      </div> 
-     
-  	<!-- //CONTENT --> 
+	    
+		<div class="grid_5" id="contact_details">
+		<h1>tel: +44(0)1302 245 310</h1>
+		<?=$this->load->view('sidebar/social_links')?>
+		</div>
+	    	
+    	</div>
+    </div>
+    	
+    	
+	    	<div class="menu_container">
+	    		<div class="container_24"><?=$this->load->view('global/top_menu')?></div>
+	    	</div>
+	    	
+	    	<?php	
+				      if (isset($slideshow))
+				      { ?>
+	    	
+				<div class="slide_container">
+					<div class="slides" align="center">
+					
+				      <?=$this->load->view($slideshow)?> 
+				      
 		
-     </div></div></div>
-  
-  
+					</div>
+				</div>
+			
+			
+			<?php }  ?>
+			
+    </div>
 
+
+
+
+
+
+<div class="main_content container_24">
+	
+		
+			<div class="grid_14" id="main_body">
+				
+				<div  > 	
+					<?php $this->load->view('global/warning'); ?>
+					<?php $this->load->view($main); ?>
+				</div>
+			
+			</div>
+	
+			<div class="grid_10">
+				
+				<?php 
+				if(isset($widecolumntop))
+				{ ?>
+					
+				<div id="widecolumntop">
+				<?=$this->load->view($widecolumntop);?> 
+				</div>
+				<div id="clear"></div>
+				<?php
+				}
+				?> 
+		
+			</div>
+			
+			
+			
+			<div class="grid_10">
+				
+				<?php 
+				if(isset($widecolumn))
+				{
+				$this->load->view('global/widecolumn'); 
+				}
+				?> 
+		
+			</div>
+		
+	
+</div>
+<div class="clear"></div>
+ <!--	
+	<?php 
+	if(isset($greybox))
+	{
+	$this->load->view('global/greybox'); 
+	}
+	?> 
+	
+<div class="clear"></div>
+
+<div class="footer1">
+	<div class="container_24" >
+		
+	<div class="grid_24">
+		<?=$this->load->view('slideshow/companies')?>
+	</div>
+	
+	
+	</div>
+</div>
+-->
+
+<div class="footer2">
+	<div class="top_shadow"></div>
+	<div class="container_24">
+	
+	
+		<div class="grid_19">
+				<?=$this->load->view('sidebar/footerlinks')?>
+		</div>
+	
+		<div class="grid_5">
+			
+		</div>
+	
+	</div>
+</div>
 <?php $this->load->view('global/footer'); ?>
-<script type="text/javascript"> 
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script> 
-<script type="text/javascript"> 
-try {
-var pageTracker = _gat._getTracker("UA-920708-15");
-pageTracker._trackPageview();
-} catch(err) {}</script> 
 </body>
 </html>

@@ -1,0 +1,1 @@
+<div style="text-align:center;"><a href="<?=base_url()?>images/general/consultancy.png" rel="prettyPhoto" title="Consultancy"><img width="360px" src="<?=base_url()?>images/general/consultancy.png"/></a></div>

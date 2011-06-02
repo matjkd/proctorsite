@@ -1,10 +1,11 @@
 <?php
 
-class Admin extends My_Controller {
+class Admin extends MY_Controller
 
-	function Admin()
+{
+function __construct()
 	{
-		parent::Controller();
+		parent::__construct();
 		$this->load->model('professionals_model');
 		$this->load->library(array('encrypt', 'form_validation'));	
 		$this->is_logged_in();
@@ -19,6 +20,7 @@ class Admin extends My_Controller {
 		
 		$id = $this->uri->segment(3);
 		$data['page'] = $id;
+		$data['title'] = "edit page";
 		$data['content'] =	$this->content_model->get_content($id);
 		$data['news'] = $this->news_model->list_news();
 		$data['main'] = "admin/edit_content";
@@ -33,6 +35,54 @@ class Admin extends My_Controller {
 		
 		redirect ("admin/edit/$id");
 	}
+	function create_news()
+	{
+		$data['page'] = "news";
+		$data['content'] =	$this->content_model->get_content('news');
+		$data['main'] = "admin/create_news";
+		$data['menu'] =	$this->content_model->get_menus();
+		$data['news'] = $this->news_model->list_news();
+		$this->load->vars($data);
+		$this->load->view('template');
+	}
+	function submit_news()
+	{			
+		$this->form_validation->set_rules('news_title','Title','max_length[255]');			
+		$this->form_validation->set_rules('news_content','Content','max_length[1024]');
+		$this->form_validation->set_rules('page_type','Page Type','max_length[11]');
+		$this->form_validation->set_error_delimiters('<br /><span class="error">', '</span>');
+	
+		if ($this->form_validation->run() == FALSE) // validation hasn'\t been passed
+		{
+				
+			$this->load->view('blog');
+		}
+		else // passed validation proceed to post success logic
+		{
+		 	// build array for the model
+			$form_data = array(
+					    'news_content' => $this->input->post('content'),
+    					'added_by' => $this->input->post('added_by'),
+    					'date_added' => $this->input->post('date_added'),
+    					'news_title' => $this->input->post('title'),
+    					//page type 1 is blog, or news, doesn't matter as its not used yet
+    					'page_type' => 1
+						);
+					
+			// run insert model to write data to db
+		
+			if ($this->news_model->SaveForm($form_data) == TRUE) // the information has therefore been successfully saved in the db
+			{
+				redirect('blog');   // or whatever logic needs to occur
+			}
+			else
+			{
+			echo 'An error occurred saving your information. Please try again later';
+			// Or whatever error handling is necessary
+			}
+		}
+	}
+	
 	function create_company()
 	{
 		
@@ -181,6 +231,25 @@ function edit_pro()
 		$id = $this->uri->segment(3);
 		$this->professionals_model->edit_pro($id);
 		redirect ("admin/editpro/$id");
+	}
+	function editnews()
+	{
+		
+		$id = $this->uri->segment(3);
+		$data['page'] ='news';
+		$data['content'] =	$this->content_model->get_content('news');
+		$data['news'] =	$this->news_model->get_news($id);
+		$data['title'] = "edit blog";
+		$data['main'] = "admin/edit_news";
+		$data['menu'] =	$this->content_model->get_menus();
+		$this->load->vars($data);
+		$this->load->view('template');
+	}
+function edit_news()
+	{
+		$id = $this->uri->segment(3);
+		$this->news_model->edit_news($id);
+		redirect ("admin/editnews/$id");
 	}
 	function delete_user()
 	{

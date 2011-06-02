@@ -9,7 +9,7 @@ $data = array(
 			'name' => 'message',
 			'id' => 'message',
               'rows'   => '4',
-              'cols'        => '22'
+              'cols'        => '12'
             
             );
 $referrals = array(

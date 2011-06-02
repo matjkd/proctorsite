@@ -1,17 +1,30 @@
 <?php
 
-class Welcome extends My_Controller {
-
-	function Welcome()
+class Welcome extends MY_Controller
+{
+function __construct()
 	{
-		parent::Controller();	
+		parent::__construct();
 		$this->load->model('professionals_model');
+		$this->load->model('captcha_model');
+		$this->logged_in();
 	}
 	
 	function index()
 	{
 		
 		redirect('/welcome/content');
+	}
+	function logged_in()
+	{
+		$is_logged_in = $this->session->userdata('is_logged_in');
+		$role = $this->session->userdata('role');
+		if($is_logged_in!=NULL && $role ==1)
+			{
+			$globaldata['edit'] = "yes";
+			$this->load->vars($globaldata);
+	        }
+			
 	}
 	
 function introduction()
@@ -47,17 +60,28 @@ function content()
 		
 		endforeach;
 		$data['menu'] =	$this->content_model->get_menus();
-		$data['slideshow'] = "global/slideshow1";
+		$data['slideshow'] = "slideshow/main_slideshow2";
 		$data['news'] = $this->news_model->list_news();
-		$data['sidebar'] = 'sidebar/links';
-		$data['rightcolumn'] = 'sidebar/channel_partner';
+		$data['widecolumn'] = 'global/mainbuttons';
+		
+		$data['widecolumntop'] = 'sidebar/testimonials';
+		
+		//show consultancy buttons if consultancy page - come up with a better solution for this
+		if($id == "consultancy")
+		{
+			
+			$data['widecolumntop'] = 'extras/consultancy_side';
+			
+		}
+		
 		$data['page'] = $id;
+		
 		$is_logged_in = $this->session->userdata('is_logged_in');
 		
-		if($is_logged_in!=NULL)
-			{
-			$data['edit'] = site_url("admin/edit/$id");
-	        }
+		//display greybox module - this should eventually be controlled by some table or something
+		$data['greybox'] = 1;
+		
+		
 			
         $this->load->vars($data);
 		$this->load->view('template');
@@ -66,25 +90,29 @@ function content()
 	
 function contact()
 	{
+			
+		$data['captcha'] = $this->captcha_model->initiate_captcha();
+    	$data['email'] = $this->input->post('email');
+    	$data['phone'] = $this->input->post('phone');
+    	$data['message'] = $this->input->post('message');
+    	$data['business_name'] = $this->input->post('business_name');
+		$data['referral'] = $this->input->post('referral');
+    	$data['name'] = $this->input->post('name');
+		$data['errors'] = validation_errors();	
+			
 		$id = "contact_us";
 		$data['content'] =	$this->content_model->get_content($id);
-		$data['slideshow'] = "global/slideshow1";
+		//$data['slideshow'] = "slideshow/main_slideshow";
 		$data['menu'] =	$this->content_model->get_menus();
 		$data['main'] = "pages/contact";
 		$data['title'] = 'Contact Us';
 		$data['news'] = $this->news_model->list_news();
-		$data['sidebar'] = 'sidebar/links';
-		$data['page'] = $id;
-		$is_logged_in = $this->session->userdata('is_logged_in');
 		
-		if($is_logged_in!=NULL)
-			{
-			$data['edit'] = site_url("admin/edit/$id");
-	        }
-			
-                       
-			
-	
+		$data['page'] = $id;
+		
+		$data['widecolumntop'] = 'sidebar/map';
+		$data['widecolumn'] = 'sidebar/address';
+		
 		$this->load->vars($data);
 		$this->load->view('template');
 }
@@ -104,20 +132,16 @@ function management_team()
 		$id = "management-team";
 		$data['content'] =	$this->content_model->get_content($id);
 		$data['team'] = $this->professionals_model->get_professionals();
-		$data['slideshow'] = "global/team";
+		$data['slideshow'] = "slideshow/team";
 		$data['menu'] =	$this->content_model->get_menus();
-		$data['main'] = "pages/team";
+		$data['main'] = "pages/dynamic";
 		$data['title'] = 'Management Team';
 		$data['news'] = $this->news_model->list_news();
 		$data['sidebar'] = 'sidebar/links';
-		$data['rightcolumn'] = 'sidebar/channel_partner';
+		$data['rightcolumn'] = 'sidebar/channel_partner_program';
 		$data['page'] = $id;
-		$is_logged_in = $this->session->userdata('is_logged_in');
-		$data['member'] = $this->professionals_model->get_professional($member);
-		if($is_logged_in!=NULL)
-			{
-			$data['edit'] = site_url("admin/edit/$id");
-	        }
+		
+		
 		         
 		$this->load->vars($data);
 		$this->load->view('template');
@@ -138,13 +162,15 @@ function lease_rate_calc()
 		$data['title'] = 'Lease Rate Calculator';
 		$data['news'] = $this->news_model->list_news();
 		$data['sidebar'] = 'sidebar/links';
+		$data['rightcolumn'] = 'sidebar/channel_partner_program';
 		$data['page'] = $id;
 		$is_logged_in = $this->session->userdata('is_logged_in');
 		
-		if($is_logged_in!=NULL)
-			{
-			$data['edit'] = site_url("admin/edit/$id");
-	        }
+			//display widecolumn module - this should eventually be controlled by some table or something
+		$data['widecolumn'] = 'sidebar/benefits_of_leasedesk';
+		$data['widecolumn2'] = 'sidebar/testimonials';
+		
+		
 	        
 	     	$data['quote_ref'] ='';
 						$data['capital'] ='';
@@ -179,13 +205,17 @@ function lease_rate_calc()
 		$data['title'] = 'Lease Rate Calculator';
 		$data['news'] = $this->news_model->list_news();
 		$data['sidebar'] = 'sidebar/links';
+		$data['rightcolumn'] = 'sidebar/channel_partner_program';
 		$data['page'] = $id;
 		$is_logged_in = $this->session->userdata('is_logged_in');
 		
-		if($is_logged_in!=NULL)
-			{
-			$data['edit'] = site_url("admin/edit/$id");
-	        }		
+		//display widecolumn module - this should eventually be controlled by some table or something
+		$data['widecolumn'] = 'sidebar/benefits_of_leasedesk';
+		$data['widecolumn2'] = 'sidebar/testimonials';
+		$is_logged_in = $this->session->userdata('is_logged_in');
+		
+		
+				
 		//validate the calculator entries
 		
 		$this->form_validation->set_rules('amount_type', 'capital type', 'trim|required');
@@ -303,6 +333,42 @@ function lease_rate_calc()
 		}
 		
 	}
+
+function iframe_calc()
+	{
+		$id = "lease_rate_calc";
+		$data['content'] =	$this->content_model->get_content($id);
+		
+		$data['menu'] =	$this->content_model->get_menus();
+		$data['main'] = "pages/lease_rate_calc";
+		$data['title'] = 'Lease Rate Calculator';
+		$data['page'] = $id;
+		$is_logged_in = $this->session->userdata('is_logged_in');
+		
+		        
+	     	$data['quote_ref'] ='';
+						$data['capital'] ='';
+						$data['capital_type'] ='';
+						$data['amount_type'] ='';
+						$data['interest_type'] = '';
+						$data['calculate_by'] = '';
+						$data['interest_rate'] = '';
+						$data['rate_per_1000'] = '';
+						$data['periodic_payment'] = '';
+						$data['payment_type'] = '';
+						$data['payment_frequency'] = '';
+						$data['initial'] = '';
+						$data['regular'] = '';
+						$data['number_of_ports'] = '';
+						$data['annual_support_costs'] = '';
+						$data['other_monthly_costs'] = '';
+						$data['user_id'] = '';
+						
+						
+		$this->load->vars($data);
+		$this->load->view('iframe');
+		
+	}
 function login()
 	{
 		
@@ -312,7 +378,7 @@ function login()
 		$data['menu'] =	$this->content_model->get_menus();
 		$data['info'] = "infoblock/times";
 		$data['page'] = "login";
-		
+		$data['title'] = $data['page'];
 		 
 	
 		$this->load->vars($data);

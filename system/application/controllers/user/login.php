@@ -1,9 +1,10 @@
 <?php
-class Login extends MY_Controller {
+class Login extends MY_Controller
 
-function Login()
+{
+function __construct()
 	{
-		parent::MY_Controller();
+		parent::__construct();
 		
 		$this->load->library(array('encrypt', 'form_validation'));
 		
@@ -46,6 +47,7 @@ function Login()
 						$user_id = $row->user_id;
 						$user_firstname = $row->firstname;
 						$user_lastname = $row->lastname;
+						$company_id = $row->company_id;
 					
 					}
 			}
@@ -54,7 +56,7 @@ function Login()
 				'username' => $this->input->post('username'),
 				'role' => $role_level,
 				'user_id' => $user_id,
-			
+				'company_id' => $company_id,
 				'firstname' => $user_firstname,
 				'lastname' => $user_lastname,
 				'is_logged_in' => true,
@@ -134,9 +136,9 @@ function Login()
 		$is_logged_in = $this->session->userdata('is_logged_in');
 		if(!isset($is_logged_in) || $is_logged_in == true)
 		{
-			redirect($this->uri->uri_string());
+			redirect('welcome/');
 		}		
-		$this->index();
+		redirect('welcome/');
 	}
 	
 	

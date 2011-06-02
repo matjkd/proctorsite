@@ -1,38 +1,60 @@
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta charset="utf-8">
 
-<link rel="SHORTCUT ICON" href="http://www.channel-resource.com/favicon.ico">
- <link rel="shortcut icon" href="http://www.channel-resource.com/favicon.png" >
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title><?=$title?></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+  <link rel="shortcut icon" href="<?=base_url()?>favicon.ico">
+  <link rel="apple-touch-icon" href="<?=base_url()?>apple-touch-icon.png">
+
+<!-- Load google fonts-->
+<link  href="http://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet" type="text/css" >
+
+  <!-- CSS : implied media="all" -->
+   <link rel="stylesheet" href="<?=base_url()?>css/custom-theme/jquery-ui-1.8.2.custom.css">
+   <link rel="stylesheet" href="<?=base_url()?>css/prettyPhoto.css">
+   <link rel="stylesheet" href="<?=base_url()?>css/style.css?v=2">
+   <link rel="stylesheet" href="<?=base_url()?>css/960.css">
+   <link rel="stylesheet" href="<?=base_url()?>css/form.css?v=2">
+
+   
+   <link rel="stylesheet" media="handheld" href="<?=base_url()?>css/handheld.css?v=2">  
+   
+   
+<!--[if IE 6]>
+<link rel="stylesheet" href="<?=base_url()?>css/ie6.css" /> 
+<![endif]-->
+
+<!--[if IE 7]>
+<link rel="stylesheet" href="<?=base_url()?>css/ie7.css" /> 
+<![endif]-->
+
+<!--[if IE 8]>
+<link rel="stylesheet" href="<?=base_url()?>css/ie8.css" /> 
+<![endif]-->
  
+  <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+  <script src="<?=base_url()?>js/libs/modernizr-1.6.min.js"></script>
+   
+   
 
-<link rel='stylesheet' href='<?=base_url()?>css/boilerplate.css' type='text/css' /> 
-<link rel='stylesheet' href='<?=base_url()?>css/demo_table_jui.css' type='text/css' />
-<link rel='stylesheet' href='<?=base_url()?>css/forms.css' type='text/css' />
+  
+ 
+   
 
 <script type='text/javascript' src='http://www.google.com/jsapi'></script>
 
-<script src="<?=base_url()?>js/Jquery.js" type="text/javascript"></script>
-<script src="<?=base_url()?>js/jeditable.js" type="text/javascript"></script>
-<script src="<?=base_url()?>js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
-<script src="<?=base_url()?>js/wymeditor/jquery.wymeditor.min.js" type="text/javascript"></script>
-<link  href="http://fonts.googleapis.com/css?family=Cabin:400,500,600,bold" rel="stylesheet" type="text/css" >
-
-
-
-
-
 
 	
-
-<script type="text/javascript">
-	$(function() {
-		$("input:submit").button();
-		
-		
-	});
-	</script>
-
-
 
 <!--[if lt IE 7.]>
 <script defer type="text/javascript" src="<?=base_url()?>js/pngfix.js"></script>
@@ -40,7 +62,6 @@
 <![endif]-->
 
 <title>
-<?=$title?>
+Form
 </title>
 </head>
-

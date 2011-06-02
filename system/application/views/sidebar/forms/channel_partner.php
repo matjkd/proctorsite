@@ -1,8 +1,7 @@
-<?=$this->load->view('sidebar/forms/form_top')?>
-	
+<div id="contact_form">
 <?php echo $errors;?>	
 <?=form_open('channel/request')?>
-<?=$this->load->view('global/table')?>	
+
 
 <?php 
 $data = array(
@@ -17,22 +16,46 @@ $interested = array(
 'Further Information' => 'Further Information',
 'Becoming a Channel Partner'  => 'Becoming a Channel Partner'
 );
-
-
-$this->table->add_row('Name', form_input('name', set_value('name', $name)));
-$this->table->add_row('Email', form_input('email', set_value('email', $email)));
-$this->table->add_row('Telephone', form_input('phone', set_value('phone', $phone)));
-$this->table->add_row('Business Name', form_input('business_name', set_value('business_name', $business_name)));
-$this->table->add_row('I am interested in?', form_dropdown('interested', $interested));
-
-$this->table->add_row('Postcode', form_input('postcode', set_value('postcode', $postcode)));
-$this->table->add_row('Message', form_textarea($data, set_value('message', $message)));
-
-
-	
-	echo $this->table->generate();
-	$this->table->clear();
-	echo form_submit('submit', 'Submit');
-		form_close();
-	
 ?>
+
+<p>
+<?=form_label('Name')?><br/>
+<?=form_input('name', set_value('name', $name))?>
+</p>
+
+<p>
+<?=form_label('Email')?><br/>
+<?=form_input('email', set_value('email', $email))?>
+</p>
+
+<p>
+<?=form_label('Phone')?><br/>
+<?=form_input('phone', set_value('phone', $phone))?>
+</p>
+
+<p>
+<?=form_label('Company Name')?><br/>
+<?=form_input('business_name', set_value('business_name', $business_name))?>
+</p>
+
+<p>
+<?=form_label('Interested in?')?><br/>
+<?=form_dropdown('interested', $interested)?>
+</p>
+
+<p>
+<?=form_label('Postcode')?><br/>
+<?=form_input('postcode', set_value('postcode', $postcode))?>
+</p>
+
+<p>
+<?=form_label('Message')?><br/>
+
+<?=form_textarea($data, set_value('message', $message))?>
+</p>
+
+<p>
+<?=form_submit('submit', 'Submit')?>
+<?=form_close()?>
+</p>	
+</div>

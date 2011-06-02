@@ -1,63 +1,46 @@
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta charset="utf-8">
 
-<link rel="SHORTCUT ICON" href="http://www.channel-resource.com/favicon.ico">
- <link rel="shortcut icon" href="http://www.channel-resource.com/favicon.png" >
- 
-<link rel='stylesheet' href='<?=base_url()?>css/system.css' type='text/css' />
-<link rel='stylesheet' href='<?=base_url()?>css/general.css' type='text/css' />
-<link rel='stylesheet' href='<?=base_url()?>css/typo.css' type='text/css' />
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-<link rel='stylesheet' href='<?=base_url()?>css/jquery-ui-1.8.custom.css' type='text/css' />
-<link rel='stylesheet' href='<?=base_url()?>css/demo_table_jui.css' type='text/css' />
+  <title><?=$title?></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
 
+  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<script type='text/javascript' src='http://www.google.com/jsapi'></script>
+  <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+  <link rel="shortcut icon" href="<?=base_url()?>favicon.ico">
+  <link rel="apple-touch-icon" href="<?=base_url()?>apple-touch-icon.png">
 
-<script src="<?=base_url()?>js/Jquery.js" type="text/javascript"></script>
-<script src="<?=base_url()?>js/jeditable.js" type="text/javascript"></script>
-<script src="<?=base_url()?>js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
-<script src="<?=base_url()?>js/wymeditor/jquery.wymeditor.min.js" type="text/javascript"></script>
-<script src="<?=base_url()?>js/tiny_mce/tiny_mce.js" type="text/javascript"></script>
-
-
-<script src="<?=base_url()?>js/jquery.cycle.all.min.js" language="javascript"></script>
-
-
-<script language="javascript">AC_FL_RunContent = 0;</script>
-
-
-
-<!-- Menu head --> 
-<link rel='stylesheet' href='<?=base_url()?>css/ja_menus/ja_cssmenu/ja.cssmenu.css' type='text/css' />
-<link rel='stylesheet' href='<?=base_url()?>css/addons.css' type='text/css' />
-<script src="<?=base_url()?>css/ja_menus/ja_cssmenu/ja.cssmenu.js" type="text/javascript"></script>
-
-<link rel='stylesheet' href='<?=base_url()?>css/template.css' type='text/css' />
-	
- 
-<script type="text/javascript"> 
-	//<![CDATA[
-	document.write('<link rel="stylesheet" type="text/css" href="<?=base_url()?>css/css3.css" media="all" \/>');
-	//]]>
-</script> 
-<script type="text/javascript">
-	$(function() {
-		$("button").button();
-		
-		
-	});
-	</script>
-
-
-<link rel='stylesheet' href='<?=base_url()?>css/colors/default.css' type='text/css' />
-<!--[if lt IE 7.]>
-<script defer type="text/javascript" src="<?=base_url()?>js/pngfix.js"></script>
-<link rel='stylesheet' href='<?=base_url()?>css/ie6.css' type='text/css' />
+<!-- Load google fonts-->
+<link href="http://fonts.googleapis.com/css?family=Arimo:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <!-- CSS : implied media="all" -->
+   <link rel="stylesheet" href="<?=base_url()?>css/custom-theme/jquery-ui-1.8.2.custom.css">
+   <link rel="stylesheet" href="<?=base_url()?>css/prettyPhoto.css">
+   
+   <link rel="stylesheet" href="<?=base_url()?>css/960.css">
+   <link rel="stylesheet" href="<?=base_url()?>css/style.css?v=2">
+   <link rel="stylesheet" href="<?=base_url()?>css/template.css">
+   
+   <link rel="stylesheet" media="handheld" href="<?=base_url()?>css/handheld.css?v=2">  
+   
+   
+<!--[if IE 6]>
+<link rel="stylesheet" href="<?=base_url()?>css/ie6.css" /> 
 <![endif]-->
 
-<title>
-<?=$title?>
-</title>
-</head>
+<!--[if IE 7]>
+<link rel="stylesheet" href="<?=base_url()?>css/ie7.css" /> 
+<![endif]-->
 
+<!--[if IE 8]>
+<link rel="stylesheet" href="<?=base_url()?>css/ie8.css" /> 
+<![endif]-->
+ 
+  <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+  <script src="<?=base_url()?>js/libs/modernizr-1.6.min.js"></script>
+   
+   

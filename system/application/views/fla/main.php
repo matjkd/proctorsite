@@ -1,1 +1,0 @@
-Welcome to Channel Resource. This site is under construction.

@@ -1,17 +1,18 @@
 <?php
 
-class Leasedesk extends My_Controller {
+class Leasedesk extends MY_Controller {
 
-	function Leasedesk()
+function __construct()
 	{
-		parent::Controller();	
+		parent::__construct();
+		$this->load->model('captcha_model');
 		
 	}
 	function index()
 	{
 		$id = "leasedesk";
-		$data['main'] = "pages/dynamic";
-		
+		$data['main'] = "pages/software_solutions";
+		$data['captcha'] = $this->captcha_model->initiate_captcha();
 		
 		$data['content'] =	$this->content_model->get_content($id);
 		foreach($data['content'] as $row):
@@ -20,13 +21,17 @@ class Leasedesk extends My_Controller {
 		
 		endforeach;
 		$data['menu'] =	$this->content_model->get_menus();
-		$data['slideshow'] = "global/lease-desk-flash";
+		$data['slideshow'] = "slideshow/software";
 		$data['news'] = $this->news_model->list_news();
-		$data['sidebar'] = 'sidebar/links';
-		$data['rightcolumn'] = 'sidebar/channel_partner';
+		$data['widecolumntop'] = 'extras/software_solutions';
+		$data['widecolumn'] = 'global/mainbuttons';
+		$data['rightcolumn'] = 'sidebar/channel_partner_program';
 		$data['bottom'] = 'sidebar/leasedesk_forms';
 		$data['page'] = $id;
 		$is_logged_in = $this->session->userdata('is_logged_in');
+		
+		//display greybox module - this should eventually be controlled by some table or something
+		$data['greybox'] = 1;
 		
 		if($is_logged_in!=NULL)
 			{
