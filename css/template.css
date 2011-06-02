@@ -367,6 +367,9 @@ width: 180px;
 height: 125px;
 text-align: center;
 }
+#calcbutton {
+	cursor:pointer;
+}
 #inputs {
 
 }
