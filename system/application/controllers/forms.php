@@ -172,9 +172,9 @@ End
 						
 						
 						$this->postmark->from('noreply@lease-desk.com', 'Lease Desk Limited');
-						//$this->postmark->to('chloe@lease-desk.com'); 
-						$this->postmark->to('mat@redstudio.co.uk'); 
-						//$this->postmark->cc('debra.taylor@lease-desk.com'); 
+						$this->postmark->to('chloe@lease-desk.com'); 
+						$this->postmark->cc('mat@redstudio.co.uk'); 
+						$this->postmark->cc('debra.taylor@lease-desk.com'); 
 						$this->postmark->subject('Request a Demo');
 						$this->postmark->message_html("$name has Requested Info.<br/><br/>
 						
@@ -264,9 +264,9 @@ End
 						
 						
 						$this->postmark->from('noreply@lease-desk.com', 'Lease Desk Limited');
-						//$this->postmark->to('chloe@lease-desk.com'); 
-						$this->postmark->to('mat@redstudio.co.uk'); 
-						//$this->postmark->cc('debra.taylor@lease-desk.com'); 
+						$this->postmark->to('chloe@lease-desk.com'); 
+						$this->postmark->cc('mat@redstudio.co.uk'); 
+						$this->postmark->cc('debra.taylor@lease-desk.com'); 
 						$this->postmark->subject('Request a Demo');
 						$this->postmark->message_html("$name has Requested a Demo.<br/><br/>
 						

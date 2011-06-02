@@ -5,8 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
   <title><?=$title?></title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="Manage leasing with a unique software solution for technology companies who use leasing programs to drive sales">
+  <meta name="author" content="Leasing, leasing solutions, consultancy">
 
   <!--  Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,5 +42,18 @@
  
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
   <script src="<?=base_url()?>js/libs/modernizr-1.6.min.js"></script>
-   
+  
+   <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19623681-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
    
