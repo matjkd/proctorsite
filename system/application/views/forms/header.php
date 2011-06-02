@@ -5,7 +5,7 @@
  <link rel="shortcut icon" href="http://www.channel-resource.com/favicon.png" >
  
 
-<link rel='stylesheet' href='<?=base_url()?>css/jquery-ui-1.8.custom.css' type='text/css' />
+<link rel='stylesheet' href='<?=base_url()?>css/boilerplate.css' type='text/css' /> 
 <link rel='stylesheet' href='<?=base_url()?>css/demo_table_jui.css' type='text/css' />
 <link rel='stylesheet' href='<?=base_url()?>css/forms.css' type='text/css' />
 

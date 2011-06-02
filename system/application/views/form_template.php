@@ -6,7 +6,8 @@
 
 <link rel="SHORTCUT ICON" href="http://www.channel-resource.com/favicon.ico">
  <link rel="shortcut icon" href="http://www.channel-resource.com/favicon.png" >
- 
+
+<link rel='stylesheet' href='<?=base_url()?>css/boilerplate.css' type='text/css' /> 
 <link rel='stylesheet' href='<?=base_url()?>css/system.css' type='text/css' />
 <link rel='stylesheet' href='<?=base_url()?>css/general.css' type='text/css' />
 <link rel='stylesheet' href='<?=base_url()?>css/typo.css' type='text/css' />

@@ -54,7 +54,7 @@ class Forms extends Controller {
 				
 					$data['main'] = 'sidebar/forms/request';
 					$this->load->vars($data);
-					$this->load->view('form_template');
+					$this->load->view('mitel_form_template');
 					
 				}
 			else
@@ -121,7 +121,7 @@ End
 				
 				$data['main'] = 'sidebar/forms/request_sent';
 				$this->load->vars($data);
-				$this->load->view('form_template');
+				$this->load->view('mitel_form_template');
 				}
 	}
 function send_info()
@@ -443,7 +443,7 @@ function register_thurs()
 function webinar()
 {
 			
-		$data['webinardate'] = "Thursday 10th March 2011 at 4pm";
+		$data['webinardate'] = "Wednesday 23rd March 2011 at 4pm";
 		$webinardate = $data['webinardate'];
 		$this->form_validation->set_rules('email', 'email', 'trim|required');
 		$this->form_validation->set_rules('phone', 'phone', 'trim|required');
@@ -469,7 +469,7 @@ function webinar()
 				}
 				else
 					{
-					echo "success";	
+				
 					$data['errors'] = validation_errors();
 					//$this->forms_model->add_request();
 								$email = $this->input->post('email');
@@ -509,6 +509,159 @@ $address
 						
 								$this->load->vars($data);
 								$this->load->view('forms/form_template');
+					
+					
+					
+					}
+		
+		
+}
+
+function mitel1()
+{
+			
+		$data['webinardate'] = "Friday 27th May at 10am";
+		$webinardate = $data['webinardate'];
+		$this->form_validation->set_rules('email', 'email', 'trim|required');
+		$this->form_validation->set_rules('phone', 'phone', 'trim|required');
+		$this->form_validation->set_rules('business_name', 'business_name', 'trim|required');
+		$this->form_validation->set_rules('firstname', 'First name', 'trim|required');
+		$this->form_validation->set_rules('lastname', 'Last name', 'trim|required');
+		
+		$data['email'] = $this->input->post('email');
+		$data['firstname'] = $this->input->post('firstname');
+		$data['lastname'] = $this->input->post('lastname');
+		$data['business_name'] = $this->input->post('business_name');
+		$data['jobtitle'] = $this->input->post('jobtitle');
+		$data['address'] = $this->input->post('address');
+		$data['phone'] = $this->input->post('phone');
+		
+		
+			if($this->form_validation->run() == FALSE)
+				{
+				$data['errors'] = validation_errors();
+				$data['main'] = 'forms/webinar';
+				$this->load->vars($data);
+				$this->load->view('forms/mitel_form_template');
+				}
+				else
+					{
+				
+					$data['errors'] = validation_errors();
+					//$this->forms_model->add_request();
+								$email = $this->input->post('email');
+								$firstname = $this->input->post('firstname');
+								$lastname = $this->input->post('lastname');
+								$business_name = $this->input->post('business_name');
+								$jobtitle = $this->input->post('jobtitle');
+								$address = $this->input->post('address');
+								$phone = $this->input->post('phone');
+						
+								
+								
+				    			$referral = $this->input->post('referral');
+				    			$name = $this->input->post('name');
+								
+								
+								$this->email->from('info@proctorconsulting.co.uk', 'Proctor Consulting');
+								$this->email->to('chloe@lease-desk.com'); 
+								$this->email->cc('debra.taylor@lease-desk.com'); 
+								$this->email->cc('jacob.monks@lease-desk.com'); 
+								$this->email->subject('Register for Webinar');
+								$this->email->message("$firstname $lastname has completed the request form for webinar on $webinardate.
+								
+Job Title: $jobtitle
+Company Name: $business_name
+Email: $email
+Phone: $phone		 
+address: 
+$address
+");	
+								
+								
+								$this->email->send();
+								$data['main'] = 'forms/success';
+						
+						
+						
+								$this->load->vars($data);
+								$this->load->view('forms/mitel_form_template');
+					
+					
+					
+					}
+		
+		
+}
+function mitel2()
+{
+			
+		$data['webinardate'] = "Thursday 2nd June at 10am";
+		$webinardate = $data['webinardate'];
+		$this->form_validation->set_rules('email', 'email', 'trim|required');
+		$this->form_validation->set_rules('phone', 'phone', 'trim|required');
+		$this->form_validation->set_rules('business_name', 'business_name', 'trim|required');
+		$this->form_validation->set_rules('firstname', 'First name', 'trim|required');
+		$this->form_validation->set_rules('lastname', 'Last name', 'trim|required');
+		
+		$data['email'] = $this->input->post('email');
+		$data['firstname'] = $this->input->post('firstname');
+		$data['lastname'] = $this->input->post('lastname');
+		$data['business_name'] = $this->input->post('business_name');
+		$data['jobtitle'] = $this->input->post('jobtitle');
+		$data['address'] = $this->input->post('address');
+		$data['phone'] = $this->input->post('phone');
+		
+		
+			if($this->form_validation->run() == FALSE)
+				{
+				$data['errors'] = validation_errors();
+				$data['main'] = 'forms/webinar2';
+				$this->load->vars($data);
+				$this->load->view('forms/mitel_form_template');
+				}
+				else
+					{
+				
+					$data['errors'] = validation_errors();
+					//$this->forms_model->add_request();
+								$email = $this->input->post('email');
+								$firstname = $this->input->post('firstname');
+								$lastname = $this->input->post('lastname');
+								$business_name = $this->input->post('business_name');
+								$jobtitle = $this->input->post('jobtitle');
+								$address = $this->input->post('address');
+								$phone = $this->input->post('phone');
+						
+								
+								
+				    			$referral = $this->input->post('referral');
+				    			$name = $this->input->post('name');
+								
+								
+								$this->email->from('info@proctorconsulting.co.uk', 'Proctor Consulting');
+								$this->email->to('chloe@lease-desk.com'); 
+								$this->email->cc('debra.taylor@lease-desk.com'); 
+								$this->email->cc('jacob.monks@lease-desk.com'); 
+								$this->email->subject('Register for Webinar');
+								$this->email->message("$firstname $lastname has completed the request form for webinar on $webinardate.
+								
+Job Title: $jobtitle
+Company Name: $business_name
+Email: $email
+Phone: $phone		 
+address: 
+$address
+");	
+								
+								
+								$this->email->send();
+								$data['main'] = 'forms/success';
+						
+						
+						
+								$this->load->vars($data);
+								$this->load->view('forms/mitel_form_template');
 					
 					
 					

@@ -2,7 +2,7 @@
 <h2>Register for Webinar</h2>
 on <?=$webinardate?><br/><br/>
 <?php echo $errors;?>	
-<?=form_open('forms/mitel1')?>
+<?=form_open('forms/mitel2')?>
 <?=$this->load->view('global/table')?>	
 
 <?php 

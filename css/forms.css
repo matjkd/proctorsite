@@ -11,7 +11,8 @@ font-family: 'Cabin', serif;
   word-spacing: 0em;
   line-height: 1.2;
   margin:0;
-}
+  color:#ffffff;
+  }
 #header {
 background:#ffffff;
 height:60px;
@@ -33,7 +34,8 @@ margin: 5px auto;
 #form {
 text-align:center;
 color:#ffffff;
-background:#b54845;
+background:#0f2755;
+
 width:300px;
 margin: 25px auto;
 position:relative;

@@ -6,6 +6,7 @@ function get_professionals()
 		{
 			$data = array();
 			$this->db->orderby('order', 'asc');
+			$this->db->where('active', '1');
 			$query = $this->db->get('professionals');
 			if ($query->num_rows() > 1)
 			{
