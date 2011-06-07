@@ -59,5 +59,8 @@ echo $content;
 
 
 <a href="<?=base_url()?>blog/post/<?=$news['news_id']?>">Read More</a><br/>
-<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="<?=base_url()?>blog/post/<?=$news['news_id']?>" show_faces="true" width="450" font=""></fb:like>
+
+<g:plusone style="float:left;" width="55" height="20" href="<?=base_url()?>blog/post/<?=$news['news_id']?>"></g:plusone>
+<fb:like href="<?=base_url()?>blog/post/<?=$news['news_id']?>" show_faces="false" width="350" font=""></fb:like>
+
 <?php endforeach; ?>

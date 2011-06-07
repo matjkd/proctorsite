@@ -22,9 +22,11 @@
 	<script src="<?=base_url()?>js/script.js"></script>
 	
 	<script src="<?=base_url()?>js/plugins.js"></script>
+ <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
  
- 
-	
+	<script type="text/javascript" src="http://apis.google.com/js/plusone.js">
+  {lang: 'en-GB'}
+</script>
 	 
   <!-- end concatenated and minified scripts-->
   

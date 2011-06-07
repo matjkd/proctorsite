@@ -1,0 +1,2 @@
+<g:plusone style="float:left;" width="55" height="20" href="<?=base_url()?>blog/post/<?=$news['news_id']?>"></g:plusone>
+<fb:like href="<?=base_url()?>blog/post/<?=$news['news_id']?>" show_faces="false" width="350" font=""></fb:like>

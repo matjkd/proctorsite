@@ -71,8 +71,7 @@ function post($post)
 		$data['menu'] =	$this->content_model->get_menus();
 		$data['slideshow'] = "slideshow/main_slideshow2";
 		$data['news'] = $this->news_model->get_news($post);
-		$data['sidebar'] = 'sidebar/links';
-		$data['rightcolumn'] = 'sidebar/channel_partner_program';
+		
 		$data['page'] = $id;
 		$is_logged_in = $this->session->userdata('is_logged_in');	
 			
@@ -83,8 +82,9 @@ function post($post)
 		$is_logged_in = $this->session->userdata('is_logged_in');
 		
 			//display widecolumn module - this should eventually be controlled by some table or something
-		$data['widecolumn'] = 'sidebar/benefits_of_leasedesk';
+		$data['widecolumn'] = 'global/mainbuttons';
 		
+		$data['widecolumntop'] = 'sidebar/testimonials';
 		
 			
          $data['title'] = 'Proctor Consulting Blog';
