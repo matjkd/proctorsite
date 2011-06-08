@@ -72,7 +72,7 @@ function content()
 		
 		$data['widecolumntop'] = 'sidebar/testimonials';
 		
-		//show consultancy buttons if consultancy page - come up with a better solution for this
+		//@TODO come up with a better solution for this show consultancy buttons if consultancy page
 		if($id == "consultancy")
 		{
 			

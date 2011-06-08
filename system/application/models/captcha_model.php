@@ -51,8 +51,8 @@ class Captcha_model extends Model {
 			}
 		else
 			{
-				//return false to indicate it hasn't failed
-				return FALSE;
+                            //return false to indicate it hasn't failed
+                            return FALSE;
 			}
 		
 	}
