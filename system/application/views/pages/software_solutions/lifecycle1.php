@@ -8,7 +8,7 @@ levels of visibility, control & management information.</p>
 administration focus is now an easy task, no more need to continually update spreadsheets or refer
 to monthly reports.</p>
 
-<p>If a vendor uses Residual Value Operating Leases it is imperative tom manage this at either upgrade
+<p>If a vendor uses Residual Value Operating Leases it is imperative to manage this at either upgrade
 or end of term. Lease-desk.com saves our customers hundreds of thousands by comprehensively
 managing the equipment return process.</p>
 

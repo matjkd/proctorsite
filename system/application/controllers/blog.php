@@ -57,7 +57,7 @@ class Blog extends MY_Controller {
 		
 		
 			
-         $data['title'] = 'Proctor Consulting Blog';
+         $data['title'] = 'Lease Desk Limited News and Blog';
 		              
 			
 		$data['info'] = "infoblock/times";
@@ -86,9 +86,12 @@ function post($post)
 		
 		$data['widecolumntop'] = 'sidebar/testimonials';
 		
-			
-         $data['title'] = 'Proctor Consulting Blog';
-		              
+		foreach($data['news'] as $row):
+		
+		
+			$data['title'] = $row['news_title'];
+		endforeach;
+	
 			
 		$data['info'] = "infoblock/times";
 		$this->load->vars($data);

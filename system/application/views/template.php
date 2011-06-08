@@ -127,27 +127,7 @@
 	
 </div>
 <div class="clear"></div>
- <!--	
-	<?php 
-	if(isset($greybox))
-	{
-	$this->load->view('global/greybox'); 
-	}
-	?> 
-	
-<div class="clear"></div>
 
-<div class="footer1">
-	<div class="container_24" >
-		
-	<div class="grid_24">
-		<?=$this->load->view('slideshow/companies')?>
-	</div>
-	
-	
-	</div>
-</div>
--->
 
 <div class="footer2">
 	<div class="top_shadow"></div>

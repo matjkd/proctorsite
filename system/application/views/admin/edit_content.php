@@ -11,10 +11,16 @@ Title:<br/>
 <a id="tips1"   title="The title displayed at the top of the article. Though for most articles this is replaced by graphic"><img width='12px' height='12px' alt='i' src='<?=base_url()?>images/icons/i.png'></a> 
 
 <br/>
+<?=form_open("admin/edit_content/$page")?> 
+Page Title:<br/>
+ <?=form_input('page_title', $row['page_title'])?>
+ &nbsp;
+<a id="tips2"   title="The title displayed at the top of the browser"><img width='12px' height='12px' alt='i' src='<?=base_url()?>images/icons/i.png'></a> 
 
+<br/>
 Youtube id:<br/>
 <?=form_input('youtube', $row['youtube'])?> &nbsp;
-<a id="tips2"   title="The youtube id. This can be found in the url when viewing the youtube video. it will be something like this: B5zGxkMK6hk"><img width='12px' height='12px' alt='i' src='<?=base_url()?>images/icons/i.png'></a> 
+<a id="tips3"   title="The youtube id. This can be found in the url when viewing the youtube video. it will be something like this: B5zGxkMK6hk"><img width='12px' height='12px' alt='i' src='<?=base_url()?>images/icons/i.png'></a> 
 
 <br/>
 
@@ -25,14 +31,14 @@ Unless you know what you're doing, the fields below could break the site if not 
 
 Menu Title<br/>
 <?=form_input('menu_title', $row['menu_title'])?>&nbsp;
-<a id="tips3"   title="Only change this if changing code. The menu title is refered to by the links and the name of the image file that makes the title"><img width='12px' height='12px' alt='i' src='<?=base_url()?>images/icons/i.png'></a> 
+<a id="tips4"   title="Only change this if changing code. The menu title is refered to by the links and the name of the image file that makes the title"><img width='12px' height='12px' alt='i' src='<?=base_url()?>images/icons/i.png'></a> 
 
 
 <br/>
 
 Extra<br/>
 <?=form_input('extra', $row['extra'])?>&nbsp;
-<a id="tips4"   title="Only change this if changing code. This is the location of extra code for this page. So any additional info can be displayed below the content"><img width='12px' height='12px' alt='i' src='<?=base_url()?>images/icons/i.png'></a> 
+<a id="tips5"   title="Only change this if changing code. This is the location of extra code for this page. So any additional info can be displayed below the content"><img width='12px' height='12px' alt='i' src='<?=base_url()?>images/icons/i.png'></a> 
 
 
 

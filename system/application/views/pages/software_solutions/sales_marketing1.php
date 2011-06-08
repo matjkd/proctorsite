@@ -10,7 +10,7 @@ structures across multiple organisations to enable the sales process.</p>
 is imperative for accurate forecasting and results. Our customers view vital information in easy
 to comprehend graphical formats. Powerful contact management functionality and alert system
 enables transparency to all those concerned with a proposal. Outlook integration (or other local
-email clients) allows user to manage communication calendars and tasks from within Lease-
+email clients) allows users to manage communication calendars and tasks from within Lease-
 desk.com.</p>
 
 <p>Upgrading their customer lease portfolio via Technology Refresh is a key driver for our customers

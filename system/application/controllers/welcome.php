@@ -56,7 +56,13 @@ function content()
 		$data['content'] =	$this->content_model->get_content($id);
 		foreach($data['content'] as $row):
 		
-		$data['title'] = $row['title'];
+		if($row['page_title'] != NULL){
+			$data['title'] = $row['page_title'];
+		}
+		else
+		{
+			$data['title'] = $row['title'];
+		}
 		
 		endforeach;
 		$data['menu'] =	$this->content_model->get_menus();
