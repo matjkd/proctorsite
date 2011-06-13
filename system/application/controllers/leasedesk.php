@@ -10,7 +10,8 @@ function __construct()
 	}
 	function index()
 	{
-		$id = "leasedesk";
+
+                $id = "leasedesk";
 		$data['main'] = "pages/software_solutions";
 		$data['captcha'] = $this->captcha_model->initiate_captcha();
 		
