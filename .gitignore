@@ -3,3 +3,4 @@ system/application/config/config.php
 mitel-holland/system/application/config/database.php
 mitel-holland/system/application/config/email.php
 email_images/
+nbproject/

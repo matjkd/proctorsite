@@ -42,12 +42,12 @@
    	<div class="logotop">
     	<div class="container_24">
     	
-    	<!-- Logo here --> 
-	    <div class="grid_19">
+    	<!-- Logo here -->  
+	    <div class="grid_18">
 		<div id="logo"><img width="286px" height="58px" src="<?=base_url()?>images/logos/leasedesk_logo.png"/></div>
 		</div>
 	    
-		<div class="grid_5" id="contact_details">
+		<div class="grid_6" id="contact_details">
 		<h1>tel: +44(0)1302 245 310</h1>
 		<?=$this->load->view('sidebar/social_links')?>
 		</div>
