@@ -44,6 +44,7 @@ h3 {
 }
 .news_date {
 	font-style: italic;
+        color: #999999;
 
 }
 .main_content {
@@ -853,4 +854,24 @@ a.next, a.nextPage {
 	font-size:1.8em;
 	color: #555555;
 	
+}
+
+
+/* Social network buttons */
+.social-single {
+margin: 5px 0px 10px 0px;
+}
+#twitterbutton, #likebutton, #stumblebutton, #plusone, #linkedinshare {
+float: left;
+display: block;
+margin-bottom: 10px;
+}
+
+#likebutton {
+margin-top:0px;
+}
+
+#plusone {
+margin-left:0px;
+margin-top:0px;
 }
