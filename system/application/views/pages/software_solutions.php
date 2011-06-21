@@ -15,8 +15,8 @@
 </div>
 
 <?php endforeach;?>
-<div class="widebox" id="halfwidth"><a href=""><img id="openchannel" src="<?=base_url()?>images/icons/softwaresolutions/request_demo.png" alt="request a demo of lease-desk"/></a></div>
-<div class="widebox"  id="halfwidtheven"><a href=""><img id="openchannel2" src="<?=base_url()?>images/icons/softwaresolutions/request_info.png" alt="request info about lease-desk"/></a></div>
+<div class="widebox" id="halfwidth" style="text-align: center;"><a href=""><img id="openchannel" src="<?=base_url()?>images/icons/softwaresolutions/request_demo.png" alt="request a demo of lease-desk"/></a></div>
+<div class="widebox"  id="halfwidtheven" style="text-align: center;"><a href=""><img id="openchannel2" src="<?=base_url()?>images/icons/softwaresolutions/request_info.png" alt="request info about lease-desk"/></a></div>
 <div style="clear:both"></div>
 
 <?php if(isset($edit))
