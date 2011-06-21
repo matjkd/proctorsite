@@ -39,8 +39,25 @@ $content = str_replace('[readmore]', '', $news['news_content']);
 
 echo $content;
 ?>
+<div class="social-single">
 
-<g:plusone style="float:left;" width="55" height="20" href="<?=base_url()?>blog/post/<?=$news['news_id']?>"></g:plusone>
-<fb:like href="<?=base_url()?>blog/post/<?=$news['news_id']?>" show_faces="false" width="350" font=""></fb:like>
+
+<div id="twitterbutton">
+    <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="leasedeskdotcom">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+</div>
+
+
+
+    <div id="plusone">
+    <g:plusone size="medium" width="55px" height="20px" href="<?=base_url()?>blog/post/<?=$news['news_id']?>"></g:plusone>
+</div>
+
+    <div id="likebutton">
+    <fb:like href="<?=base_url()?>blog/post/<?=$news['news_id']?>" send="false" layout="button_count" width="0" height="20" show_faces="false" font=""></fb:like>
+</div>
+</div>
+<div style="clear:both"></div>
+
+
 
 <?php endforeach; ?>
