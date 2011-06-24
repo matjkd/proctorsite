@@ -31,14 +31,12 @@ $(document).ready(function(){
 });
 
 
-</script>
-<script type="text/javascript">
 	$(function() {
 		$("button, input:submit, a", ".demo").button();
 		
 		$("a", ".demo").click(function() { return false; });
 	});
-	</script>
+</script>
 
 
 <div id="leftside">

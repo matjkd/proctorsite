@@ -1,5 +1,5 @@
 
-<div >
+<div style="background:url('/images/logos/companies/testimonials/daisy.png')  no-repeat;">
 		<div class="cycleside" style="display:none;">
 			<div>
 			<img src="<?=base_url()?>images/icons/speech_open_32.png">

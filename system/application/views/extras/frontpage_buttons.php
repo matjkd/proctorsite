@@ -15,7 +15,7 @@ Lease-Desk.com is a hosted software solution that can provide any company with a
 		<a href="<?=base_url()?>welcome/content/consultancy"><img src="<?=base_url()?>images/icons/consultancy_services.png"/></a>
 	</div>
 	<div>
-		Ensure your organisation is using financial products, partners and processes that are fit for purpose and see costs reduced and sustainable margin increased on a sustainable basis.
+		Ensure your organisation is using financial products, partners and processes that are fit for purpose and see costs reduced and margin increased on a sustainable basis.
 Invest in your teams to ensure they have the right skills to succeed in a demanding market.
 	</div>
 </div>
