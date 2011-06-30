@@ -5,7 +5,9 @@ class Blog extends MY_Controller {
 	 function __construct()
     {
         parent::__construct();
-		$this->logged_in();
+	$this->load->model('captcha_model');
+        $this->logged_in();
+
 	}
 	
 	function index()
@@ -41,9 +43,9 @@ class Blog extends MY_Controller {
 		$data['slideshow'] = "slideshow/main_slideshow2";
 		$data['news'] = $this->news_model->list_news();
 		
-		$data['widecolumn'] = 'global/mainbuttons';
-		
-		$data['widecolumntop'] = 'sidebar/testimonials';
+		//$data['widecolumn'] = 'global/mainbuttons';
+		$data['captcha'] = $this->captcha_model->initiate_captcha();
+		$data['widecolumntop'] = 'sidebar/request_sidebar';
 		
 		$data['page'] = $id;
 		$is_logged_in = $this->session->userdata('is_logged_in');	

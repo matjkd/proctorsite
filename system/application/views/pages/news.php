@@ -1,11 +1,14 @@
-<img src="<?=base_url()?>images/titles/latest_news.png"/>
+<h1>Latest News</h1>
 
 <?php if(isset($edit)) { ?>
 	<a style='float:right;' href="<?=base_url()?>admin/create_news"><img width="16px" height="16px" alt="edit" src="<?=base_url()?>images/icons/social/add_16.png"></a>
 <?php } ?>
+
+
 <?php foreach($content as $row):?>
 
-<img src="<?=base_url()?>images/headings/<?=$row['menu_title'];?>.png">
+<h2><?=$row['menu_title'];?></h2>
+ 
 <?php 
 
 if(isset($create_news))
@@ -16,18 +19,24 @@ if(isset($create_news))
 
 
 
-<?php endforeach;
+<?php endforeach; ?>
+
+<p>Welcome to Lease-Desk's Blog!<br/>
+
+Here you can read our latest company information and stay up to date with any new lease-desk.com developments and projects.
+</p>
+<?php
 //list news here
 foreach($news as $news):?>
 
 <span class="blogcontainer">
-<p><h1>
+<p><h2>
 <?=$news['news_title'];?> <?php if(isset($edit))
 {
 	echo "  <a style='float:right;' href='".base_url()."admin/editnews/".$news['news_id']."'><img width='16px' height='16px' alt='edit' src='".base_url()."images/icons/social/edit_16.png'></a>";
 }
 ?>
-</h1>
+</h2>
 <?php
 
 	$old_date = strtotime($news['date_added']);
@@ -83,5 +92,7 @@ echo $content;
 </div>
 <div style="clear:both"></div>
 </span>
+
+
 <?php endforeach; ?>
 
