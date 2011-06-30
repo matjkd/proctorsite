@@ -83,10 +83,9 @@ function post($post)
 		
 		$is_logged_in = $this->session->userdata('is_logged_in');
 		
-			//display widecolumn module - this should eventually be controlled by some table or something
-		$data['widecolumn'] = 'global/mainbuttons';
-		
-		$data['widecolumntop'] = 'sidebar/testimonials';
+		//$data['widecolumn'] = 'global/mainbuttons';
+		$data['captcha'] = $this->captcha_model->initiate_captcha();
+		$data['widecolumntop'] = 'sidebar/request_sidebar';
 		
 		foreach($data['news'] as $row):
 		

@@ -17,21 +17,20 @@ if(isset($create_news))
 <?php endforeach;
 //list news here
 foreach($news as $news):?>
-<p><h3>
+<p><h2>
 <?=$news['news_title'];?> <?php if(isset($edit))
 {
 	echo "  <a  style='float:right;' href='".base_url()."admin/editnews/".$news['news_id']."'><img width='16px' height='16px' alt='edit' src='".base_url()."images/icons/social/edit_16.png'></a>";
 }
 ?>
-</h3>
+</h2>
 <?php
 
 	$old_date = strtotime($news['date_added']);
 	$new_date = date('l jS \of F Y', $old_date);
 
 ?>
-<div class="news_date"><?=$new_date?><br/>
- Added by <?=$news['added_by'];?></div>
+<div class="news_date"><?=$new_date?>  Added by <?=$news['added_by'];?></div>
 
 </p>
 <?php 
