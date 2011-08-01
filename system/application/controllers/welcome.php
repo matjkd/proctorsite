@@ -410,7 +410,18 @@ function login()
             $this->load->view('template');
 
         }
-	
+
+        function request_demo()
+        {
+            $data['captcha'] = $this->captcha_model->initiate_captcha();
+            $data['main'] = 'pages/form';
+              $data['form'] = 'sidebar/forms/request_demo';
+            $data['title'] = 'Request a Demo';
+            $data['page'] = "Request Demo";
+            $this->load->vars($data);
+            $this->load->view('template');
+            
+        }
 	
 // end of channel resource links
 }
