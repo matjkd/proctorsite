@@ -399,6 +399,17 @@ function login()
 		$this->load->vars($data);
 		$this->load->view('template');
 	}
+
+        function video()
+        {
+            $data['youtubeid'] = "wD5X-d1hhh4";
+            $data['main'] = '/pages/video';
+            $data['title'] = 'Video';
+            $data['page'] = "Video";
+            $this->load->vars($data);
+            $this->load->view('template');
+
+        }
 	
 	
 // end of channel resource links

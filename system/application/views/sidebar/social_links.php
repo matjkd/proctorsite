@@ -5,7 +5,7 @@
 
 <div id="link"><a target="_blank" href="http://www.youtube.com/LeaseDeskdotcom"><img id="social_link" src="<?=base_url()?>images/icons/social/youtube_32.png" />	</a></div>
 	
-<div id="link"><a target="_blank" href="http://www.facebook.com/pages/Lease-Deskcom/"><img  id="social_link" src="<?=base_url()?>images/icons/social/facebook_32.png" /></a></div>
+<div id="link"><a target="_blank" href="http://www.facebook.com/pages/Lease-Deskcom/126786210725401"><img  id="social_link" src="<?=base_url()?>images/icons/social/facebook_32.png" /></a></div>
 
 <div id="link"><a target="_blank" href="http://www.linkedin.com/company/proctor-consulting-uk"><img  id="social_link" src="<?=base_url()?>images/icons/social/linkedin_32.png" /></a></div>
 

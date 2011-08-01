@@ -105,7 +105,7 @@ $(function()  {
 });
 
 //Dialog boxes
-   // popup dialog for channel partner thing
+   // popup dialog for calc
 	$.fx.speeds._default = 200;
 	$(function()  {
 		$('#calc').dialog({
@@ -121,7 +121,23 @@ $(function()  {
 			return false;
 		});
 	});
-	
+
+ // popup dialog for newsletter signup
+	$.fx.speeds._default = 200;
+	$(function()  {
+		$('#newsletter').dialog({
+			autoOpen: false,
+			show: "Fade",
+			modal: true,
+			width:550,
+			height:480
+		});
+
+		$('#newsletterbutton').click(function() {
+			$('#newsletter').dialog('open');
+			return false;
+		});
+	});
 
     
 	// popup dialog for channel partner thing
@@ -361,6 +377,7 @@ jQuery(function() {
 		$('#desc1').tipsy({delayIn: 500, delayOut: 1000, gravity: 'e', fade: true, offset: 20 });
 		$('#desc2').tipsy({delayIn: 500, delayOut: 1000, gravity: 'e', fade: true, offset: 20 });
 		$('#desc3').tipsy({delayIn: 500, delayOut: 1000, gravity: 'e', fade: true, offset: 20 });
+                $('#desc4').tipsy({delayIn: 500, delayOut: 1000, gravity: 'e', fade: true, offset: 20 });
 		
 	});
 	
