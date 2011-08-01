@@ -10,7 +10,7 @@
 
        <?php
        
-       //$this->load->view('sidebar/newsletter.php');
+      $this->load->view('sidebar/newsletter.php');
 
        ?>
 
