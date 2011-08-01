@@ -402,7 +402,7 @@ function login()
 
         function video()
         {
-            $data['youtubeid'] = "wD5X-d1hhh4";
+            $data['youtubeid'] = "HuXmL4QalTo";
             $data['main'] = '/pages/video';
             $data['title'] = 'Video';
             $data['page'] = "Video";
