@@ -360,6 +360,11 @@ margin-left:40px;
 font-style: italic;
 font-size:120%;
 }
+#testimonials a {
+
+    text-decoration: none;
+
+}
 
 #testimonial_name{
 	float:right; 

@@ -6,7 +6,7 @@
 			<div>
 			<img src="<?=base_url()?>images/icons/speech_open_32.png">
 			
-			<div id="testimonials">The opportunities identified have been included in recent Daisy telemarketing campaigns that have successfully created additional business for the Group.</div>
+			<div id="testimonials"><a target="_blank" href="http://www.channel-resource.com/images/files/Daisy_PLC_Case_Study.pdf">The opportunities identified have been included in recent Daisy telemarketing campaigns that have successfully created additional business for the Group.</a></div>
 				<div style="float:right"><img src="<?=base_url()?>images/icons/speech_close_32.png"></div>
 			<br/>
 			<br/>
@@ -31,8 +31,8 @@
 			<div>
 			<img src="<?=base_url()?>images/icons/speech_open_32.png">
 
-			<div id="testimonials">The biggest benefit
-is the ability to secure all data in one system, with access to any aspect of the business at the touch of a button</div>
+			<div id="testimonials"><a target="_blank" href="http://www.channel-resource.com/images/files/Henry_Howard_Finance_PLC_Case_Study.pdf">The biggest benefit
+is the ability to secure all data in one system, with access to any aspect of the business at the touch of a button</a></div>
 				<div style="float:right"><img src="<?=base_url()?>images/icons/speech_close_32.png"></div>
 			<br/>
 			<br/>
