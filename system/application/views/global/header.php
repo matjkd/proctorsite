@@ -17,6 +17,7 @@
 
 <!-- Load google fonts-->
 <link href='http://fonts.googleapis.com/css?family=News+Cycle&v1' rel='stylesheet' type='text/css'>
+
   <!-- CSS : implied media="all" -->
    <link rel="stylesheet" href="<?=base_url()?>css/custom-theme/jquery-ui-1.8.2.custom.css">
    <link rel="stylesheet" href="<?=base_url()?>css/prettyPhoto.css">
