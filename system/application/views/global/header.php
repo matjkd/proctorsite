@@ -40,7 +40,12 @@
 <!--[if IE 8]>
 <link rel="stylesheet" href="<?=base_url()?>css/ie8.css" /> 
 <![endif]-->
- <?php if ($this->agent->platform() == "Windows") {  ?>
+
+ <?php 
+ echo $this->agent->platform();
+ if ($this->agent->platform() == "Windows") {  ?>
+ }
+ }
 
 <link rel="stylesheet" href="<?=base_url()?>css/windows.css" />
 
