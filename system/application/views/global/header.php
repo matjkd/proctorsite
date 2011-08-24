@@ -43,10 +43,9 @@
 
  <?php 
 
- if ($this->agent->platform() == "Windows") {  ?>
- }
- }
-
+ if (strstr($this->agent->platform(), "Windows")) {  ?>
+ 
+ 
 <link rel="stylesheet" href="<?=base_url()?>css/windows.css" />
 
  <?php }  ?>
