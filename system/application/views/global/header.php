@@ -40,7 +40,11 @@
 <!--[if IE 8]>
 <link rel="stylesheet" href="<?=base_url()?>css/ie8.css" /> 
 <![endif]-->
- 
+ <?php if ($this->agent->platform() == "Windows") {  ?>
+
+<link rel="stylesheet" href="<?=base_url()?>css/windows.css" />
+
+ <?php }  ?>
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
   <script src="<?=base_url()?>js/libs/modernizr-1.6.min.js"></script>
   
