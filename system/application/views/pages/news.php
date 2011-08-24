@@ -77,14 +77,13 @@ echo $content;
 
 
 <div id="twitterbutton">
-    <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="leasedeskdotcom">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <a href="http://twitter.com/share" class="twitter-share-button" data-url="<?=base_url()?>blog/post/<?=$news['news_id']?>" data-count="horizontal" data-via="leasedeskdotcom">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 </div>
 
 
 
-    <div id="plusone">
-    <g:plusone size="medium" width="55px" height="20px" href="<?=base_url()?>blog/post/<?=$news['news_id']?>"></g:plusone>
-</div>
+<!-- Place this tag where you want the +1 button to render -->
+<div  style="float:left;" class="g-plusone" data-size="medium" href="<?=base_url()?>blog/post/<?=$news['news_id']?>"></div>
 
     <div id="likebutton">
     <fb:like href="<?=base_url()?>blog/post/<?=$news['news_id']?>" send="false" layout="button_count" width="0" height="20" show_faces="false" font=""></fb:like>

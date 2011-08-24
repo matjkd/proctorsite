@@ -47,9 +47,8 @@ echo $content;
 
 
 
-    <div id="plusone">
-    <g:plusone size="medium" width="55px" height="20px" href="<?=base_url()?>blog/post/<?=$news['news_id']?>"></g:plusone>
-</div>
+<!-- Place this tag where you want the +1 button to render -->
+<div  style="float:left;" class="g-plusone" data-size="medium" href="<?=base_url()?>blog/post/<?=$news['news_id']?>"></div>
 
     <div id="likebutton">
     <fb:like href="<?=base_url()?>blog/post/<?=$news['news_id']?>" send="false" layout="button_count" width="0" height="20" show_faces="false" font=""></fb:like>

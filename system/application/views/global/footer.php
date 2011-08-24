@@ -24,9 +24,7 @@
 	<script type="text/javascript" src="<?=base_url()?>js/plugins.js"></script>
  <script type="text/javascript" src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
  
-	<script type="text/javascript" src="http://apis.google.com/js/plusone.js">
-  {lang: 'en-GB'}
-</script>
+
 	 
   <!-- end concatenated and minified scripts-->
   

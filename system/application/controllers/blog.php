@@ -43,7 +43,7 @@ class Blog extends MY_Controller {
 		$data['slideshow'] = "slideshow/main_slideshow2";
 		$data['news'] = $this->news_model->list_news();
 		
-		//$data['widecolumn'] = 'global/mainbuttons';
+		$data['widecolumn'] = 'global/mainbuttons';
 		$data['captcha'] = $this->captcha_model->initiate_captcha();
 		$data['widecolumntop'] = 'sidebar/request_sidebar';
 		
