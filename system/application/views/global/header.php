@@ -42,7 +42,7 @@
 <![endif]-->
 
  <?php 
- echo $this->agent->platform();
+
  if ($this->agent->platform() == "Windows") {  ?>
  }
  }
