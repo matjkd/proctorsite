@@ -42,6 +42,7 @@ h1, h2,
   letter-spacing: 0em;
   word-spacing: 0em;
   line-height: 1.2;
+  -webkit-transform: rotate(-0.0000000001deg);
 }
 h1 {
 	
