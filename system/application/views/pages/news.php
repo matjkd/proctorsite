@@ -21,34 +21,37 @@ if(isset($create_news))
 
 <?php endforeach; ?>
 
-<p>Welcome to Lease-Desk's Blog!<br/>
-
-Here you can read our latest company information and stay up to date with any new lease-desk.com developments and projects.
+<p>
 </p>
 <?php
 //list news here
 foreach($news as $news):?>
+<?php
 
-<span class="blogcontainer">
-<p><h2>
+	$old_date = strtotime($news['date_added']);
+	$new_date = date('l jS \of F Y', $old_date);
+$day = date('j', $old_date);
+$month = date('M', $old_date);
+?>
+<div class="news_date"><?=$day?><br/>
+    <?=$month?>
+</div>
+<div class="blogcontainer">
+<h2>
 <?=$news['news_title'];?> <?php if(isset($edit))
 {
 	echo "  <a style='float:right;' href='".base_url()."admin/editnews/".$news['news_id']."'><img width='16px' height='16px' alt='edit' src='".base_url()."images/icons/social/edit_16.png'></a>";
 }
 ?>
 </h2>
-<?php
 
-	$old_date = strtotime($news['date_added']);
-	$new_date = date('l jS \of F Y', $old_date);
 
-?>
-<div class="news_date"><?=$new_date?>, 
- Added by <?=$news['added_by'];?></div>
 
-</p>
+
+<div style="clear:both"></div>
+<br/>
 <?php 
-//adds a readmore by cutting all text after the $needlee
+//adds a readmore by cutting all text after the $needle
 $needle = "[readmore]";
 $haystack = $news['news_content'];
 $pos = strpos($haystack, $needle);
@@ -73,6 +76,7 @@ echo $content;
 
 <a href="<?=base_url()?>blog/post/<?=$news['news_id']?>">Read More</a><br/>
 
+<em>Added by <?=$news['added_by'];?></em><br/>
 <div class="social-single">
 
 
@@ -90,8 +94,8 @@ echo $content;
 </div>
 </div>
 <div style="clear:both"></div>
-</span>
-
+</div>
+<hr/>
 
 <?php endforeach; ?>
 
