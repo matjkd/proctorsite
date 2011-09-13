@@ -17,6 +17,16 @@ if(isset($create_news))
 <?php endforeach;
 //list news here
 foreach($news as $news):?>
+<?php
+
+	$old_date = strtotime($news['date_added']);
+	$new_date = date('l jS \of F Y', $old_date);
+$day = date('j', $old_date);
+$month = date('M', $old_date);
+?>
+<div class="news_date"><?=$day?><br/>
+    <?=$month?>
+</div>
 <p><h2>
 <?=$news['news_title'];?> <?php if(isset($edit))
 {
@@ -24,13 +34,7 @@ foreach($news as $news):?>
 }
 ?>
 </h2>
-<?php
 
-	$old_date = strtotime($news['date_added']);
-	$new_date = date('l jS \of F Y', $old_date);
-
-?>
-<div class="news_date"><?=$new_date?>  Added by <?=$news['added_by'];?></div>
 
 </p>
 <?php 
