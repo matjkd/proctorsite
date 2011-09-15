@@ -61,9 +61,11 @@ $pos = strpos($haystack, $needle);
 if ($pos === false) {
    //The string '$needle' was not found in the string $haystack
    $content = $haystack;
+   $readmore = FALSE;
 } else {
    //The string $needle' was found in the string $haystack
-   $content = substr(strrev(strstr(strrev($haystack), strrev($needle))), 0, -strlen($needle)); 
+   $content = substr(strrev(strstr(strrev($haystack), strrev($needle))), 0, -strlen($needle));
+    $readmore = TRUE;
 }
 
 
@@ -74,7 +76,9 @@ echo $content;
 
 <div  id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=195766550471199&amp;xfbml=1"></script>
 
+<?php if($readmore){ ?>
 <a href="<?=base_url()?>blog/post/<?=$news['news_id']?>">Read More</a><br/>
+<?php } ?>
 
 <em>Added by <?=$news['added_by'];?></em><br/>
 <div class="social-single">
