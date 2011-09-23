@@ -98,12 +98,12 @@ function contact()
 	{
 			
 		$data['captcha'] = $this->captcha_model->initiate_captcha();
-    	$data['email'] = $this->input->post('email');
-    	$data['phone'] = $this->input->post('phone');
-    	$data['message'] = $this->input->post('message');
-    	$data['business_name'] = $this->input->post('business_name');
-		$data['referral'] = $this->input->post('referral');
-    	$data['name'] = $this->input->post('name');
+                $data['email'] = $this->input->post('email');
+                $data['phone'] = $this->input->post('phone');
+                $data['message'] = $this->input->post('message');
+                $data['business_name'] = $this->input->post('business_name');
+                $data['referral'] = $this->input->post('referral');
+                $data['name'] = $this->input->post('name');
 		$data['errors'] = validation_errors();	
 			
 		$id = "contact_us";
