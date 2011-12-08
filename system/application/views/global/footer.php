@@ -3,12 +3,12 @@
 
   <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
    
-  	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+  	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   	<script type="text/javascript">!window.jQuery && document.write(unescape('%3Cscript src="<?=base_url()?>js/libs/jquery-1.5.0.js"%3E%3C/script%3E'))</script>
   
   	
  	<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=true&amp;key=ABQIAAAAo44bloMTDYnLwRZTm304PxRjIDG7MCN9w_oLo8JELtK6-fKljxTfDJFGXJ1XT65i7IURIHFAuRl7TA" type="text/javascript"></script>
-	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
   	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> 
 <?php if($page == "contact_us") { ?>
 <script type="text/javascript" src="<?=base_url()?>js/maps.js"></script>
