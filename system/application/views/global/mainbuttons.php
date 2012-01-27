@@ -11,7 +11,7 @@
           <a href="http://www.iteawards-software.com/finalists"><img src="https://s3-eu-west-1.amazonaws.com/lease-desk-blog/ITESoftwareAwardsFinalistLogo.png" width="65px"/></a>
     </div>
      
-     The European Software Excellence Awards are the first pan-European awards which recognise the crucial role that Independent Software Vendors (ISVs) and Software Developers play in the delivery of real world solutions...
+    <strong> Lease-Desk.com Finalist for Software Innovation</strong>
      <br/><a href="<?=base_url()?>blog/post/36">read more</a>
    
  
