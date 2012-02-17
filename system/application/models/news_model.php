@@ -76,7 +76,27 @@ class News_model extends Model {
         $update = $this->db->update('news', $content_update);
         return $update;
     }
+    
+/**
+ *
+ * @param type $filename
+ * @param type $blog_id
+ * @return type 
+ */
+    function add_file($filename, $blog_id) {
+        $content_update = array(
+            'main_image' => $filename
+        );
 
+        $this->db->where('news_id', $blog_id);
+        $update = $this->db->update('news', $content_update);
+        return $update;
+    }
+/**
+ *
+ * @param type $form_data
+ * @return type 
+ */
     function SaveForm($form_data) {
         $this->db->insert('news', $form_data);
 
