@@ -51,7 +51,7 @@ class Blog extends MY_Controller {
 
 
 
-        $data['title'] = 'Lease Desk Limited News and Blog';
+        $data['title'] = 'Lease-Desk News and Blog';
 
 
         $data['info'] = "infoblock/times";

@@ -76,6 +76,16 @@ class Admin extends MY_Controller {
 
 
             if ($this->news_model->SaveForm($form_data) == TRUE) { // the information has therefore been successfully saved in the db
+                
+
+//create a new bucket
+               
+                $bucketname = "lease-desk-blog";
+                if ($this->s3->putBucket($bucketname, S3::ACL_PUBLIC_READ)) {
+//upload success
+                } else {
+//upload failed
+                }
                 // run insert model to write data to db
                 //upload file
                 //retrieve uploaded file
