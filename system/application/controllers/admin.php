@@ -70,10 +70,7 @@ class Admin extends MY_Controller {
 
 
             if ($this->news_model->SaveForm($form_data) == TRUE) { // the information has therefore been successfully saved in the db
-                
-
 //create a new bucket
-               
                 $bucketname = "lease-desk-blog";
                 if ($this->s3->putBucket($bucketname, S3::ACL_PUBLIC_READ)) {
 //upload success
@@ -263,6 +260,47 @@ class Admin extends MY_Controller {
     function edit_news() {
         $id = $this->uri->segment(3);
         $this->news_model->edit_news($id);
+
+
+        //create a new bucket
+
+        $bucketname = "lease-desk-blog";
+        if ($this->s3->putBucket($bucketname, S3::ACL_PUBLIC_READ)) {
+//upload success
+        } else {
+//upload failed
+        }
+        // run insert model to write data to db
+        //upload file
+        //retrieve uploaded file
+        if (!empty($_FILES) && $_FILES['file']['error'] != 4) {
+
+            $fileName = $_FILES['file']['name'];
+            $tmpName = $_FILES['file']['tmp_name'];
+            $filelocation = $fileName;
+
+            $thefile = file_get_contents($tmpName, true);
+
+            //add filename into database
+            //get blog id
+            $blog_id = mysql_insert_id();
+            $this->news_model->add_file($fileName, $blog_id);
+            //move the file
+
+            if ($this->s3->putObject($thefile, "lease-desk-blog", $filelocation, S3:: ACL_PUBLIC_READ)) {
+                //echo "We successfully uploaded your file.";
+                $this->session->set_flashdata('message', 'News Added and file uploaded successfully');
+            } else {
+                //echo "Something went wrong while uploading your file... sorry.";
+                $this->session->set_flashdata('message', 'News Added, but your file did not upload');
+            }
+        } else {
+
+            $this->session->set_flashdata('message', 'News Added');
+        }
+
+
+
         redirect("admin/editnews/$id");
     }
 
