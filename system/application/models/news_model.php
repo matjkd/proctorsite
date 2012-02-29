@@ -19,6 +19,7 @@ class News_model extends Model {
     function list_recent_news() {
         $data = array();
         $this->db->where('page_type', 1);
+         $this->db->where('published', 1);
         $this->db->limit(10);
         $this->db->order_by('news_id', 'DESC');
         $query = $this->db->get('news');

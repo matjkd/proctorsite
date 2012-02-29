@@ -25,7 +25,7 @@ type [readmore] to create a break. So when you view the news as a list it only d
     <?= form_label('Image') ?><br/>
     
     <?php if($row['main_image'] != NULL) { ?>
-<img src="https://s3-eu-west-1.amazonaws.com/lease-desk-blog/<?=$row['main_image']?>" style="padding:10px 10px 10px 0;" width="150px">
+<img src="https://s3-eu-west-1.amazonaws.com/lease-desk-blog/<?=$row['main_image']?>" style="padding:10px 10px 10px 0;" width="150px"><br/>
 <?php } ?>
 
     <?= form_upload('file') ?>
@@ -37,7 +37,11 @@ type [readmore] to create a break. So when you view the news as a list it only d
 
 </p>
 
+<p>
+    <?= form_label('Published') ?><br/>
+    <?=$row['published'];?>
 
+</p>
 
 <?php echo form_submit('submit', 'Submit'); ?>
 <?=form_close()?> 
