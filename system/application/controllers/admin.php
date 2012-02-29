@@ -69,12 +69,6 @@ class Admin extends MY_Controller {
 
 
 
-
-
-
-
-
-
             if ($this->news_model->SaveForm($form_data) == TRUE) { // the information has therefore been successfully saved in the db
                 
 

@@ -6,15 +6,33 @@ type [readmore] to create a break. So when you view the news as a list it only d
 <?php  $id = $row['news_id'];?>
 
 
-<?=form_open("admin/edit_news/$id")?> 
-Title:<?=form_input('title', $row['news_title'])?>
+<?=form_open_multipart("admin/edit_news/$id")?> 
 
-<br/>
-Added By: <?=form_input('added_by', $row['added_by'])?><br/>
-Date: <input type="text" name="date_added" id="datepicker" value="<?=$row['date_added']?>"><br/>
+<p>
+    <?= form_label('title') ?><br/>
+  <?=form_input('title', $row['news_title'])?>
+</p>
 
-Content:
-<textarea cols=75 rows=20 name="content" id="content"  class='wymeditor'><?=$row['news_content'];?></textarea>
+<p>
+    <?= form_label('added by') ?><br/>
+  <?=form_input('added_by', $row['added_by'])?>
+</p>
+<p>
+    <?= form_label('date') ?><br/>
+   <input type="text" name="date_added" id="datepicker" value="<?=$row['date_added']?>">
+</p> 
+<p class="Image">
+    <?= form_label('Image') ?><br/>
+
+    <?= form_upload('file') ?>
+</p>
+
+<p>
+    <?= form_label('content') ?><br/>
+    <textarea cols=75 rows=20 name="content" id="content"  class='wymeditor'><?=$row['news_content'];?></textarea>
+
+</p>
+
 
 
 <?php echo form_submit('submit', 'Submit'); ?>
