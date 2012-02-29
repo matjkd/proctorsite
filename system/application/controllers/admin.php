@@ -283,7 +283,7 @@ class Admin extends MY_Controller {
 
             //add filename into database
             //get blog id
-            $blog_id = mysql_insert_id();
+            $blog_id = $id;
             $this->news_model->add_file($fileName, $blog_id);
             //move the file
 
