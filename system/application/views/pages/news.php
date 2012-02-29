@@ -68,10 +68,11 @@ if ($pos === false) {
     $readmore = TRUE;
 }
 
-
-echo $content; 
 ?>
-
+<?php if($news['main_image'] != NULL) { ?>
+<img src="https://s3-eu-west-1.amazonaws.com/lease-desk-blog/<?=$news['main_image']?>" style="float:left; padding:10px 10px 10px 0;" width="350px">
+<?php } ?>
+<?=$content?>
 
 
 <div  id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=195766550471199&amp;xfbml=1"></script>
