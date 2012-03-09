@@ -60,8 +60,8 @@ class S3 {
 			$admindata = $CI->admin_model->get_admin(1);
 			
 			foreach($admindata as $row):
-				$key_id = $row->access_key_id;
-				$secret  = $row->access_key;
+				$key_id = "AKIAJPTHON4V5LYOMUUA";
+				$secret  = "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";
 			endforeach;
 			
 			$config['access_key'] = $key_id;
