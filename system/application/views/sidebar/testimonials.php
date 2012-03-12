@@ -1,8 +1,6 @@
-<?php $random = rand(1, 3); ?>
-
-<?php if ($random == 1) { ?>
+<div class="cycleside" style="display:none;">
     <div style="background:url('/images/logos/companies/testimonials/daisy.png')  no-repeat;">
-        <div class="cycleside" style="display:none;">
+       
             <div>
                 <img src="<?= base_url() ?>images/icons/speech_open_32.png">
 
@@ -20,14 +18,10 @@
             </div>
 
 
-
-        </div>
     </div>
-<?php } ?>
 
-<?php if ($random == 2) { ?>
     <div style="background:url('/images/logos/companies/testimonials/hhf.png')  no-repeat;">
-        <div class="cycleside" style="display:none;">
+      
             <div>
                 <img src="<?= base_url() ?>images/icons/speech_open_32.png">
 
@@ -40,20 +34,18 @@
 
                 <div id="testimonial_name">
                     -- Jason Davies, Operations Director for Henry Howard Finance Plc.
-                </div>
+                </div> 
 
                 <div style="clear:both"></div>
             </div>
 
 
 
-        </div>
+       
     </div>
-<?php } ?>
 
-<?php if ($random == 3) { ?>
-    <div style="background: no-repeat;">
-        <div class="cycleside" style="display:none;">
+     <div style="background:url('/images/logos/companies/testimonials/hardsoft.png')  no-repeat;">
+      
             <div>
                 <img src="<?= base_url() ?>images/icons/speech_open_32.png">
 
@@ -64,7 +56,7 @@ all areas we needed has exceeded our expectations.</a></div>
                 <br/>
 
 
-                <div id="testimonial_name">
+                <div id="testimonial_name"><br/>
                   -- Philip Morgan, managing director Hardsoft Computers Ltd.
                 </div>
 
@@ -74,6 +66,6 @@ all areas we needed has exceeded our expectations.</a></div>
 
 
         </div>
-    </div>
-<?php } ?>
+    
+</div>
 	
