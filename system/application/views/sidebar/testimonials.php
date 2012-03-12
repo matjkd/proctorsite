@@ -57,17 +57,15 @@
             <div>
                 <img src="<?= base_url() ?>images/icons/speech_open_32.png">
 
-                <div id="testimonials"><a target="_blank" href="https://s3-eu-west-1.amazonaws.com/lease-desk-blog/Hardsoft_Case_Study.pdf">The sheer level of 
-                        information on each customer lease, as well as having all the data  in one place means that 
-                        we now have a single view of our live customer upgrade opportunities 
-                        and prospects.</a></div>
+                <div id="testimonials"><a target="_blank" href="https://s3-eu-west-1.amazonaws.com/lease-desk-blog/Hardsoft_Case_Study.pdf">The support from the Project team and the vast ability to cover
+all areas we needed has exceeded our expectations.</a></div>
                 <div style="float:right"><img src="<?= base_url() ?>images/icons/speech_close_32.png"></div>
                 <br/>
                 <br/>
 
 
                 <div id="testimonial_name">
-                  -- Philip morgan managing director Hardsoft Computers Ltd.
+                  -- Philip Morgan, managing director Hardsoft Computers Ltd.
                 </div>
 
                 <div style="clear:both"></div>
