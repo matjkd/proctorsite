@@ -57,7 +57,7 @@ all areas we needed has exceeded our expectations.</a></div>
 
 
                 <div id="testimonial_name"><br/>
-                  -- Philip Morgan, managing director Hardsoft Computers Ltd.
+                  -- Philip Morgan, Managing Director Hardsoft Computers Ltd.
                 </div>
 
                 <div style="clear:both"></div>
