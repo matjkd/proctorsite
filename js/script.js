@@ -1,3 +1,4 @@
+ var base_url = $('#baseurl').val();
 // remap jQuery to $
 (function($){
 
@@ -289,6 +290,8 @@ $(function() {
     });
 	     
 });
+
+
 
 
 //pretty photo
@@ -678,3 +681,65 @@ function mce_success_cb(resp){
 
 	
 
+function addTagtoBlog(blog_id) {
+
+    var tag = $('#autocompletetags').val();
+    loadergif = $('<img class="gifloader" src="' + base_url +'images/load.gif" />');
+  
+    if (tag) {
+  
+        $('#tags').append(loadergif);
+        $.post(base_url + '/admin/add_news_tag/', {
+            blog_id: blog_id,
+            tag: tag
+        }, function(data) {
+          var newtag = "<div class='tag'>" + tag + "</div>";
+            $('.gifloader').remove();
+            $('#tags').append(newtag);
+    
+        });
+   
+    }
+
+}
+
+function deleteTagfromBlog(tag_id) {
+ var loadergif = $('<img class="gifloader" src="' + base_url +'images/load.gif" />');
+ $('#tags').append(loadergif);
+      $.post(base_url + '/admin/delete_news_tag/', {
+            tag_id: tag_id
+            
+        }, function(data) {
+          
+            $('.gifloader').remove();
+            $('#tag_' + tag_id).remove();
+    
+        });
+}
+
+//autocomplete tags
+$(function() {
+    $( "#autocompletetags" ).autocomplete({
+        source: function(request, response) {
+            $.ajax({
+                url: base_url + "admin/json_tags",
+                data: {
+                    term: $("#autocompletetags").val()
+                },
+                dataType: "json",
+                type: "POST",
+                success: function(data){
+                    response($.map(data, function(item){
+                        return {
+                            label: item.news_tag,
+                            value: item.news_tag
+                        } 
+                        
+                    }));
+                }
+            });
+        },
+        minLength: 1
+        
+    });
+});

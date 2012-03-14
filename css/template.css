@@ -930,3 +930,17 @@ margin-top:0px;
 margin-left:0px;
 margin-top:0px;
 }
+
+.tag {
+    padding:3px;
+    background:#4d6f76;
+    color: #fff;
+    margin:3px;
+    float:left;
+}
+
+.tagcloud a {
+    
+    text-decoration: none;
+    color: #191919;
+}

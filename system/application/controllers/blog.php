@@ -35,7 +35,8 @@ class Blog extends MY_Controller {
         $data['slideshow'] = "slideshow/main_slideshow2";
         $data['news'] = $this->news_model->list_recent_news();
 
-        $data['widecolumn'] = 'global/mainbuttons';
+        $data['tagcloud'] = $this->news_model->get_all_news_tags();
+        $data['widecolumn'] = 'sidebar/blogside';
         $data['captcha'] = $this->captcha_model->initiate_captcha();
         $data['widecolumntop'] = 'sidebar/request_sidebar';
 
@@ -52,6 +53,43 @@ class Blog extends MY_Controller {
 
 
         $data['title'] = 'Lease-Desk News and Blog';
+
+
+        $data['info'] = "infoblock/times";
+        $this->load->vars($data);
+        $this->load->view('template');
+    }
+
+    function tagged($tag) {
+
+        $id = $tag;
+
+
+        $data['menu'] = $this->content_model->get_menus();
+        $data['slideshow'] = "slideshow/main_slideshow2";
+        $data['news'] = $this->news_model->list_tagged_news($tag);
+        foreach ($data['news'] as $row):
+            $tagname = $row['news_tag'];
+        endforeach;
+
+        $data['tagcloud'] = $this->news_model->get_all_news_tags();
+        $data['widecolumn'] = 'sidebar/blogside';
+        $data['captcha'] = $this->captcha_model->initiate_captcha();
+        $data['widecolumntop'] = 'sidebar/request_sidebar';
+
+        $data['page'] = $id;
+        $is_logged_in = $this->session->userdata('is_logged_in');
+
+        $data['content'] = $this->content_model->get_content($id);
+
+        $data['main'] = "pages/news";
+
+        $is_logged_in = $this->session->userdata('is_logged_in');
+
+        $data['title'] = 'Lease-Desk News and Blog';
+
+
+        $data['mainheading'] = "Posts tagged '" . $tagname . "'";
 
 
         $data['info'] = "infoblock/times";

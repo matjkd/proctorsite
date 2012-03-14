@@ -13,11 +13,11 @@
 </head>
 <?php if($page == "contact_us") { ?>
 <body onload="initialize()">
-
+  
 <?php } else { ?>
 <body>
 <?php } ?>		
-
+<input type="hidden" id="baseurl" value="<?=base_url()?>"/>
 <!--[if lt IE 7]>
   <div style='border: 1px solid #F7941D; background: #FEEFDA; text-align: center; clear: both; height: 75px; position: relative;'>
     <div style='position: absolute; right: 3px; top: 3px; font-family: courier new; font-weight: bold;'><a href='#' onclick='javascript:this.parentNode.parentNode.style.display="none"; return false;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-cornerx.jpg' style='border: none;' alt='Close this notice'/></a></div>

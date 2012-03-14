@@ -241,8 +241,11 @@ class Admin extends MY_Controller {
     function editnews() {
 
         $id = $this->uri->segment(3);
+        $data['news_id'] = $id;
         $data['page'] = 'news';
+        $data['tags'] = $this->news_model->get_news_tags($id);
         $data['content'] = $this->content_model->get_content('news');
+        $data['widecolumn'] = 'admin/news_tags';
         $data['news'] = $this->news_model->get_news($id);
         $data['title'] = "edit blog";
         $data['main'] = "admin/edit_news";
@@ -290,6 +293,48 @@ class Admin extends MY_Controller {
 
         redirect("admin/editnews/$id");
     }
+   
+    function add_news_tag(){
+        $tag = $this->input->post('tag');
+        $blog_id = $this->input->post('blog_id');
+        
+       //check if tag name is in database already
+        $tagdata = $this->news_model->autocomplete_news_tags($tag);
+        if ($tagdata) {
+
+            // The tag is in the database already
+            // now add to the cat  list
+            foreach ($tagdata as $row):
+                $tag_id = $row['news_tag_id'];
+            endforeach;
+
+            //add a check that the category hasn't already been added
+            $this->news_model->add_to_news_tag_links($tag_id, $blog_id);
+
+
+            $return = $blog_id;
+        } else {
+
+            // The tag isn't in the database
+            // TODO check for similar names
+            // add to database, then add to users list
+            $this->news_model->create_new_tag($tag);
+            $tag_id = $this->db->insert_id();
+            $this->news_model->add_to_news_tag_links($tag_id, $blog_id);
+            $return = $blog_id;
+        }
+        echo $return;
+        //redirect("admin/add_product/$id");
+    }
+    
+    /*
+     * 
+     */
+    function delete_news_tag() {
+        $tag_id = $this->input->post('tag_id');
+        $this->news_model->delete_news_tag($tag_id);
+        return;
+    }
 
     function delete_user() {
         //get user id from link
@@ -299,6 +344,13 @@ class Admin extends MY_Controller {
         $this->session->set_flashdata('message', 'User Deleted');
 
         redirect('admin/view_companies', 'refresh');
+    }
+    
+       public function json_tags() {
+        $term = $this->input->post('term');
+        $data['source'] = $this->news_model->autocomplete_news_tags($term);
+        $this->load->vars($data);
+        $this->load->view('json');
     }
 
     function is_logged_in() {

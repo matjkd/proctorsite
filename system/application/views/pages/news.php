@@ -1,5 +1,8 @@
+<?php if(isset($mainheading)) { ?>
+<h1><?=$mainheading?></h1>
+<?php } else { ?>
 <h1>Latest News</h1>
-
+<?php } ?>
 <?php if(isset($edit)) { ?>
 	<a style='float:right;' href="<?=base_url()?>admin/create_news"><img width="16px" height="16px" alt="edit" src="<?=base_url()?>images/icons/social/add_16.png"></a>
 <?php } ?>
