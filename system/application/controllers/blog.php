@@ -22,7 +22,7 @@ class Blog extends MY_Controller {
         }
     }
 
-    function item() {
+    function item($offset = 0) {
 
         if (($this->uri->segment(3)) == NULL) {
             $id = "news";
@@ -33,7 +33,9 @@ class Blog extends MY_Controller {
 
         $data['menu'] = $this->content_model->get_menus();
         $data['slideshow'] = "slideshow/main_slideshow2";
-        $data['news'] = $this->news_model->list_recent_news();
+        $data['news'] = $this->news_model->list_recent_news($offset);
+        $data['allnews'] = $this->news_model->list_news();
+     
 
         $data['tagcloud'] = $this->news_model->get_all_news_tags();
         $data['widecolumn'] = 'sidebar/blogside';

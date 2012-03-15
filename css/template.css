@@ -944,3 +944,17 @@ margin-top:0px;
     text-decoration: none;
     color: #191919;
 }
+.paginater {
+    float:left;
+    padding:0px 5px;;
+    margin:3px 3px;
+    border:1px solid #dddddd;
+    background:#4d6f76
+}
+.paginater:hover {
+    background:#353e43;
+}
+.paginater a {
+    color:#ffffff;
+    text-decoration: none;
+}

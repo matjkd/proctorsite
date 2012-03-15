@@ -16,13 +16,13 @@ class News_model extends Model {
         return $data;
     }
 
-    function list_recent_news() {
+    function list_recent_news($offset=0) {
         $data = array();
         $this->db->where('page_type', 1);
         $this->db->where('published', 1);
-        $this->db->limit(10);
+       
         $this->db->order_by('news_id', 'DESC');
-        $query = $this->db->get('news');
+        $query = $this->db->get('news', 5, $offset);
         if ($query->num_rows() > 0) {
             foreach ($query->result_array() as $row)
                 $data[] = $row;
@@ -128,6 +128,7 @@ class News_model extends Model {
       function create_new_tag($tag) {
 
         $pagelink = trim(str_replace(" ", "_", $tag));
+         $pagelink = trim(str_replace(".", "_", $pagelink));
 
         $new_cat_entry = array(
             'news_tag' => trim(ucfirst(strtolower($tag))),
