@@ -24,7 +24,8 @@
     <textarea cols=75 rows=20 name="content" id="content"  class='wymeditor'></textarea>
 
 </p>
-
+   
+Published: <?=form_checkbox('published', '1')?><br/>
 
 
 <?php echo form_submit('submit', 'Submit'); ?>

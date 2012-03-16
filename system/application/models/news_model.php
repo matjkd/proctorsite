@@ -87,7 +87,8 @@ class News_model extends Model {
             'news_content' => $this->input->post('content'),
             'added_by' => $this->input->post('added_by'),
             'date_added' => $this->input->post('date_added'),
-            'news_title' => $this->input->post('title')
+            'news_title' => $this->input->post('title'),
+            'published' => $this->input->post('published')
         );
 
 

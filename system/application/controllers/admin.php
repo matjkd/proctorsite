@@ -62,6 +62,7 @@ class Admin extends MY_Controller {
                 'added_by' => $this->input->post('added_by'),
                 'date_added' => $this->input->post('date_added'),
                 'news_title' => $this->input->post('title'),
+                 'published' => $this->input->post('published'),
                 //page type 1 is blog, or news, doesn't matter as its not used yet
                 'page_type' => 1
             );
@@ -286,7 +287,7 @@ class Admin extends MY_Controller {
             }
         } else {
 
-            $this->session->set_flashdata('message', 'News Added');
+            $this->session->set_flashdata('message', 'News Updated');
         }
 
 

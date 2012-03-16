@@ -38,9 +38,9 @@ type [readmore] to create a break. So when you view the news as a list it only d
 </p>
 
 <p>
-    <?= form_label('Published') ?><br/>
-    <?=$row['published'];?>
-
+    
+    
+Published: <?=form_checkbox('published', '1', $row['published'])?><br/>
 </p>
 
 <?php echo form_submit('submit', 'Submit'); ?>
