@@ -1,5 +1,5 @@
 
-    <h1><?= $titleonpage ?></h1>
+<h1><?= $titleonpage ?></h1>
 
 
 
@@ -7,9 +7,27 @@
 <?php foreach ($content as $row): ?>
 
     <?php if (isset($edit)) { ?>
-    
         <a style='float:right;' href="<?= base_url() ?>admin/create_news"><img width="16px" height="16px" alt="edit" src="<?= base_url() ?>images/icons/social/add_16.png"></a>
         <a  style='float:right;' href='<?= base_url() ?>admin/edit/<?= $row['menu_title'] ?>'><img width='16px' height='16px' alt='edit' src='<?= base_url() ?>images/icons/social/edit_16.png'></a>
+        <div style="clear:both"></div>
+        <?php
+        foreach ($allnews as $row):
+
+            if ($row['published'] < 1) {
+                echo "<div class='unpublished' id='unpublished_" . $row['news_id'] . "'>";
+                echo $row['news_title'] . " (not published)";
+                echo "<span style='float:right' >";
+                echo "<a href='" . base_url() . "admin/editnews/" . $row['news_id'] . "'>EDIT</a>";
+                echo "| <span class='spanlink' onclick='deleteBlog(" . $row['news_id'] . ")'>delete</span>";
+                echo "</span>";
+                echo "</div>";
+            }
+
+
+        endforeach;
+        ?>
+
+
 
     <?php } ?>
 
@@ -31,16 +49,20 @@ foreach ($news as $news):
     $month = date('M', $old_date);
     ?>
     <div class="news_date"><?= $day ?><br/>
-        <?= $month ?>
+    <?= $month ?>
     </div>
     <div class="blogcontainer">
         <h2>
-            <?= $news['news_title']; ?> <?php
+            <a href="<?= base_url() ?>blog/post/<?= $news['news_id'] ?>">
+    <?= $news['news_title']; ?></a> </h2>
+
+
+        <?php
         if (isset($edit)) {
             echo "  <a style='float:right;' href='" . base_url() . "admin/editnews/" . $news['news_id'] . "'><img width='16px' height='16px' alt='edit' src='" . base_url() . "images/icons/social/edit_16.png'></a>";
         }
-            ?>
-        </h2>
+        ?>
+
 
 
 
@@ -62,22 +84,24 @@ foreach ($news as $news):
         } else {
             //The string $needle' was found in the string $haystack
             $content = substr(strrev(strstr(strrev($haystack), strrev($needle))), 0, -strlen($needle));
+            
             $readmore = TRUE;
         }
         ?>
         <?php if ($news['main_image'] != NULL) { ?>
             <img src="https://s3-eu-west-1.amazonaws.com/lease-desk-blog/<?= $news['main_image'] ?>" style="float:left; padding:10px 10px 10px 0;" width="350px">
         <?php } ?>
-        <?= $content ?>
+    <?= $content ?>
 
 
-        <div  id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=195766550471199&amp;xfbml=1"></script>
+       
 
         <?php if ($readmore) { ?>
             <a href="<?= base_url() ?>blog/post/<?= $news['news_id'] ?>">Read More</a><br/>
-        <?php } ?>
+    <?php } ?>
 
         <em>Added by <?= $news['added_by']; ?></em><br/>
+         <div  id="fb-root"></div>
         <div class="social-single">
 
 
@@ -99,6 +123,18 @@ foreach ($news as $news):
     <hr/>
 
 <?php endforeach; ?>
+
+<script type="text/javascript">
+    window.___gcfg = {
+        lang: 'en-GB'
+    };
+    (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+</script>
+<script src="http://connect.facebook.net/en_US/all.js#appId=195766550471199&amp;xfbml=1"></script>
 
 <?php if (isset($allnews)) { ?>
 

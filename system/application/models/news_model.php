@@ -146,6 +146,15 @@ class News_model extends Model {
         $this->db->delete('news_tag_links');
         return;
     }
+    
+    
+    function delete_blog($blog_id) {
+        
+        $this->db->where('news_id', $blog_id);
+                $this->db->delete('news');
+        return;
+                
+    }
 
     function add_to_news_tag_links($tag_id, $blog_id) {
 

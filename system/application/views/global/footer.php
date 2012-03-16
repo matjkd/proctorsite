@@ -32,5 +32,10 @@
   <script src="<?= base_url() ?>js/libs/dd_belatedpng.js"></script>
   <script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>
 <![endif]-->
+<script type="text/javascript">
+    $(function()  {
+$("#massiveloader").css("display", "none");
+    });
+</script>
 
 

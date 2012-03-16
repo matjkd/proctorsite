@@ -111,6 +111,10 @@ margin-right:10px;
     color:#999999;
 
 }
+.blogcontainer h2 a {
+    color:#333;
+    text-decoration: none;
+}
 .blogcontainer p:first-child {
 font-weight: bold;
 color:#CCC;
@@ -957,4 +961,18 @@ margin-top:0px;
 .paginater a {
     color:#ffffff;
     text-decoration: none;
+}
+.unpublished {
+    
+    height:22px;
+    padding:2px;
+    background-color: #dddddd;
+    margin-bottom:3px;
+}
+
+.spanlink {
+    color: #607890;
+    text-decoration: underline;
+    cursor: pointer;
+
 }

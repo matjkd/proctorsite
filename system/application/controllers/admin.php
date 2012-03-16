@@ -158,6 +158,12 @@ class Admin extends MY_Controller {
         $this->session->set_flashdata('message', 'Company Deleted');
         redirect('admin/view_companies', 'refresh');
     }
+    
+    function delete_blog(){
+        $blog_id = $this->input->post('blog_id');
+        $this->news_model->delete_blog($blog_id);
+        
+    }
 
     function create_user() {
         if ($this->input->post('username')) {

@@ -2,7 +2,7 @@
 
 <?php foreach($content as $row):?>
 
-<img src="<?=base_url()?>images/headings/<?=$row['menu_title'];?>.png">
+
 <?php 
 
 if(isset($create_news))
@@ -63,3 +63,14 @@ echo $content;
 
 
 <?php endforeach; ?>
+    <script type="text/javascript">
+     window.___gcfg = {
+    lang: 'en-GB'
+};
+(function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+    </script>
+    <script src="http://connect.facebook.net/en_US/all.js#appId=195766550471199&amp;xfbml=1"></script>
