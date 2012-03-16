@@ -25,8 +25,18 @@ Youtube id:<br/>
 <br/>
 
 Content:<br/>
-<textarea cols=75 rows=20 name="content" id="content"  class='wymeditor'><?=$row['content'];?></textarea
+<textarea cols=75 rows=20 name="content" id="content"  class='wymeditor'><?=$row['content'];?></textarea>
 <br/>
+
+Meta Description:<br/>
+<textarea cols="250" rows="2" name="meta_desc" id="meta_desc"  ><?=$row['meta_desc'];?></textarea>
+<br/>
+Meta Keywords:<br/>
+<textarea cols="250" rows="2" name="meta_keywords" id="meta_keywords"  ><?=$row['meta_keywords'];?></textarea>
+<br/>
+
+
+<hr/>
 Unless you know what you're doing, the fields below could break the site if not changed properly<br/>
 
 Menu Title<br/>

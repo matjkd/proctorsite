@@ -1,22 +1,18 @@
-<?php if (isset($mainheading)) { ?>
-    <h1><?= $mainheading ?></h1>
-<?php } else { ?>
-    <h1>Latest News</h1>
-<?php } ?>
-<?php if (isset($edit)) { ?>
-    <a style='float:right;' href="<?= base_url() ?>admin/create_news"><img width="16px" height="16px" alt="edit" src="<?= base_url() ?>images/icons/social/add_16.png"></a>
-<?php } ?>
+
+    <h1><?= $titleonpage ?></h1>
+
+
 
 
 <?php foreach ($content as $row): ?>
 
-    <h2><?= $row['menu_title']; ?></h2>
+    <?php if (isset($edit)) { ?>
+    
+        <a style='float:right;' href="<?= base_url() ?>admin/create_news"><img width="16px" height="16px" alt="edit" src="<?= base_url() ?>images/icons/social/add_16.png"></a>
+        <a  style='float:right;' href='<?= base_url() ?>admin/edit/<?= $row['menu_title'] ?>'><img width='16px' height='16px' alt='edit' src='<?= base_url() ?>images/icons/social/edit_16.png'></a>
 
-    <?php
-    if (isset($create_news)) {
-        echo "  <a href='$create_news'><img width='16px' height='16px' alt='edit' src='" . base_url() . "images/icons/add.png'></a>";
-    }
-    ?>
+    <?php } ?>
+
 
 
 

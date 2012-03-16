@@ -24,18 +24,15 @@ class Blog extends MY_Controller {
 
     function item($offset = 0) {
 
-        if (($this->uri->segment(3)) == NULL) {
-            $id = "news";
-        } else {
-            $id = $this->uri->segment(3);
-        }
+
+        $id = "news";
 
 
         $data['menu'] = $this->content_model->get_menus();
         $data['slideshow'] = "slideshow/main_slideshow2";
         $data['news'] = $this->news_model->list_recent_news($offset);
         $data['allnews'] = $this->news_model->list_news();
-     
+
 
         $data['tagcloud'] = $this->news_model->get_all_news_tags();
         $data['widecolumn'] = 'sidebar/blogside';
@@ -46,6 +43,18 @@ class Blog extends MY_Controller {
         $is_logged_in = $this->session->userdata('is_logged_in');
 
         $data['content'] = $this->content_model->get_content($id);
+        foreach ($data['content'] as $row):
+
+            if ($row['page_title'] != NULL) {
+                $data['title'] = $row['page_title'];
+            } else {
+                $data['title'] = $row['title'];
+            }
+            $data['titleonpage'] = $row['title'];
+            $data['meta_description'] = $row['meta_desc'];
+            $data['meta_keywords'] = $row['meta_keywords'];
+
+        endforeach;
 
         $data['main'] = "pages/news";
 
@@ -54,7 +63,7 @@ class Blog extends MY_Controller {
 
 
 
-        $data['title'] = 'Lease-Desk News and Blog';
+
 
 
         $data['info'] = "infoblock/times";

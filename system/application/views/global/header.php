@@ -5,8 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
   <title><?=$title?></title>
-  <meta name="description" content="Manage leasing with a unique software solution for technology companies who use leasing programs to drive sales">
-  <meta name="author" content="Leasing, leasing solutions, consultancy">
+  
+  <meta name="description" content="<?php if (isset($meta_description) && $meta_description != NULL) {
+    echo $meta_description;
+} else { ?>Manage leasing with a unique software solution for technology companies who use leasing programs to drive sales<?php } ?>">
+
+<meta name="keywords" content="<?php if (isset($meta_keywords) && $meta_keywords != NULL) {
+    echo $meta_keywords;
+} else { ?>Leasing, leasing solutions, consultancy<?php } ?>">
+  
+
 
   <!--  Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
