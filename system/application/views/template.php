@@ -18,7 +18,7 @@
 <body>
     
 <?php } ?>
-    <div id="massiveloader" style=" width:100%; height:100%; position:absolute; z-index:100000;"></div>
+    
 <input type="hidden" id="baseurl" value="<?=base_url()?>"/>
 <!--[if lt IE 7]>
   <div style='border: 1px solid #F7941D; background: #FEEFDA; text-align: center; clear: both; height: 75px; position: relative;'>
