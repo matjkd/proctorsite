@@ -976,3 +976,41 @@ margin-top:0px;
     cursor: pointer;
 
 }
+
+
+/* main navigator fix? */
+	#main_navi2 {
+	
+		padding:0px !important;
+		margin:0px !important;
+	}
+	
+	#main_navi2 li {
+		background-color:#dce0e1;
+		border-top:0px solid #666;
+		clear:both;
+		color:#FFFFFF;
+		font-size:12px;
+		height:61px;
+		list-style-type:none;
+		padding:3px 0 2px 0;
+		margin-bottom:10px;
+		cursor:pointer;
+	}
+	
+	#main_navi2 li:hover {
+		background-color:#bdc4c6;
+	}
+	
+	#main_navi2 li.active {
+		background-color:#bdc4c6;
+	}
+	
+	#main_navi2 img {
+		float:left;
+		margin-right:10px;
+	}
+	
+	#main_navi2 strong {
+		display:block;
+	}

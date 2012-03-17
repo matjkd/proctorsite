@@ -1,6 +1,6 @@
 <div class="navi_wrapper">
 <!-- main navigator --> 
-<ul id="main_navi"> 
+<ul id="main_navi2"> 
  
 	<li> 
 	
