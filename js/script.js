@@ -299,9 +299,13 @@ $(function() {
 
 //pretty photo
 
-$(function() {
-    $("a[rel^='prettyPhoto']").prettyPhoto();
-});
+$(document).ready(function(){
+		$("a[rel^='prettyPhoto']").prettyPhoto({
+			animationSpeed: 'normal', /* fast/slow/normal */
+			opacity: 1, /* Value between 0 and 1 */
+			showTitle: true /* true/false */
+		});
+	});
 		
 // team slider
 $(function() {
