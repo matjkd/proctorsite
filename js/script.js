@@ -302,7 +302,7 @@ $(function() {
 $(document).ready(function(){
 		$("a[rel^='prettyPhoto']").prettyPhoto({
 			animationSpeed: 'normal', /* fast/slow/normal */
-			opacity: 1, /* Value between 0 and 1 */
+			opacity: 0.5, /* Value between 0 and 1 */
 			showTitle: true, /* true/false */
 			social_tools: false
 		});
