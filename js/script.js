@@ -338,17 +338,6 @@ $(function() {
 
 
 
-
-//pretty photo
-
-$(document).ready(function(){
-		$("a[rel^='consultancyPopup']").prettyPhoto({
-			animationSpeed: 'normal', /* fast/slow/normal */
-			opacity: 0.5, /* Value between 0 and 1 */
-			showTitle: true, /* true/false */
-			social_tools: false
-		});
-	});
 		
 
 
