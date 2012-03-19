@@ -3,7 +3,7 @@
 
 <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
 
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 <script type="text/javascript">!window.jQuery && document.write(unescape('%3Cscript src="<?= base_url() ?>js/libs/jquery-1.5.0.js"%3E%3C/script%3E'))</script>
 
 
