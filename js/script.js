@@ -435,7 +435,7 @@ if($("#main_navi").length>0) {
 		 
 		 
         // when page loads setup keyboard focus on the first horzontal scrollable
-       //horizontal.eq(0).data("scrollable").focus();
+       horizontal.eq(0).data("scrollable").focus();
 		 
     });
 }
