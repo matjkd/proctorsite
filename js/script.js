@@ -2,7 +2,7 @@
  
  
  //software scroller
-
+$(function() {
 if($("#main_navi").length>0) {
     // do 
     //horizontal scroller
@@ -39,6 +39,7 @@ if($("#main_navi").length>0) {
 		 
     });
 }
+});
  
 
 // remap jQuery to $
