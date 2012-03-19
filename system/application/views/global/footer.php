@@ -18,7 +18,7 @@
 <script type="text/javascript" src="<?= base_url() ?>js/libs/editor.js" type="text/javascript"></script>
 <script type="text/javascript"  src="<?= base_url() ?>js/libs/easing.min.js"></script>
 <script type="text/javascript"  src="<?= base_url() ?>js/libs/bxslider.js"></script>
-<script type="text/javascript" src="<?= base_url() ?>js/libs/jquerytools.js"></script>
+<script src="http://cdn.jquerytools.org/1.2.6/all/jquery.tools.min.js"></script>
 <script type="text/javascript" src="<?= base_url() ?>js/script.js"></script>
 
 <script type="text/javascript" src="<?= base_url() ?>js/plugins.js"></script>
