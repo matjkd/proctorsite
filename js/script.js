@@ -350,18 +350,7 @@ $(document).ready(function(){
 		});
 	});
 		
-// team slider
-$(function() {
-    $('#team').bxSlider({
-        displaySlideQty: 5,
-        moveSlideQty: 1,
-        infiniteLoop: true,
-        auto: false,  
-        easing: 'easeOutQuad',
-        speed: 1500,
-        pause:  18000    
-    });
-});
+
 
 // editor
 jQuery(function() {
