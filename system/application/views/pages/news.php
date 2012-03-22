@@ -147,8 +147,8 @@ foreach ($news as $news):
     $currentpage = $this->uri->segment(3);
     ?>
 
-    <?php if (($currentpage - $perpage) > 0) { ?> 
-        <div class="paginater"><a href="<?= base_url() ?>blog/item/<?= $currentpage - $perpage ?>">Previous</a></div>
+    <?php if (($currentpage) > 0) { ?> 
+        <div class="paginater" style="float:right;"><a href="<?= base_url() ?>blog/item/<?= $currentpage - $perpage ?>">Newer Posts &raquo;</a></div>
     <?php } ?>
 
     <?php foreach ($allnews as $row): ?>
@@ -160,7 +160,7 @@ foreach ($news as $news):
 
         <?php if ($count == $perpage) { ?>
             <?php $page = $page + 1; ?>
-            <div class="paginater" <?php if ($currentpage == ($totalcount - $count)) { ?> style="background:#353e43;"<?php } ?>><a href="<?= base_url() ?>blog/item/<?= $totalcount - $count ?>"><?= $page ?></a></div>
+<!--            <div class="paginater" <?php if ($currentpage == ($totalcount - $count)) { ?> style="background:#353e43;"<?php } ?>><a href="<?= base_url() ?>blog/item/<?= $totalcount - $count ?>"><?= $page ?></a></div>-->
             <?php $count = 0; ?>
         <?php } ?>
 
@@ -168,7 +168,7 @@ foreach ($news as $news):
     <?php if ($count > 0) { ?>
         <?php $page = $page + 1; ?>
         <?php if (($currentpage + $perpage) < $totalcount) { ?> 
-            <div class="paginater"><a href="<?= base_url() ?>blog/item/<?= $currentpage + $perpage ?>">Next</a></div>
+            <div class="paginater" style="float:left;"><a href="<?= base_url() ?>blog/item/<?= $currentpage + $perpage ?>">&laquo; Older Posts</a></div>
         <?php } ?>
         <?php $count = 0; ?>
     <?php } ?>
