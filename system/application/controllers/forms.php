@@ -324,10 +324,14 @@ function calc_results()
 		
 		
 		//$data['value3'] =$data['value1'] + $data['value2'];
-		
+		if($data['quote_results']) {
 		
 		$this->load->vars($data);
 		$this->load->view('popups/calculator_results');
+                }
+                else {
+                    echo "All fields must be completed";
+                }
 		
 	}
 }
