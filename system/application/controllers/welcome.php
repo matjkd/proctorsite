@@ -348,6 +348,21 @@ class Welcome extends MY_Controller {
         $this->load->vars($data);
         $this->load->view('template');
     }
+    
+    function cookies() {
+
+        $id = 'login';
+        $data['content'] = $this->content_model->get_content($id);
+        $data['main'] = "extras/cookiesEU";
+        $data['menu'] = $this->content_model->get_menus();
+       
+        $data['page'] = "login";
+        $data['title'] = $data['page'];
+
+
+        $this->load->vars($data);
+        $this->load->view('template');
+    }
 
 // Customer Resource Links
     function quote() {
