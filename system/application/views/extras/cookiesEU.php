@@ -33,7 +33,7 @@
 
 <ul>
     <li>Session Cookie - This stores no personal information and is there just to remember your current session and pass alerts to you, such as if you fill the contact form in incorrectly,
-        it will tell you what was wrong, and remember the fields you have completed correctly</li>
+        it will tell you what was wrong, and remember the fields you have completed correctly.</li>
 </ul>
 
 <p>There is no way to prevent these cookies being set other than to not use our site.</p>
@@ -45,7 +45,7 @@
 <ul>
     <li>Google Maps -  <a href="http://www.google.com/policies/privacy/">Privacy Policy</a>  </li>        
     <li>Youtube -  <a href="http://www.google.com/policies/privacy/">Privacy Policy</a>  </li>        
-    <li>Amazon S3 - Some images are stored on Amazon s3 servers</li>
+    <li>Amazon S3 - Some images are stored on Amazon S3 servers</li>
 </ul>
 
 <p>Disabling these cookies will likely break the functions offered by these third parties</p>
@@ -55,7 +55,7 @@
 
 <p>So you can easily Like or share our content  on the likes of Facebook, Google+ and Twitter we have included sharing buttons on our site.</p>
 
-<p>Cookies are set by:</p>
+
 
 <ul>
 
@@ -67,7 +67,10 @@
 
 <h3> Visitor Statistics Cookies</h3>
 
-<p>We use cookies to compile visitor statistics such as how many people have visited our website, what type of technology they are using (e.g. Mac or Windows which helps to identify when our site isn't working as it should for particular technologies), how long they spend on the site, what page they look at etc.  This helps us to continuously improve our website. These so called â€œanalyticsâ€ programs also tell us if  how people reached this site (e.g. from a search engine) and whether they have been here before helping us to put more money into developing our services for you instead of marketing spend. </p>
+<p>We use cookies to compile visitor statistics such as how many people have visited our website, what type of technology they are using 
+    (e.g. Mac or Windows which helps to identify when our site isn't working as it should for particular technologies), how long they spend on the site, what page they look at etc. 
+    This helps us to continuously improve our website. These so called analytics programs also tell us if  how people reached this site (e.g. from a search engine)
+    and whether they have been here before helping us to put more money into developing our services for you instead of marketing spend. </p>
 
 <p>We use:</p>
 
